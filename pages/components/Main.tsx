@@ -4,19 +4,21 @@ import AboutMe from './AboutMe'
 import Introduction from './Introduction'
 import Portfolio from './Portfolio'
 import Contact from './Contact'
+import SocialMedia from './SocialMedia'
 import { openSidebarContext } from './OpenSidebarContext'
 
 const Main = (): JSX.Element => {
-  const { hideSidebar, setHideSidebar } = useContext(openSidebarContext)
+    const { hideSidebar, setHideSidebar } = useContext(openSidebarContext)
 
-  return (
-    <main onClick={() => setHideSidebar(true)} className={hideSidebar ? styles.main : `${styles.main} ${styles.blurry}`}>
-      <Introduction />
-      <AboutMe />
-      <Portfolio />
-      <Contact />
-    </main>
-  )
+    return (
+        <main onClick={() => setHideSidebar(true)} className={hideSidebar ? styles.main : `${styles.main} ${styles.blurry}`}>
+            <Introduction />
+            <AboutMe />
+            <Portfolio />
+            <Contact />
+            <SocialMedia />
+        </main>
+    )
 }
 
 export default Main
