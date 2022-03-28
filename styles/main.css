@@ -1,0 +1,12 @@
+:root {
+    --background: #23214e;
+    --background-dark: #111027fa;
+    --title: #2d9cca;
+    --white: #fff;
+    --main-text: #29658a;
+    --secondary-text: #474866;
+    --subtitle: #a9abb8;
+    --margin-nav: 1rem;
+    --margin-nav-double: 3rem;
+    --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+  }
