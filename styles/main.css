@@ -1,17 +1,18 @@
 :root {
-    --background: #23214e;
-    --background-dark: #111027fa;
-    --title: #2d9cca;
-    --white: #fff;
-    --main-text: #29658a;
-    --secondary-text: #474866;
-    --subtitle: #a9abb8;
+    --background: #18262c;
+    --background-dark: #07131afa;
+    --title: #8ef68a;
+    --subtitle: #FFF;
+    --main-text: #97aab1;
+    --secondary-text: #3f4f55;
+    --white: #FFF;
     --margin: 1rem;
     --margin-2x: 2rem;
     --margin-3x: 3rem;
     --padding: 1rem;
     --padding-2x: 2rem;
     --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
-    --width-ch: 64ch;
+    --width-ch: 80ch;
     --navbar-height: 100px;
+    --border-radius: 4px;
   }
