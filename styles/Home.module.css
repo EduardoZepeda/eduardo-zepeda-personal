@@ -174,6 +174,7 @@
   color: var(--title);
   border: 1px solid var(--title);
   border-radius: var(--border-radius);
+  cursor: pointer;
 }
 
 .portfolio {
@@ -207,10 +208,6 @@
   transition: var(--transition);
 }
 
-.portfolioImage:hover {
-  filter: brightness(100%);
-  transition: var(--transition);
-}
 
 .portfolioInfo {
   width: 50%;
@@ -329,6 +326,7 @@
 
 @media (min-width: 768px) {
   .sidebar {
+    /* Hide sidebar translating it outside the screen */
     visibility: hidden;
     transform: translateX(100vw);
   }

@@ -16,7 +16,7 @@ const ProjectItem = ({ title, description, link, stack }: ProjectItemProps): JSX
   return (
     <div className={styles.projectItem}>
       <div>
-        <a href={link} className={styles.icon}>
+        <a href={link} aria-label={`${title} source code`} className={styles.icon}>
           <FontAwesomeIcon size={iconSize} icon={faGithubAlt} />
         </a>
       </div>
