@@ -1,12 +1,15 @@
-import React from 'react'
+import { useContext } from 'react'
+import { openSidebarContext } from '../../lib/OpenSidebarContext'
 
 const NavElements = (): JSX.Element => {
+  const { setHideSidebar } = useContext(openSidebarContext)
+
   return (
     <ol>
-      <ul>Introduction</ul>
-      <ul>About me</ul>
-      <ul>Portfolio</ul>
-      <ul>Contact</ul>
+      <a onClick={() => setHideSidebar(true)} href='#'><ul>Introduction</ul></a>
+      <a onClick={() => setHideSidebar(true)} href='#about'><ul>About me</ul></a>
+      <a onClick={() => setHideSidebar(true)} href='#portfolio'><ul>Portfolio</ul></a>
+      <a onClick={() => setHideSidebar(true)} href='#contact'><ul>Contact</ul></a>
     </ol>
   )
 }

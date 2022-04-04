@@ -18,6 +18,9 @@
 
 .icon {
   padding: var(--padding) 0;
+}
+
+.iconContainer {
   align-self: end;
 }
 
@@ -205,7 +208,7 @@
 }
 
 .portfolioInfo {
-  width: calc(50% + 50px);
+  width: 50%;
   text-align: right;
   transform: translateX(-50px);
 }
@@ -308,6 +311,10 @@
   .projectItem {
     width: 100%;
   }
+
+  .icon {
+    margin-right: var(--margin);
+  }
 }
 
 @media (min-width: 768px) {
@@ -326,6 +333,14 @@
 
   .portfolioItems .portfolioContainer:nth-child(even) {
     flex-direction: row-reverse;
+  }
+
+  .portfolioItems .portfolioContainer:nth-child(even) .icon {
+    margin-right: var(--margin);
+  }
+
+  .portfolioItems .portfolioContainer:nth-child(odd) .icon {
+    margin-left: var(--margin);
   }
 
   .portfolioItems .portfolioContainer:nth-child(even) .portfolioInfo {

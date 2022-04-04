@@ -13,7 +13,8 @@ const Home: NextPage = () => {
     github: 'https://github.com/eduardoZepeda',
     instagram: 'https://www.instagram.com/coffeebytes.dev/',
     linkedin: 'https://linkedin.com/in/eduardomzepeda',
-    twitter: 'https://twitter.com/hello_wired'
+    twitter: 'https://twitter.com/hello_wired',
+    email: 'eduardozepeda@coffeebytes.dev'
   }
 
   return (
