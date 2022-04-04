@@ -6,7 +6,9 @@ const AboutMe = (): JSX.Element => {
     <section id='about'>
       <h2>About me</h2>
       <div className={styles.aboutMe}>
-        <p>About me</p>
+        <p>{`Web developer with experience in ecommerce. Skilled in Django, DRF, React, NextJS, Bootstrap, TailwindCSS and other related
+          libraries. I can configure a server from scracth. I've been using GNU/Linux for most than a decade as my personal and working OS. My favorite distribution is Debian.`}
+        </p>
       </div>
     </section>
   )

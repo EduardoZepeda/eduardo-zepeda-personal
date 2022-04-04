@@ -22,7 +22,8 @@ const Home: NextPage = () => {
       <div className={styles.container}>
         <Head>
           <title>Title</title>
-          <meta name='description' content='Some description' />
+          <meta name='description' content='Eduardo Zepeda web developer personal page' />
+          <meta name='og:description' content='Eduardo Zepeda web developer personal page' />
           <link rel='icon' href='/favicon.ico' />
         </Head>
         <Nav />

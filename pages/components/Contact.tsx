@@ -8,12 +8,13 @@ const Contact = (): JSX.Element => {
 
   return (
     <section id='contact'>
-      <div>
+      <div className={styles.contact}>
         <h2>Contact</h2>
-        <p>Contact</p>
+        <p>My inbox is always open and I'm always listening to new offers and challenges. I'd be happy to hear from you. Althought sometimes it's impossible, I'll try to respond to you in a day or two.
+        </p>
       </div>
       <a href={`mailto:${socialMediaLinks.email}`}>
-        <button className={styles.btn}>Contact</button>
+        <button className={styles.btn}>Say hi</button>
       </a>
     </section>
   )

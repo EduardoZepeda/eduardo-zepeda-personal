@@ -59,7 +59,7 @@ section {
 }
 
 @font-face {
-  font-family: 'Nunito';
+  font-family: 'Raleway';
   src: local('Raleway-Medium'), url('/fonts/Raleway-Medium.woff2') format('woff2');
   font-display: fallback;
   font-style: normal;

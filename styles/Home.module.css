@@ -1,5 +1,5 @@
 .container {
-  font-family: 'Nunito';
+  font-family: 'Raleway';
   display: grid;
   grid-template-rows: var(--navbar-height) auto 1fr;
 }
@@ -20,9 +20,7 @@
   padding: var(--padding) 0;
 }
 
-.iconContainer {
-  align-self: end;
-}
+.iconContainer {}
 
 .nav .burgerIcon {
   margin: 0;
@@ -170,7 +168,7 @@
 
 
 .btn {
-  margin: var(--margin-2x);
+  margin: var(--margin-2x) 0;
   padding: var(--padding);
   background-color: var(--background);
   color: var(--title);
@@ -205,12 +203,20 @@
   height: 100%;
   object-fit: cover;
   border-radius: var(--border-radius);
+  filter: brightness(75%);
+  transition: var(--transition);
+}
+
+.portfolioImage:hover {
+  filter: brightness(100%);
+  transition: var(--transition);
 }
 
 .portfolioInfo {
   width: 50%;
-  text-align: right;
   transform: translateX(-50px);
+  display: flex;
+  flex-direction: column;
 }
 
 .portfolioInfo h4 {
@@ -227,6 +233,7 @@
 }
 
 .stack {
+  width: calc(100% - 80px);
   margin: var(--margin-2x) 0;
   font-size: 0.9rem;
   font-family: 'Consolas', 'Courier New', Courier, monospace;
@@ -267,7 +274,6 @@
 .projectItemDescription {
   margin: var(--margin) 0;
 }
-
 
 @media (max-width: 768px) {
   .main {
@@ -315,6 +321,10 @@
   .icon {
     margin-right: var(--margin);
   }
+
+  .stack {
+    width: 100%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -329,6 +339,10 @@
 
   .socialMedia.footer {
     visibility: hidden;
+  }
+
+  .portfolioContainer:nth-child(odd) .portfolioInfo {
+    align-items: flex-end;
   }
 
   .portfolioItems .portfolioContainer:nth-child(even) {

@@ -3,10 +3,18 @@ import styles from '../../styles/Home.module.css'
 import ProjectItem from './ProjectItem'
 
 const projectData = [
-  { title: 'title', description: 'description', stack: 'stack ', link: 'link' },
-  { title: 'title', description: 'description', stack: 'stack ', link: 'link' },
-  { title: 'title', description: 'description', stack: 'stack ', link: 'link' },
-  { title: 'title', description: 'description', stack: 'stack ', link: 'link' }
+  {
+    title: 'django-payments-mercadopago',
+    description: 'A mercadopago payment gateway backend for django-payments',
+    stack: 'Django',
+    link: 'https://github.com/EduardoZepeda/django-payments-mercadopago'
+  },
+  {
+    title: 'django-postalcodes-mexico',
+    description: 'A Django Package for getting and handling the Mexican Postal Service (Correos de Mexico) postal codes information.',
+    stack: 'Django',
+    link: 'https://github.com/EduardoZepeda/django-postalcodes-mexico'
+  }
 ]
 
 const Projects = (): JSX.Element => {
