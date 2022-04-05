@@ -60,6 +60,7 @@
 .main .introductionHeader {
   color: var(--subtitle);
   margin: 0.5rem 0;
+  font-size: 2.5rem;
 }
 
 .main p {
@@ -171,7 +172,7 @@
 
 .btn {
   margin: var(--margin-2x) 0;
-  padding: var(--padding);
+  padding: var(--padding) var(--padding-2x);
   background-color: var(--background);
   color: var(--title);
   border: 1px solid var(--title);
@@ -295,10 +296,6 @@
 
   .footer.blurry {
     filter: blur(4px);
-  }
-
-  .main .introductionHeader {
-    font-size: 2rem;
   }
 
   .nav .menu {

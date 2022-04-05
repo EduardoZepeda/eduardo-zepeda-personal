@@ -21,7 +21,7 @@ const Home: NextPage = () => {
     <openSidebarContext.Provider value={{ hideSidebar, setHideSidebar, socialMediaLinks }}>
       <div className={styles.container}>
         <Head>
-          <title>Title</title>
+          <title>Eduardo Zepeda</title>
           <meta name='description' content='Eduardo Zepeda web developer personal page' />
           <meta name='og:description' content='Eduardo Zepeda web developer personal page' />
           <link rel='icon' href='/favicon.ico' />
