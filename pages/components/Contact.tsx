@@ -10,11 +10,11 @@ const Contact = (): JSX.Element => {
     <section id='contact'>
       <div className={styles.contact}>
         <h2>Contact</h2>
-        <p>My inbox is always open and I'm always listening to new offers and challenges. I'd be happy to hear from you. Althought sometimes it's impossible, I'll try to respond to you in a day or two.
+        <p>My inbox is always open and I'm always listening to new offers. I'd be delighted to hear about you. Although sometimes it's impossible for me, I'll try to reply in a day or two.
         </p>
       </div>
       <a href={`mailto:${socialMediaLinks.email}`} aria-label='Email contact'>
-        <button className={styles.btn}>Say hi</button>
+        <button className={styles.btn}>say hi</button>
       </a>
     </section>
   )

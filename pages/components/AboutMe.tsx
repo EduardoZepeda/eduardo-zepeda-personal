@@ -7,8 +7,10 @@ const AboutMe = (): JSX.Element => {
       <h2>About me</h2>
       <div className={styles.aboutMe}>
         <p>{`Web developer with experience in ecommerce. Skilled in Django, DRF, React, NextJS, Bootstrap, TailwindCSS and other related
-          libraries. I can configure a server from scracth. I've been using GNU/Linux for most than a decade as my personal and working OS. My favorite distribution is Debian.`}
+          libraries. `}
         </p>
+        <p>GNU/Linux user and enthusiast for most than a decade. My favorite distribution is Debian.</p>
+        <p>I frequently write tutorials and posts about tech in my personal blog, feel free to read them at <a href='https://coffeebytes.dev' rel='noreferrer noopener' target='_blank' aria-label='Coffee bytes website'><strong>Coffee bytes</strong></a></p>
       </div>
     </section>
   )

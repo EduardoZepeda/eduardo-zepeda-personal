@@ -22,6 +22,10 @@
 
 .iconContainer {}
 
+.aboutMe a {
+  color: var(--title);
+}
+
 .nav .burgerIcon {
   margin: 0;
 }
@@ -59,9 +63,7 @@
 }
 
 .main p {
-  margin: 0;
   color: var(--main-text);
-  font-size: 1.2rem;
 }
 
 .introduction {
@@ -175,6 +177,12 @@
   border: 1px solid var(--title);
   border-radius: var(--border-radius);
   cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: var(--title);
+  color: var(--background);
 }
 
 .portfolio {
@@ -206,6 +214,10 @@
   border-radius: var(--border-radius);
   filter: brightness(75%);
   transition: var(--transition);
+}
+
+.portfolioImage:hover {
+  filter: brightness(100%);
 }
 
 

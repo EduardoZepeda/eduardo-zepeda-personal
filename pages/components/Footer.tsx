@@ -12,7 +12,7 @@ const Footer = (): JSX.Element => {
         <Icons />
       </div>
       <div>
-        <small>Designed and coded by Eduardo Zepeda</small>
+        <p><small>Coded by Eduardo Zepeda</small></p>
       </div>
     </footer>
   )

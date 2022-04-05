@@ -5,7 +5,7 @@ import ProjectItem from './ProjectItem'
 const projectData = [
   {
     title: 'django-payments-mercadopago',
-    description: 'A mercadopago payment gateway backend for django-payments',
+    description: 'A totally functional mercadopago payment gateway backend for django-payments.',
     stack: 'Django',
     link: 'https://github.com/EduardoZepeda/django-payments-mercadopago'
   },

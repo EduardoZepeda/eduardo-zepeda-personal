@@ -32,14 +32,14 @@ const PortfolioItem = ({ imgSrc, title, info, websiteLink, sourceCodeLink, stack
       </div>
       <div className={styles.portfolioInfo}>
         <h3>{title}</h3>
-        <div className={styles.portfolioDescription}>{info}</div>
+        <div className={styles.portfolioDescription}><p>{info}</p></div>
         <div className={styles.stack}>{stack}</div>
         <div className={styles.iconContainer}>
-          <span><a href={websiteLink} className={styles.icon} aria-label={`${title} website`}><FontAwesomeIcon size={iconSize} icon={faLink} /></a></span>
+          <span><a target='_blank' rel='noreferrer noopener' href={websiteLink} className={styles.icon} aria-label={`${title} website`}><FontAwesomeIcon size={iconSize} icon={faLink} /></a></span>
           {sourceCodeLink !== undefined
             ? (
               <span>
-                <a href={sourceCodeLink} className={styles.icon} aria-label={`${title} source code`}>
+                <a href={sourceCodeLink} target='_blank' rel='noreferrer noopener' className={styles.icon} aria-label={`${title} source code`}>
                   <FontAwesomeIcon size={iconSize} icon={faGithubAlt} />
                 </a>
               </span>)

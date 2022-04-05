@@ -9,10 +9,10 @@ const Icons = (): JSX.Element => {
 
   return (
     <>
-      <a aria-label={'Eduardo Zepeda Github profile'} href={socialMediaLinks.github}><FontAwesomeIcon size={iconSize} icon={faGithubAlt} /></a>
-      <a aria-label={'Eduardo Zepeda Twitter profile'} href={socialMediaLinks.twitter}><FontAwesomeIcon size={iconSize} icon={faTwitter} /></a>
-      <a aria-label={'Eduardo Zepeda Instagram profile'} href={socialMediaLinks.instagram}><FontAwesomeIcon size={iconSize} icon={faInstagram} /></a>
-      <a aria-label={'Eduardo Zepeda Linkedin profile'} href={socialMediaLinks.linkedin}><FontAwesomeIcon size={iconSize} icon={faLinkedin} /></a>
+      <a target='_blank' rel='noreferrer noopener' aria-label='Eduardo Zepeda Github profile' href={socialMediaLinks.github}><FontAwesomeIcon size={iconSize} icon={faGithubAlt} /></a>
+      <a target='_blank' rel='noreferrer noopener' aria-label='Eduardo Zepeda Twitter profile' href={socialMediaLinks.twitter}><FontAwesomeIcon size={iconSize} icon={faTwitter} /></a>
+      <a target='_blank' rel='noreferrer noopener' aria-label='Eduardo Zepeda Instagram profile' href={socialMediaLinks.instagram}><FontAwesomeIcon size={iconSize} icon={faInstagram} /></a>
+      <a target='_blank' rel='noreferrer noopener' aria-label='Eduardo Zepeda Linkedin profile' href={socialMediaLinks.linkedin}><FontAwesomeIcon size={iconSize} icon={faLinkedin} /></a>
     </>
   )
 }

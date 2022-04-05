@@ -13,6 +13,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  line-height: 2em;
+}
+
 ol,
 ul {
   padding: 0;

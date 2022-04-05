@@ -6,8 +6,8 @@ const Introduction = (): JSX.Element => {
       <div className={styles.introduction}>
         <p>Hey there, my name is</p>
         <h1>Eduardo Zepeda</h1>
-        <h2 className={styles.introductionHeader}>Building web applications</h2>
-        <p className={styles.intro}>Web developer who enjoys to create web applications using Python and Javascript</p>
+        <h2 className={styles.introductionHeader}>Py + Js + GNU/Linux</h2>
+        <p className={styles.intro}>Web developer who enjoys coding in Python and Javascript in GNU/Linux environments.</p>
       </div>
     </section>
   )
