@@ -20,12 +20,20 @@ const Portfolio = (): JSX.Element => {
       stack: 'Digital Ocean Droplet, React, Wordpress backend, styled components, Nginx'
     },
     {
+      imgSrc: '/portfolio/MineSweeper.jpg',
+      title: 'Mine Sweeper',
+      info: 'A simple Mine Sweeper with three levels of difficulty and a custom difficulty mode.',
+      websiteLink: 'https://eduardozepeda.github.io/mine-sweeper/',
+      sourceCodeLink: 'https://github.com/EduardoZepeda/mine-sweeper',
+      stack: 'React, Typescript'
+    },
+    {
       imgSrc: '/portfolio/TheNexus.jpg',
       title: 'The nexus',
       info: 'Bookmark, organize and backup your favorite websites with this startpage. CRUD capabilities based on localStorage.',
       websiteLink: 'https://eduardozepeda.github.io/nexusStartPage/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/nexusStartPage',
-      stack: 'Github, Backbone, Bootstrap, Jquery'
+      stack: 'Github pages, Backbone, Bootstrap, Jquery'
     },
     {
       imgSrc: '/portfolio/ElementalNames.jpg',
