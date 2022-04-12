@@ -6,11 +6,11 @@ const NavElements = (): JSX.Element => {
 
   return (
     <ol>
-      <a onClick={() => setHideSidebar(true)} href='#'><ul>Introduction</ul></a>
-      <a onClick={() => setHideSidebar(true)} href='#about'><ul>About me</ul></a>
-      <a onClick={() => setHideSidebar(true)} href='#portfolio'><ul>Portfolio</ul></a>
-      <a onClick={() => setHideSidebar(true)} href='#projects'><ul>OSS</ul></a>
-      <a onClick={() => setHideSidebar(true)} href='#contact'><ul>Contact</ul></a>
+      <ul><a onClick={() => setHideSidebar(true)} href='#'>Introduction</a></ul>
+      <ul><a onClick={() => setHideSidebar(true)} href='#about'>About me</a></ul>
+      <ul><a onClick={() => setHideSidebar(true)} href='#portfolio'>Portfolio</a></ul>
+      <ul><a onClick={() => setHideSidebar(true)} href='#projects'>OSS</a></ul>
+      <ul><a onClick={() => setHideSidebar(true)} href='#contact'>Contact</a></ul>
     </ol>
   )
 }

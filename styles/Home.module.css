@@ -79,9 +79,11 @@
   flex-direction: column;
   align-items: center;
   transition: var(--transition);
+  text-align: center;
 }
 
-.footer a {
+
+.footer .socialMedia a {
   display: flex;
   justify-content: center;
   align-items: center;
