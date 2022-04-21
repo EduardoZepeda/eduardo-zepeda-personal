@@ -8,6 +8,10 @@ import Footer from './components/Footer'
 import { openSidebarContext } from '../lib/OpenSidebarContext'
 
 const Home: NextPage = () => {
+
+  const siteUrl = 'https://eduardozepeda.dev'
+  const siteDescription = 'Eduardo Zepeda web developer specialized in Python, Javascript, Typescript, Django, React, Nextjs, DRF with GNU linux experience'
+  const siteTitle = 'Eduardo Zepeda web developer'
   const [hideSidebar, setHideSidebar] = useState<boolean>(true)
   const socialMediaLinks = {
     github: 'https://github.com/eduardoZepeda',
@@ -22,9 +26,14 @@ const Home: NextPage = () => {
       <div className={styles.container}>
         <Head>
           <title>Eduardo Zepeda</title>
-          <meta name='description' content='Eduardo Zepeda web developer personal page' />
-          <meta name='og:description' content='Eduardo Zepeda web developer personal page' />
           <link rel='icon' href='/favicon.ico' />
+          <meta name='description' content={siteDescription} />
+          <meta name='og:description' content={siteDescription} />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={siteUrl} />
+          <meta property="og:title" content={siteTitle} />
+          <meta property="twitter:title" content={siteTitle} />
+          <meta property="twitter:description" content={siteDescription} />
         </Head>
         <Nav />
         <Main />
