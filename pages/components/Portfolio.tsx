@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PortfolioItem from './PortfolioItem'
 import styles from '../../styles/Home.module.css'
 
 const Portfolio = (): JSX.Element => {
+  const [visibleItems, setVisibleItems] = useState<number>(4)
+
   const portfolioData = [
     {
       imgSrc: '/portfolio/Enfok.jpg',
@@ -14,10 +16,10 @@ const Portfolio = (): JSX.Element => {
     {
       imgSrc: '/portfolio/CoffeeBytes.jpg',
       title: 'Coffee bytes',
-      info: 'My personal web development blog, +100 entries/tutorials and +100 subscribed developers. I write new posts every week.',
+      info: 'My web development blog, +100 entries/tutorials and +100 subscribed developers. I write new posts every week.',
       websiteLink: 'https://coffeebytes.dev',
       sourceCodeLink: 'https://github.com/EduardoZepeda/coffeebytes',
-      stack: 'Digital Ocean Droplet, React, Wordpress backend, styled components, Nginx'
+      stack: 'Digital Ocean Droplet, Nginx, Hugo'
     },
     {
       imgSrc: '/portfolio/MineSweeper.jpg',
@@ -42,6 +44,22 @@ const Portfolio = (): JSX.Element => {
       websiteLink: 'https://elemental-names.vercel.app/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/elementalNames',
       stack: 'Vercel, React, TailwindCSS'
+    },
+    {
+      imgSrc: '/portfolio/MiReflex.jpg',
+      title: 'Mi reflex',
+      info: 'Landing page that integrates facebook pixel events and Mailchimp registration',
+      websiteLink: 'https://eduardozepeda.github.io/landingPageMyReflex/',
+      sourceCodeLink: 'https://github.com/EduardoZepeda/landingPageMyReflex',
+      stack: 'Github pages, NextJS, TailwindCSS'
+    },
+    {
+      imgSrc: '/portfolio/NextJsPractice.jpg',
+      title: 'Coffee provider',
+      info: 'A coffee bookmark based on local storage it shows some graphs and stats based on real data',
+      websiteLink: 'https://nextjs-practice-mauve.vercel.app/',
+      sourceCodeLink: 'https://github.com/EduardoZepeda/nextjsPractica',
+      stack: 'Vercel, NextJS, TailwindCSS'
     }
   ]
 
@@ -60,7 +78,11 @@ const Portfolio = (): JSX.Element => {
     <section id='portfolio' className={styles.portfolio}>
       <h2>Portfolio</h2>
       <div className={styles.portfolioItems}>
-        {portfolioItems}
+        {portfolioItems.slice(0, visibleItems)}
+      </div>
+      <div className={styles.portfolioBtn}>
+        {/* if visible items is greater than portfolio items, hide button */}
+        {visibleItems <= portfolioItems.length - 1 && <button onClick={() => setVisibleItems(visibleItems + 2)} className={styles.btn}>Load more</button>}
       </div>
     </section>
   )

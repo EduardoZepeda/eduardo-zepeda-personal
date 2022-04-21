@@ -240,6 +240,10 @@
   -moz-box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.75);
 }
 
+.portfolioBtn {
+  text-align: center;
+}
+
 .stack {
   width: calc(100% - 80px);
   margin: var(--margin-2x) 0;

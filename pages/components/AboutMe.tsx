@@ -10,7 +10,7 @@ const AboutMe = (): JSX.Element => {
           libraries. `}
         </p>
         <p>GNU/Linux user and enthusiast for most than a decade. My favorite distribution is Debian.</p>
-        <p>I frequently write tutorials and posts about tech in my personal blog, feel free to read them at <a href='https://coffeebytes.dev' rel='noreferrer noopener' target='_blank' aria-label='Coffee bytes website'>Coffee bytes</a></p>
+        <p>I frequently write tutorials and posts about tech in my web development blog, feel free to read them at <a href='https://coffeebytes.dev' rel='noreferrer noopener' target='_blank' aria-label='Coffee bytes website'>Coffee bytes</a></p>
       </div>
     </section>
   )
