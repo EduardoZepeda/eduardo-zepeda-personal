@@ -11,15 +11,15 @@ const Portfolio = (): JSX.Element => {
       title: 'Enfok shop',
       info: 'Ecommerce website for a +14k likes fanpage. Lots of featured were added: Mercado pago integration, facebook pixel events integration, receipt payment method, advanced dashboard functions, newsletter with customized affilate link system and much more.',
       websiteLink: 'https://enfokshop.com/es-mx/',
-      stack: 'Digital Ocean Droplet, Django, React, Jquery, Bootstrap, Nginx, Redis, Celery'
+      stack: 'Digital Ocean Droplet, Django, React, Jquery, Bootstrap, Nginx, Redis, Celery, Jenkins'
     },
     {
       imgSrc: '/portfolio/CoffeeBytes.jpg',
       title: 'Coffee bytes',
-      info: 'My web development blog, +100 entries/tutorials and +100 subscribed developers. I write new posts every week.',
+      info: 'My web development blog, +100 entries/tutorials and +150 subscribed developers. I write new posts every week.',
       websiteLink: 'https://coffeebytes.dev',
       sourceCodeLink: 'https://github.com/EduardoZepeda/coffeebytes',
-      stack: 'Digital Ocean Droplet, Nginx, Hugo'
+      stack: 'Digital Ocean Droplet, Hugo (Previously React), Nginx, Jenkins'
     },
     {
       imgSrc: '/portfolio/MineSweeper.jpg',
@@ -27,7 +27,7 @@ const Portfolio = (): JSX.Element => {
       info: 'A simple Mine Sweeper with three levels of difficulty and a custom difficulty mode.',
       websiteLink: 'https://eduardozepeda.github.io/mine-sweeper/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/mine-sweeper',
-      stack: 'React, Typescript'
+      stack: 'Github pages, React, Typescript'
     },
     {
       imgSrc: '/portfolio/TheNexus.jpg',
