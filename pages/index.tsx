@@ -32,7 +32,7 @@ const Home: NextPage = () => {
           <link rel='icon' href='/favicon.ico' />
           <meta property="og:locale" content="en_US"/>
           <meta name='description' content={siteDescription} />
-          <meta name='author' content={authorFirstName + authorLastName} />
+          <meta name='author' content={authorFirstName + ' ' + authorLastName} />
           <meta name='og:description' content={siteDescription} />
           <meta property='og:type' content='profile' />
           <meta property='profile:first_name' content={authorFirstName} />
