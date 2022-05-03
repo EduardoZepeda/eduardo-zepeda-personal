@@ -9,8 +9,9 @@ import { openSidebarContext } from '../lib/OpenSidebarContext'
 
 const Home: NextPage = () => {
   const siteUrl = 'https://eduardozepeda.dev'
-  const siteDescription = 'Eduardo Zepeda web developer specialized in Python, Javascript, Typescript, Django, React, Nextjs, DRF with GNU linux experience'
-  const siteTitle = 'Eduardo Zepeda web developer'
+  const author = 'Eduardo Zepeda'
+  const siteDescription = 'Eduardo Zepeda full stack developer web specialized in Python, Javascript, Typescript, Django, React, Nextjs, DRF and vast GNU linux experience'
+  const siteTitle = 'Eduardo Zepeda fullstack dev'
   const [hideSidebar, setHideSidebar] = useState<boolean>(true)
   const socialMediaLinks = {
     github: 'https://github.com/eduardoZepeda',
@@ -26,7 +27,9 @@ const Home: NextPage = () => {
         <Head>
           <title>Eduardo Zepeda</title>
           <link rel='icon' href='/favicon.ico' />
+          <meta property="og:locale" content="en_US"/>
           <meta name='description' content={siteDescription} />
+          <meta name='author' content={author} />
           <meta name='og:description' content={siteDescription} />
           <meta property='og:type' content='website' />
           <meta property='og:url' content={siteUrl} />
