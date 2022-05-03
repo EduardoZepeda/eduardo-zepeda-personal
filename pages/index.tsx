@@ -9,7 +9,10 @@ import { openSidebarContext } from '../lib/OpenSidebarContext'
 
 const Home: NextPage = () => {
   const siteUrl = 'https://eduardozepeda.dev'
-  const author = 'Eduardo Zepeda'
+  const authorFirstName = 'Eduardo'
+  const authorLastName = 'Zepeda'
+  const username = 'EduardoZepeda'
+  const gender = 'male'
   const siteDescription = 'Eduardo Zepeda full stack developer web specialized in Python, Javascript, Typescript, Django, React, Nextjs, DRF and vast GNU linux experience'
   const siteTitle = 'Eduardo Zepeda fullstack dev'
   const [hideSidebar, setHideSidebar] = useState<boolean>(true)
@@ -29,9 +32,14 @@ const Home: NextPage = () => {
           <link rel='icon' href='/favicon.ico' />
           <meta property="og:locale" content="en_US"/>
           <meta name='description' content={siteDescription} />
-          <meta name='author' content={author} />
+          <meta name='author' content={authorFirstName + authorLastName} />
           <meta name='og:description' content={siteDescription} />
-          <meta property='og:type' content='website' />
+          <meta property='og:type' content='profile' />
+          <meta property='profile:first_name' content={authorFirstName} />
+          <meta property='profile:last_name ' content={authorLastName} />
+          <meta property='profile:username' content={username} />
+          <meta property='profile:gender' content={gender} />
+
           <meta property='og:url' content={siteUrl} />
           <meta property='og:title' content={siteTitle} />
           <meta property='twitter:title' content={siteTitle} />
