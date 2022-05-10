@@ -11,7 +11,7 @@ const Portfolio = (): JSX.Element => {
       title: 'Enfok shop',
       info: 'Ecommerce website for a +14k likes fanpage. Lots of featured were added: Mercado pago integration, facebook pixel events integration, receipt payment method, advanced dashboard functions, newsletter with customized affilate link system and much more.',
       websiteLink: 'https://enfokshop.com/es-mx/',
-      stack: 'Digital Ocean Droplet, Django, React, Jquery, Bootstrap, Nginx, Redis, Celery, Jenkins'
+      stack: 'Digital Ocean Droplet, Django, Postgres, React, Jquery, Bootstrap, Nginx, Redis, Celery, Jenkins'
     },
     {
       imgSrc: '/portfolio/CoffeeBytes.jpg',
@@ -20,6 +20,14 @@ const Portfolio = (): JSX.Element => {
       websiteLink: 'https://coffeebytes.dev',
       sourceCodeLink: 'https://github.com/EduardoZepeda/coffeebytes',
       stack: 'Digital Ocean Droplet, Hugo (Previously React), Nginx, Jenkins'
+    },
+    {
+      imgSrc: '/portfolio/Tamper.jpg',
+      title: 'Tamper',
+      info: 'Geo location app that, given a location, finds the nearest speciality coffee shops, only for Guadalajara. Tamper also shows new coffee shops in the city.',
+      websiteLink: 'https://django-gis-testing.herokuapp.com/',
+      sourceCodeLink: 'https://github.com/EduardoZepeda/django-gis-coffee',
+      stack: 'Heroku, Django, Postgres, PostGIS, Leaflet'
     },
     {
       imgSrc: '/portfolio/MineSweeper.jpg',
@@ -32,7 +40,7 @@ const Portfolio = (): JSX.Element => {
     {
       imgSrc: '/portfolio/TheNexus.jpg',
       title: 'The nexus',
-      info: 'Bookmark, organize and backup your favorite websites with this startpage. CRUD capabilities based on localStorage.',
+      info: 'My oldest open source web app. Bookmark, organize and backup your favorite websites with this startpage. CRUD capabilities based on localStorage.',
       websiteLink: 'https://eduardozepeda.github.io/nexusStartPage/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/nexusStartPage',
       stack: 'Github pages, Backbone, Bootstrap, Jquery'
