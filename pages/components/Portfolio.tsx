@@ -11,7 +11,7 @@ const Portfolio = (): JSX.Element => {
       title: 'Enfok shop',
       info: 'Ecommerce website for a +14k likes fanpage. Lots of featured were added: Mercado pago integration, facebook pixel events integration, receipt payment method, advanced dashboard functions, newsletter with customized affilate link system and much more.',
       websiteLink: 'https://enfokshop.com/es-mx/',
-      stack: 'Digital Ocean Droplet, Django, Postgres, React, Jquery, Bootstrap, Nginx, Redis, Celery, Jenkins'
+      stack: 'Digital Ocean Droplet, Django, Postgres, React, Jquery, Bootstrap, Nginx, Gunicorn, Redis, Celery, Jenkins'
     },
     {
       imgSrc: '/portfolio/CoffeeBytes.jpg',

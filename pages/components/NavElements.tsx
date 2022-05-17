@@ -6,13 +6,13 @@ const NavElements = (): JSX.Element => {
   const { setHideSidebar } = useContext(openSidebarContext)
 
   return (
-    <ol>
-      <ul><a className={styles.navLink} onClick={() => setHideSidebar(true)} href='#'>Introduction</a></ul>
-      <ul><a className={styles.navLink} onClick={() => setHideSidebar(true)} href='#about'>About me</a></ul>
-      <ul><a className={styles.navLink} onClick={() => setHideSidebar(true)} href='#portfolio'>Portfolio</a></ul>
-      <ul><a className={styles.navLink} onClick={() => setHideSidebar(true)} href='#projects'>OSS</a></ul>
-      <ul><a className={styles.navLink} onClick={() => setHideSidebar(true)} href='#contact'>Contact</a></ul>
-    </ol>
+    <ul onClick={() => setHideSidebar(true)}>
+      <li><a className={styles.navLink} href='#'>Introduction</a></li>
+      <li><a className={styles.navLink} href='#about'>About me</a></li>
+      <li><a className={styles.navLink} href='#portfolio'>Portfolio</a></li>
+      <li><a className={styles.navLink} href='#projects'>OSS</a></li>
+      <li><a className={styles.navLink} href='#contact'>Contact</a></li>
+    </ul>
   )
 }
 

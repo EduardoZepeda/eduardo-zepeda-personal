@@ -19,9 +19,7 @@ p {
 
 ol,
 ul {
-  padding: 0;
-  margin-right: 1rem;
-  margin-left: 1rem;
+  list-style: none;
 }
 
 * {

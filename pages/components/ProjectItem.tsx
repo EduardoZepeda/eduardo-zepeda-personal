@@ -16,10 +16,10 @@ const ProjectItem = ({ title, description, link, stack }: ProjectItemProps): JSX
   return (
     <div className={styles.projectItem}>
       <div>
-        <a target='_blank' rel='noreferrer noopener' href={link} aria-label={`${title} source code`} className={styles.icon}>
+        <a href={link} aria-label={`${title} source code`} title={`${title} source code`} className={styles.icon}>
           <FontAwesomeIcon size={iconSize} icon={faGithubAlt} />
+          <h3>{title}</h3>
         </a>
-        <h3>{title}</h3>
       </div>
       <div className={styles.projectItemDescription}><p>{description}</p></div>
       <div className={styles.stack}>{stack}</div>

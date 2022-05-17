@@ -17,12 +17,10 @@
 }
 
 .navLink {
-  background-image: linear-gradient(
-    transparent 0%,
-    transparent 90%,
-    var(--title) 90%,
-    var(--title) 100%
-  );
+  background-image: linear-gradient(transparent 0%,
+      transparent 90%,
+      var(--title) 90%,
+      var(--title) 100%);
   background-repeat: no-repeat;
   background-size: 0% 100%;
   background-position-x: right;
@@ -47,6 +45,7 @@
 
 .nav .burgerIcon {
   margin: 0;
+  padding: 0.5rem;
 }
 
 .hidden {
@@ -61,8 +60,9 @@
   border-radius: var(--border-radius);
 }
 
-.menu ol {
+.menu ul {
   display: flex;
+  gap: var(--padding-2x);
 }
 
 .main {
@@ -128,22 +128,25 @@
   bottom: 0;
   background-color: var(--background-dark);
   z-index: 2;
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
   visibility: visible;
   transition: var(--transition);
+  gap: var(--padding-2x);
 }
 
 .sidebar.sidebarHidden {
   transform: translateX(100vw);
 }
 
-.sidebarMenu ol ul {
+.sidebarMenu ul {
   margin: var(--margin-2x);
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-2x);
 }
 
 .close {
@@ -319,6 +322,7 @@
   -webkit-box-shadow: -10px 10px 20px 2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -10px 10px 20px 2px rgba(0, 0, 0, 0.75);
   transition: var(--transition);
+  z-index: -1;
 }
 
 .projectItem:hover {
@@ -349,7 +353,6 @@
   .nav .menu {
     display: none;
   }
-
 
   .socialMedia.side {
     visibility: hidden;
