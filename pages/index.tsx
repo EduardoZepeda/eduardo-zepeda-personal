@@ -30,7 +30,7 @@ const Home: NextPage = () => {
         <Head>
           <title>Eduardo Zepeda</title>
           <link rel='icon' href='/favicon.ico' />
-          <meta property="og:locale" content="en_US"/>
+          <meta property='og:locale' content='en_US' />
           <meta name='description' content={siteDescription} />
           <meta name='author' content={authorFirstName + ' ' + authorLastName} />
           <meta name='og:description' content={siteDescription} />
