@@ -56,7 +56,7 @@ const Portfolio = (): JSX.Element => {
     {
       imgSrc: '/portfolio/MiReflex.jpg',
       title: 'Mi reflex',
-      info: 'Landing page that integrates facebook pixel events and Mailchimp registration',
+      info: 'Landing page that integrates facebook pixel events and Mailchimp registration API.',
       websiteLink: 'https://eduardozepeda.github.io/landingPageMyReflex/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/landingPageMyReflex',
       stack: 'Github pages, NextJS, TailwindCSS'
@@ -64,10 +64,18 @@ const Portfolio = (): JSX.Element => {
     {
       imgSrc: '/portfolio/NextJsPractice.jpg',
       title: 'Coffee provider',
-      info: 'A coffee bookmark based on local storage it shows some graphs and stats based on real data',
+      info: 'A coffee bookmark based on local storage it shows some graphs and stats based on real data from "Coffee obsession" book.',
       websiteLink: 'https://nextjs-practice-mauve.vercel.app/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/nextjsPractica',
       stack: 'Vercel, NextJS, TailwindCSS'
+    },
+    {
+      imgSrc: '/portfolio/Chiserstagram.jpg',
+      title: 'Chiserstagram',
+      info: 'Simple frontend instagram clone, with likes, share, save and responsiveness.',
+      websiteLink: 'https://chiserstagram.netlify.app/',
+      sourceCodeLink: 'https://github.com/EduardoZepeda/chiserstagramPractice',
+      stack: 'Netlify, Svelte, Vanilla CSS'
     }
   ]
 
