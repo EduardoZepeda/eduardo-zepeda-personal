@@ -67,7 +67,7 @@ const Portfolio = (): JSX.Element => {
       info: 'A coffee bookmark based on local storage it shows some graphs and stats based on real data from "Coffee obsession" book.',
       websiteLink: 'https://nextjs-practice-mauve.vercel.app/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/nextjsPractica',
-      stack: 'Vercel, NextJS, TailwindCSS'
+      stack: 'Vercel, Typescript, NextJS, Typescript, TailwindCSS'
     },
     {
       imgSrc: '/portfolio/Chiserstagram.jpg',
@@ -75,7 +75,7 @@ const Portfolio = (): JSX.Element => {
       info: 'Simple frontend instagram clone, with likes, share, save and responsiveness.',
       websiteLink: 'https://chiserstagram.netlify.app/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/chiserstagramPractice',
-      stack: 'Netlify, Svelte, Vanilla CSS'
+      stack: 'Netlify, Svelte'
     }
   ]
 

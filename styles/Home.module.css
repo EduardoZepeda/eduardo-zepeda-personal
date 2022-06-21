@@ -36,6 +36,16 @@
   padding: var(--padding) 0;
 }
 
+.iconLink {
+  transition: var(--transition);
+}
+
+.iconLink:hover {
+  color: var(--title);
+  transform: translateY(-3px);
+  transition: var(--transition);
+}
+
 .iconContainer {}
 
 .aboutMe a {

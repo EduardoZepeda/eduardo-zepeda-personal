@@ -14,7 +14,7 @@ const Home: NextPage = () => {
   const username = 'EduardoZepeda'
   const gender = 'male'
   const siteDescription = 'Eduardo Zepeda full stack developer web specialized in Python, Javascript, Typescript, Django, React, Nextjs, DRF and vast GNU linux experience'
-  const siteTitle = 'Eduardo Zepeda fullstack dev'
+  const siteTitle = 'Eduardo Zepeda Fullstack Developer'
   const [hideSidebar, setHideSidebar] = useState<boolean>(true)
   const socialMediaLinks = {
     github: 'https://github.com/eduardoZepeda',
@@ -25,7 +25,7 @@ const Home: NextPage = () => {
   }
 
   return (
-    <openSidebarContext.Provider value={{ hideSidebar, setHideSidebar, socialMediaLinks }}>
+    <openSidebarContext.Provider value={{ hideSidebar, setHideSidebar, socialMediaLinks, authorFirstName, authorLastName }}>
       <div className={styles.container}>
         <Head>
           <title>Eduardo Zepeda</title>

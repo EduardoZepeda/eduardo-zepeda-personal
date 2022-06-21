@@ -13,7 +13,7 @@ const Footer = (): JSX.Element => {
       </div>
       <div>
         <p><small><a href='https://github.com/EduardoZepeda/eduardo-zepeda-personal'>Coded with ♥ by Eduardo Zepeda.</a></small></p>
-        <p><small>Inspired by Brittany Chiang's design</small></p>
+        <p><small>Design inspired by Brittany Chiang</small></p>
       </div>
     </footer>
   )

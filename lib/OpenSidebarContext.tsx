@@ -4,6 +4,8 @@ interface openSidebarContextProps {
   hideSidebar: boolean
   setHideSidebar: Dispatch<SetStateAction<boolean>>
   socialMediaLinks: socialMediaProps
+  authorFirstName: string
+  authorLastName: string
 }
 
 interface socialMediaProps {
@@ -18,6 +20,8 @@ export const openSidebarContext = createContext<openSidebarContextProps>(
   {
     hideSidebar: true,
     setHideSidebar: () => { },
+    authorFirstName: '',
+    authorLastName: '',
     socialMediaLinks: {
       github: '',
       instagram: '',
