@@ -9,7 +9,7 @@ const Portfolio = (): JSX.Element => {
     {
       imgSrc: '/portfolio/Enfok.jpg',
       title: 'Enfok shop',
-      info: 'Ecommerce website for a +14k likes fanpage. Lots of featured were added: Mercado pago integration, facebook pixel events integration, receipt payment method, advanced dashboard functions, newsletter with customized affilate link system and much more.',
+      info: 'Ecommerce website for a +14k likes fanpage. Lots of featured were added: Mercado pago integration, competition price crawling, facebook pixel events integration, receipt payment method, advanced dashboard functions, newsletter with customized affilate link system and much more.',
       websiteLink: 'https://enfokshop.com/es-mx/',
       stack: 'Digital Ocean Droplet, Django, Postgres, React, Jquery, Bootstrap, Nginx, Gunicorn, Redis, Celery, Jenkins'
     },
@@ -36,6 +36,14 @@ const Portfolio = (): JSX.Element => {
       websiteLink: 'https://eduardozepeda.github.io/mine-sweeper/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/mine-sweeper',
       stack: 'Github pages, React, Typescript'
+    },
+    {
+      imgSrc: '/portfolio/GoCoffeeApi.jpg',
+      title: 'Coffee shops in Gdl',
+      info: 'API backend written in Go from scratch, handles search by user\'s location ordered by distance and full text search, documented using React.',
+      websiteLink: 'https://go-coffee-api.vercel.app/',
+      sourceCodeLink: 'https://github.com/EduardoZepeda/go-coffee-api',
+      stack: 'Vercel, Postgres, Go, Gorilla, React, MUI'
     },
     {
       imgSrc: '/portfolio/TheNexus.jpg',
