@@ -24,7 +24,7 @@ const Portfolio = (): JSX.Element => {
     {
       imgSrc: '/portfolio/Tamper.jpg',
       title: 'Tamper',
-      info: 'Geo location app that, given a location, finds the nearest speciality coffee shops, only for Guadalajara. Tamper also shows new coffee shops in the city.',
+      info: 'Geo location app that, given a location, finds the nearest speciality coffee shops, only for Guadalajara. Tamper also shows newest coffee shops in the city.',
       websiteLink: 'https://django-gis-testing.herokuapp.com/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/django-gis-coffee',
       stack: 'Heroku, Django, Postgres, PostGIS, Leaflet'
@@ -40,15 +40,15 @@ const Portfolio = (): JSX.Element => {
     {
       imgSrc: '/portfolio/GoCoffeeApi.jpg',
       title: 'Coffee shops in Gdl',
-      info: 'API backend written in Go from scratch, handles search by user\'s location ordered by distance and full text search, documented using React.',
+      info: 'API backend written in Go from scratch, handles search by user\'s location and return coffee shops ordered by distance, as well as full text search. Documentation frontend written in React.',
       websiteLink: 'https://go-coffee-api.vercel.app/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/go-coffee-api',
-      stack: 'Vercel, Postgres, Go, Gorilla, React, MUI'
+      stack: 'Vercel, Postgres, PostGIS, Go, Gorilla, React, MUI'
     },
     {
       imgSrc: '/portfolio/TheNexus.jpg',
       title: 'The nexus',
-      info: 'My oldest open source web app. Bookmark, organize and backup your favorite websites with this startpage. CRUD capabilities based on localStorage.',
+      info: 'My oldest open source web app. Bookmark, organize and backup your favorite websites with this startpage. CRUD capabilities based on browser\'s localStorage.',
       websiteLink: 'https://eduardozepeda.github.io/nexusStartPage/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/nexusStartPage',
       stack: 'Github pages, Backbone, Bootstrap, Jquery'

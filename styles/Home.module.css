@@ -36,6 +36,12 @@
   padding: var(--padding) 0;
 }
 
+.icon:hover {
+  color: var(--title);
+  transform: translateY(-3px);
+  transition: var(--transition);
+}
+
 .iconLink {
   transition: var(--transition);
 }
