@@ -9,7 +9,7 @@ const AboutMe = (): JSX.Element => {
         <p>Web developer with experience in ecommerce. Skilled in Django, DRF, React, NextJS, Bootstrap, TailwindCSS, Go, Hugo and other related
           libraries/frameworks.
         </p>
-        <p>GNU/Linux user and enthusiast for more than a decade. My favorite distribution is Debian.</p>
+        <p>Experienced GNU/Linux user and enthusiast for more than a decade. My favorite distribution is Debian, for personal and commercial projects.</p>
         <p>I frequently write tutorials and posts about tech in my web development blog, feel free to read them at <a href='https://coffeebytes.dev' rel='noreferrer noopener' target='_blank' aria-label='Coffee bytes website'>Coffee bytes</a></p>
       </div>
     </section>

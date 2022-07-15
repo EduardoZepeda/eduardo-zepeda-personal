@@ -46,6 +46,14 @@ const Portfolio = (): JSX.Element => {
       stack: 'Vercel, Postgres, PostGIS, Go, Gorilla, React, MUI'
     },
     {
+      imgSrc: '/portfolio/NextJsPractice.jpg',
+      title: 'Coffee provider',
+      info: 'A coffee bookmark based on local storage it shows some graphs and stats based on real data from "Coffee obsession" book. Emulated authentication using next-auth',
+      websiteLink: 'https://nextjs-practice-mauve.vercel.app/',
+      sourceCodeLink: 'https://github.com/EduardoZepeda/nextjsPractica',
+      stack: 'Vercel, Typescript, NextJS, Typescript, TailwindCSS'
+    },
+    {
       imgSrc: '/portfolio/TheNexus.jpg',
       title: 'The nexus',
       info: 'My oldest open source web app. Bookmark, organize and backup your favorite websites with this startpage. CRUD capabilities based on browser\'s localStorage.',
@@ -64,18 +72,10 @@ const Portfolio = (): JSX.Element => {
     {
       imgSrc: '/portfolio/MiReflex.jpg',
       title: 'Mi reflex',
-      info: 'Landing page that integrates facebook pixel events and Mailchimp registration API.',
+      info: 'Landing page that integrates facebook pixel events, for retargeting, and Mailchimp registration API.',
       websiteLink: 'https://eduardozepeda.github.io/landingPageMyReflex/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/landingPageMyReflex',
       stack: 'Github pages, NextJS, TailwindCSS'
-    },
-    {
-      imgSrc: '/portfolio/NextJsPractice.jpg',
-      title: 'Coffee provider',
-      info: 'A coffee bookmark based on local storage it shows some graphs and stats based on real data from "Coffee obsession" book.',
-      websiteLink: 'https://nextjs-practice-mauve.vercel.app/',
-      sourceCodeLink: 'https://github.com/EduardoZepeda/nextjsPractica',
-      stack: 'Vercel, Typescript, NextJS, Typescript, TailwindCSS'
     },
     {
       imgSrc: '/portfolio/Chiserstagram.jpg',
