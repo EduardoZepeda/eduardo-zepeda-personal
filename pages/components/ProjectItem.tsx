@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '../../styles/Home.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons'
+import Pluralize from '../../lib/Pluralize'
 
 interface ProjectItemProps {
   title: string
@@ -16,7 +17,7 @@ const ProjectItem = ({ title, description, link, stack }: ProjectItemProps): JSX
   return (
     <div className={styles.projectItem}>
       <div>
-        <a href={link} aria-label={`${title} source code`} title={`${title} source code`} className={styles.icon}>
+        <a href={link} aria-label={`${Pluralize(title)} source code`} title={`${Pluralize(title)} source code`} className={styles.icon}>
           <FontAwesomeIcon size={iconSize} icon={faGithubAlt} />
           <h3>{title}</h3>
         </a>
