@@ -10,7 +10,8 @@ const AboutMe = (): JSX.Element => {
           libraries/frameworks.
         </p>
         <p>Experienced GNU/Linux user and enthusiast for more than a decade. My favorite distribution is Debian, for personal and commercial projects.</p>
-        <p>I frequently write tutorials and posts about tech in my web development blog, feel free to read them at <a href='https://coffeebytes.dev' rel='noreferrer noopener' target='_blank' aria-label='Coffee bytes website'>Coffee bytes</a></p>
+        <p>Big fan of Digital Ocean and Microsoft <a href='https://www.credly.com/badges/17608a52-2cb7-4268-a907-613459559911/public_url' rel='noreferrer noopener' target='_blank' aria-label='Coffee bytes website'>AZ-900 certified.</a></p>
+        <p>I frequently write tutorials and posts about tech in my web development blog, feel free to read them on <a href='https://coffeebytes.dev' rel='noreferrer noopener' target='_blank' aria-label='Coffee bytes website'>Coffee bytes.</a></p>
       </div>
     </section>
   )

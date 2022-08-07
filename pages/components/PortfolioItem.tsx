@@ -18,7 +18,6 @@ interface PortfolioItemProps {
 const PortfolioItem = ({ imgSrc, title, info, websiteLink, sourceCodeLink, stack }: PortfolioItemProps): JSX.Element => {
   const iconSize = 'sm'
 
-
   return (
     <div className={styles.portfolioContainer}>
       <PortfolioImage imgSrc={imgSrc} websiteLink={websiteLink} title={title} />
