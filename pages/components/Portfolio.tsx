@@ -25,9 +25,9 @@ const Portfolio = (): JSX.Element => {
       imgSrc: '/portfolio/Tamper.jpg',
       title: 'Tamper',
       info: 'Geo location app that, given a location, finds the nearest speciality coffee shops, only for Guadalajara. Tamper also shows newest coffee shops in the city.',
-      websiteLink: 'https://django-gis-testing.herokuapp.com/',
+      websiteLink: 'https://django-gis-coffee.fly.dev/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/django-gis-coffee',
-      stack: 'Heroku, Django, Postgres, PostGIS, Leaflet'
+      stack: 'Fly.io (Previously Heroku), Django, Postgres, PostGIS, Leaflet'
     },
     {
       imgSrc: '/portfolio/MineSweeper.jpg',
