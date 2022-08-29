@@ -12,7 +12,7 @@ interface ProjectItemProps {
 }
 
 const ProjectItem = ({ title, description, link, stack }: ProjectItemProps): JSX.Element => {
-  const iconSize = 'sm'
+  const iconSize = 'lg'
 
   return (
     <div className={styles.projectItem}>

@@ -114,6 +114,7 @@
 
 .name {
   margin: var(--margin-2x) 0;
+  line-height: 3rem;
 }
 
 .footer {
@@ -297,6 +298,7 @@
   margin: var(--margin-2x) 0;
   font-size: 0.9rem;
   font-family: 'Consolas', 'Courier New', Courier, monospace;
+  line-height: 2rem;
 }
 
 .projects {
