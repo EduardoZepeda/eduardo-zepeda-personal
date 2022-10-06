@@ -1,4 +1,4 @@
-import styles from '../../styles/Home.module.css'
+import styles from '@styles/Home.module.css'
 import Icons from './Icons'
 
 const SocialMedia = (): JSX.Element => {

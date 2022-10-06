@@ -1,8 +1,8 @@
 import { useContext } from 'react'
 import { faGithubAlt, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { openSidebarContext } from '../../lib/OpenSidebarContext'
-import styles from '../../styles/Home.module.css'
+import { openSidebarContext } from '@lib/OpenSidebarContext'
+import styles from '@styles/Home.module.css'
 
 const Icons = (): JSX.Element => {
   const { socialMediaLinks, authorFirstName, authorLastName } = useContext(openSidebarContext)

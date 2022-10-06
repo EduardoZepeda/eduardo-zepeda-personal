@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import Nav from './components/Nav'
-import Main from './components/Main'
-import Footer from './components/Footer'
-import { openSidebarContext } from '../lib/OpenSidebarContext'
+import styles from '@styles/Home.module.css'
+import Nav from '@components/Nav'
+import Main from '@components/Main'
+import Footer from '@components/Footer'
+import { openSidebarContext } from '@lib/OpenSidebarContext'
 
 const Home: NextPage = () => {
   const siteUrl = 'https://eduardozepeda.dev'

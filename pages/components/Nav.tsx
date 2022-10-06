@@ -1,8 +1,8 @@
 import { useContext } from 'react'
-import styles from '../../styles/Home.module.css'
+import styles from '@styles/Home.module.css'
 import NavElements from './NavElements'
 import Sidebar from './Sidebar'
-import { openSidebarContext } from '../../lib/OpenSidebarContext'
+import { openSidebarContext } from '@lib/OpenSidebarContext'
 
 const Nav = (): JSX.Element => {
   const { hideSidebar, setHideSidebar } = useContext(openSidebarContext)

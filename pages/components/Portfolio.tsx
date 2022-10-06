@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PortfolioItem from './PortfolioItem'
-import styles from '../../styles/Home.module.css'
+import styles from '@styles/Home.module.css'
 
 const Portfolio = (): JSX.Element => {
   const [visibleItems, setVisibleItems] = useState<number>(4)
@@ -9,30 +9,30 @@ const Portfolio = (): JSX.Element => {
     {
       imgSrc: '/portfolio/Enfok.jpg',
       title: 'Enfok shop',
-      info: 'Ecommerce website for a +14k likes fanpage. Lots of featured were added: Mercado pago integration, competition price crawling, facebook pixel events integration, receipt payment method, advanced dashboard functions, newsletter with customized affilate link system and much more.',
+      info: 'Ecommerce website for a +14k likes fanpage with tons of customers. Lots of features were added, for instance: Mercado pago integration, competition price crawling, facebook pixel events integration, receipt payment method, advanced dashboard functions and statistics, newsletter with customized affilate link system and much more.',
       websiteLink: 'https://enfokshop.com/es-mx/',
       stack: 'Digital Ocean Droplet, Django, Postgres, React, Jquery, Bootstrap, Nginx, Gunicorn, Redis, Celery, Jenkins'
     },
     {
       imgSrc: '/portfolio/CoffeeBytes.jpg',
       title: 'Coffee bytes',
-      info: 'My web development blog, +100 entries/tutorials and +150 subscribed developers. I write new posts every week.',
+      info: 'My web development blog, +100 entries/tutorials and +200 subscribed developers and +500 followers. I write new posts for developers every week.',
       websiteLink: 'https://coffeebytes.dev',
       sourceCodeLink: 'https://github.com/EduardoZepeda/coffeebytes',
-      stack: 'Digital Ocean Droplet, Hugo (Previously React), Nginx, Jenkins'
+      stack: 'Digital Ocean Droplet, Hugo (Migrated from React), Nginx, Jenkins'
     },
     {
       imgSrc: '/portfolio/Tamper.jpg',
       title: 'Tamper',
-      info: 'Geo location app that, given a location, finds the nearest speciality coffee shops, only for Guadalajara. Tamper also shows newest coffee shops in the city.',
+      info: 'Geo location app that, given a location, finds the nearest speciality coffee shops, only for Guadalajara. Furthermore, Tamper also shows the newest coffee shops in the city.',
       websiteLink: 'https://django-gis-coffee.fly.dev/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/django-gis-coffee',
-      stack: 'Fly.io (Previously Heroku), Django, Postgres, PostGIS, Leaflet'
+      stack: 'Fly.io (Migrated from Heroku), Django, Postgres, PostGIS, Leaflet'
     },
     {
       imgSrc: '/portfolio/MineSweeper.jpg',
       title: 'Mine Sweeper',
-      info: 'A simple Mine Sweeper with three levels of difficulty and a custom difficulty mode.',
+      info: 'Mine Sweeper with three levels of difficulty and a custom difficulty mode.',
       websiteLink: 'https://eduardozepeda.github.io/mine-sweeper/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/mine-sweeper',
       stack: 'Github pages, React, Typescript'
@@ -40,7 +40,7 @@ const Portfolio = (): JSX.Element => {
     {
       imgSrc: '/portfolio/GoCoffeeApi.jpg',
       title: 'Coffee shops in Gdl',
-      info: 'API backend written in Go from scratch, handles search by user\'s location and return coffee shops ordered by distance, as well as full text search. Documentation frontend written in React.',
+      info: 'API backend written in Go from scratch, handles search by user\'s location and return coffee shops ordered by distance, as well as full text search capabilities. Documentation frontend written in React.',
       websiteLink: 'https://go-coffee-api.vercel.app/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/go-coffee-api',
       stack: 'Vercel, Postgres, PostGIS, Go, Gorilla, React, MUI'

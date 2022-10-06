@@ -1,10 +1,10 @@
 import React from 'react'
-import styles from '../../styles/Home.module.css'
+import styles from '@styles/Home.module.css'
 import { faLink } from '@fortawesome/free-solid-svg-icons'
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import PortfolioImage from './PortfolioImage'
-import Pluralize from '../../lib/Pluralize'
+import Pluralize from '@lib/Pluralize'
 
 interface PortfolioItemProps {
   imgSrc: string

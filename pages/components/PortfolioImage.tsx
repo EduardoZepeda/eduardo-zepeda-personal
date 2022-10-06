@@ -1,5 +1,5 @@
-import styles from '../../styles/Home.module.css'
-import Pluralize from '../../lib/Pluralize'
+import styles from '@styles/Home.module.css'
+import Pluralize from '@lib/Pluralize'
 
 interface PortfolioImageProps {
   imgSrc: string

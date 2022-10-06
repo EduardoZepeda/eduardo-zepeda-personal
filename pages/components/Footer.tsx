@@ -1,6 +1,6 @@
 import { useContext } from 'react'
-import styles from '../../styles/Home.module.css'
-import { openSidebarContext } from '../../lib/OpenSidebarContext'
+import styles from '@styles/Home.module.css'
+import { openSidebarContext } from '@lib/OpenSidebarContext'
 import Icons from './Icons'
 
 const Footer = (): JSX.Element => {

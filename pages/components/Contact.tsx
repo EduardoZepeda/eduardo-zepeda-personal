@@ -1,7 +1,7 @@
 import { useContext } from 'react'
-import { openSidebarContext } from '../../lib/OpenSidebarContext'
+import { openSidebarContext } from '@lib/OpenSidebarContext'
 
-import styles from '../../styles/Home.module.css'
+import styles from '@styles/Home.module.css'
 
 const Contact = (): JSX.Element => {
   const { socialMediaLinks } = useContext(openSidebarContext)
