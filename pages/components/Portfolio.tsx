@@ -19,15 +19,15 @@ const Portfolio = (): JSX.Element => {
       info: 'My web development blog, +100 entries/tutorials and +200 subscribed developers and +500 followers on Ig. I write new posts for developers every week.',
       websiteLink: 'https://coffeebytes.dev',
       sourceCodeLink: 'https://github.com/EduardoZepeda/coffeebytes',
-      stack: 'Digital Ocean Droplet, Hugo (Migrated from React and headless Wordpress), Nginx, Jenkins'
+      stack: 'Digital Ocean Droplet, Hugo (Prev. React + Headless WP), Nginx, Jenkins'
     },
     {
       imgSrc: '/portfolio/Tamper.jpg',
       title: 'Tamper',
-      info: 'Geo location app that, given a location, finds the nearest speciality coffee shops, exclusively for Guadalajara. Furthermore, a social network app for coffee lovers: accounts, likes, following system, feed, rating and comments system.',
+      info: 'Geo location app that, given a location, finds the nearest speciality coffee shops in Guadalajara. Furthermore, a social network app for coffee lovers: accounts, asymmetrical following system, likes, feed, rating and reviews system.',
       websiteLink: 'https://django-gis-coffee.fly.dev/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/django-gis-coffee',
-      stack: 'Fly.io, Django, Postgres, PostGIS, Leaflet'
+      stack: 'Fly.io, Django, Vanilla CSS & JS, Postgres, PostGIS, Leaflet'
     },
     {
       imgSrc: '/portfolio/MineSweeper.jpg',
