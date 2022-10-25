@@ -40,7 +40,7 @@ const Portfolio = (): JSX.Element => {
     {
       imgSrc: '/portfolio/GoCoffeeApi.jpg',
       title: 'Coffee shops in Gdl',
-      info: 'API backend written in Go from scratch, handles search by user\'s location and return coffee shops ordered by distance, as well as full text search capabilities. Documentation frontend written in React.',
+      info: 'API backend written in Go from scratch. User account read, signup, delete, login with JWT, coffee shops CRUD, following account system, search by user\'s location, full text search. Documentation generated with swaggo',
       websiteLink: 'https://go-coffee-api.vercel.app/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/go-coffee-api',
       stack: 'Vercel, Postgres, PostGIS, Go, Gorilla, React, MUI'
@@ -48,7 +48,7 @@ const Portfolio = (): JSX.Element => {
     {
       imgSrc: '/portfolio/NextJsPractice.jpg',
       title: 'Coffee provider',
-      info: 'A coffee bookmark based on local storage it shows some graphs and stats based on real data from "Coffee obsession" book. Emulated authentication using next-auth',
+      info: 'A coffee bookmark based on local storage, it shows some graphs and stats based on real data from "Coffee obsession" book. Emulated authentication using next-auth.',
       websiteLink: 'https://nextjs-practice-mauve.vercel.app/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/nextjsPractica',
       stack: 'Vercel, Typescript, NextJS, Typescript, TailwindCSS'
