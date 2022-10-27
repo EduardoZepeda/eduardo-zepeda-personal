@@ -39,8 +39,8 @@ const Portfolio = (): JSX.Element => {
     },
     {
       imgSrc: '/portfolio/GoCoffeeApi.jpg',
-      title: 'Coffee shops in Gdl',
-      info: 'API backend written in Go from scratch. User account read, signup, delete, login with JWT, coffee shops CRUD, following account system, search by user\'s location, full text search. Documentation generated with swaggo',
+      title: 'Go Coffee shops API',
+      info: 'API backend written in Go from scratch and raw SQL. User account read, signup, delete, login with JWT, coffee shops CRUD, following system, likes system, search by user\'s location, full text search and rate limiting. Docs generated with swaggo',
       websiteLink: 'https://go-coffee-api.vercel.app/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/go-coffee-api',
       stack: 'Vercel, Postgres, PostGIS, Go, Gorilla, React, MUI'
