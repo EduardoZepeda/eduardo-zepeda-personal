@@ -32,7 +32,7 @@ const Portfolio = (): JSX.Element => {
     {
       imgSrc: '/portfolio/MineSweeper.jpg',
       title: 'Mine Sweeper',
-      info: 'Mine Sweeper with three levels of difficulty and a custom difficulty mode.',
+      info: 'Mine Sweeper with three levels of difficulty and a custom difficulty mode. Mark tiles as bombs, and reset game button.',
       websiteLink: 'https://eduardozepeda.github.io/mine-sweeper/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/mine-sweeper',
       stack: 'Github pages, React, Typescript'
