@@ -6,7 +6,7 @@ const AboutMe = (): JSX.Element => {
     <section id='about'>
       <h2>About me</h2>
       <div className={styles.aboutMe}>
-        <p>Web developer with experience in ecommerce sites. I'll be solving your web app's (or your company's) necessities with awesome technologies like Django, DRF, React, NextJS, Bootstrap, TailwindCSS, Go, Hugo and other related
+        <p>Web developer with experience in ecommerce sites. I'll be solving your web app's (or your company's) necessities with awesome and mature technologies like Django, DRF, React, NextJS, Bootstrap, TailwindCSS, Go, Hugo and other related
           libraries/frameworks.
         </p>
         <p>I'm an experienced GNU/Linux user and have been using GNU/Linux environments for more than a decade, whether it be for personal or commercial projects.</p>
