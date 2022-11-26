@@ -107,7 +107,7 @@
 
 .introduction {
   color: var(--main-text);
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 2em;
   font-family: 'Raleway';
 }
@@ -358,6 +358,17 @@
 
 .projectItemDescription {
   margin: var(--margin) 0;
+}
+
+.unrevealed {
+  opacity: 0;
+  transform: translateY(-25px);
+  transition: var(--transition);
+}
+
+.revealed {
+  opacity: 100;
+  transition: var(--transition);
 }
 
 @media (max-width: 768px) {

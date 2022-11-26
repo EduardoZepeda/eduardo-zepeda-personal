@@ -7,17 +7,18 @@ import Projects from './Projects'
 import Contact from './Contact'
 import SocialMedia from './SocialMedia'
 import { openSidebarContext } from '@lib/OpenSidebarContext'
+import RevealElement from './Reveal'
 
 const Main = (): JSX.Element => {
   const { hideSidebar, setHideSidebar } = useContext(openSidebarContext)
 
   return (
     <main onClick={() => setHideSidebar(true)} className={hideSidebar ? styles.main : `${styles.main} ${styles.blurry}`}>
-      <Introduction />
-      <AboutMe />
-      <Portfolio />
-      <Projects />
-      <Contact />
+      <RevealElement><Introduction /></RevealElement>
+      <RevealElement><AboutMe /></RevealElement>
+      <RevealElement><Portfolio /></RevealElement>
+      <RevealElement><Projects /></RevealElement>
+      <RevealElement><Contact /></RevealElement>
       <SocialMedia />
     </main>
   )
