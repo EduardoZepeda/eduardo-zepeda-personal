@@ -1,6 +1,8 @@
 import { useContext } from 'react'
 import styles from '@styles/Home.module.css'
 import { openSidebarContext } from '@lib/OpenSidebarContext'
+import CreditsCode from './CreditsCode'
+
 import Icons from './Icons'
 
 const Footer = (): JSX.Element => {
@@ -12,6 +14,7 @@ const Footer = (): JSX.Element => {
         <Icons />
       </div>
       <div>
+        <CreditsCode />
         <p><small><a href='https://github.com/EduardoZepeda/eduardo-zepeda-personal'>Coded with ♥ by Eduardo Zepeda.</a></small></p>
         <p><small>Design inspired by Brittany Chiang</small></p>
       </div>

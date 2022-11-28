@@ -363,12 +363,16 @@
 .unrevealed {
   opacity: 0;
   transform: translateY(-25px);
-  transition: var(--transition);
+  transition: var(--transition-reveal);
 }
 
 .revealed {
   opacity: 100;
-  transition: var(--transition);
+  transition: var(--transition-reveal);
+}
+
+.iconCentered {
+  vertical-align: middle;
 }
 
 @media (max-width: 768px) {
