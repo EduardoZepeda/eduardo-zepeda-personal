@@ -2,7 +2,14 @@ import React from 'react'
 import styles from '@styles/Home.module.css'
 import ProjectItem from './ProjectItem'
 
-const projectData = [
+interface Project {
+  title: string
+  description: string
+  stack: string
+  link: string
+}
+
+const projectData: Project[] = [
   {
     title: 'django-payments-mercadopago',
     description: 'Make your payments easier with this mercadopago payment gateway backend for django-payments. Available on PyPI.',

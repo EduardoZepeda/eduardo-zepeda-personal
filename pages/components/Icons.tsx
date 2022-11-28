@@ -3,10 +3,11 @@ import { faGithubAlt, faTwitter, faInstagram, faLinkedin } from '@fortawesome/fr
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { openSidebarContext } from '@lib/OpenSidebarContext'
 import styles from '@styles/Home.module.css'
+import { SizeProp } from '@fortawesome/fontawesome-svg-core'
 
 const Icons = (): JSX.Element => {
   const { socialMediaLinks, authorFirstName, authorLastName } = useContext(openSidebarContext)
-  const iconSize = 'lg'
+  const iconSize: SizeProp = 'lg'
 
   return (
     <>

@@ -2,10 +2,19 @@ import React, { useState } from 'react'
 import PortfolioItem from './PortfolioItem'
 import styles from '@styles/Home.module.css'
 
+interface PortfolioProject {
+  imgSrc: string,
+  title: string,
+  info: string,
+  websiteLink: string,
+  sourceCodeLink?: string,
+  stack: string
+}
+
 const Portfolio = (): JSX.Element => {
   const [visibleItems, setVisibleItems] = useState<number>(4)
 
-  const portfolioData = [
+  const portfolioData: PortfolioProject[] = [
     {
       imgSrc: '/portfolio/Enfok.jpg',
       title: 'Enfok shop',
