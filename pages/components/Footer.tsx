@@ -15,7 +15,7 @@ const Footer = (): JSX.Element => {
       </div>
       <div>
         <CreditsCode />
-        <p><small><a href='https://github.com/EduardoZepeda/eduardo-zepeda-personal'>Coded with ♥ by Eduardo Zepeda.</a></small></p>
+        <p><small>Coded with ♥ by Eduardo Zepeda.</small></p>
         <p><small>Design inspired by Brittany Chiang</small></p>
       </div>
     </footer>

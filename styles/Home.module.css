@@ -83,7 +83,7 @@
 
 .main {
   background-color: var(--main-color);
-  padding: 0 150px;
+  padding: 0 100px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -253,7 +253,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: var(--margin);
+  margin: var(--margin) 0;
 }
 
 .portfolioImageContainer {
@@ -369,10 +369,6 @@
 .revealed {
   opacity: 100;
   transition: var(--transition-reveal);
-}
-
-.iconCentered {
-  vertical-align: middle;
 }
 
 @media (max-width: 768px) {

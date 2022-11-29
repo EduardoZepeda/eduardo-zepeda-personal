@@ -19,18 +19,19 @@ const PortfolioImage = ({ imgSrc, websiteLink, title }: PortfolioImageProps): JS
           <source
             type='image/webp'
             sizes={`(max-width: 480px) 400px,
-                    (max-width: 800px) 768px,
+                    (max-width: 960px) 800px,
                     (max-width: 1200px) 1200px`}
-            srcSet={`${createSrcSet}-400w.webp 480w,
-                     ${createSrcSet}-800w.webp 768w,
-                     ${createSrcSet}-1200w.webp 1200w`} />
+            srcSet={`${createSrcSet}-400w.webp 400w,
+                     ${createSrcSet}-800w.webp 800w,
+                     ${createSrcSet}-1200w.webp 1200w`}
+          />
           <img
-            srcSet={`${createSrcSet}-1200w.jpg 1200w, 
-                     ${createSrcSet}-800w.jpg 768w,
-                     ${createSrcSet}-400w.jpg 480w`}
             sizes={`(max-width: 480px) 400px,
-                    (max-width: 1200px) 1200px,
-                    (max-width: 800px) 768px`}
+                      (max-width: 960px) 800px,
+                      (max-width: 1200px) 1200px`}
+            srcSet={`${createSrcSet}-400w.jpg 400w,
+                     ${createSrcSet}-800w.jpg 800w,
+                     ${createSrcSet}-1200w.jpg 1200w`}
             src={`${createSrcSet}.jpg`}
             loading='lazy'
             className={styles.portfolioImage}
