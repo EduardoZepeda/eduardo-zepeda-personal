@@ -10,7 +10,7 @@ const Contact = (): JSX.Element => {
     <section id='contact'>
       <div className={styles.contact}>
         <h2>Contact</h2>
-        <p>My inbox is open for you and I'm always listening to new offers. I'd be delighted to hear about you. Although sometimes it's impossible for me, I'll try to reply in a day or two.
+        <p>Let's keep in touch. My inbox is open for you and I'm always listening to new offers. I'd be delighted to hear about you.
         </p>
       </div>
       <a href={`mailto:${socialMediaLinks.email}`} aria-label='Email contact'>
