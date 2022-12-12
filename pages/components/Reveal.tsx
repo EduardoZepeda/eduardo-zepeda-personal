@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useRef, useEffect } from 'react'
 import styles from '@styles/Home.module.css'
 
 interface propsWithChildren {
@@ -20,7 +20,7 @@ const RevealElement = ({ children }: propsWithChildren) => {
             {
                 rootMargin: '0px 0px 0px 0px',
                 root: null,
-                threshold: 0.2
+                threshold: 0.1,
             }
         )
         observer.observe(visibleElementWrapper.current as HTMLDivElement)

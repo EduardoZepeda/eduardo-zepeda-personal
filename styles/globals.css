@@ -60,6 +60,13 @@ section {
   max-width: 64ch;
 }
 
+/* Code for Firefox */
+::-moz-selection,
+::selection {
+  color: var(--background);
+  background: var(--title);
+}
+
 @font-face {
   font-family: 'Raleway';
   src: local('Raleway-Medium'), url('/fonts/Raleway-Medium.woff2') format('woff2');
