@@ -3,11 +3,11 @@ import PortfolioItem from './PortfolioItem'
 import styles from '@styles/Home.module.css'
 
 interface PortfolioProject {
-  imgSrc: string,
-  title: string,
-  info: string,
-  websiteLink: string,
-  sourceCodeLink?: string,
+  imgSrc: string
+  title: string
+  info: string
+  websiteLink: string
+  sourceCodeLink?: string
   stack: string
 }
 
@@ -18,9 +18,9 @@ const Portfolio = (): JSX.Element => {
     {
       imgSrc: '/portfolio/Enfok.jpg',
       title: 'Enfok shop',
-      info: 'Ecommerce website for a +14k likes fanpage with tons of customers. Lots of features were added, for instance: Mercado pago integration, competition price crawling, facebook pixel events integration, receipt payment method, advanced dashboard functions and statistics, newsletter with customized affilate link system and much more.',
+      info: 'Ecommerce website for a +14k likes fanpage with tons of customers. Lots of features were added, for instance: Mercado pago integration, competition price crawling, Fb pixel events integration, receipt payment method, advanced dashboard functions and statistics, newsletter with customized affilate link system and much more.',
       websiteLink: 'https://enfokshop.com/es-mx/',
-      stack: 'Digital Ocean Droplet, Django, Postgres, React, Jquery, Bootstrap, Nginx, Gunicorn, Redis, Celery, Jenkins'
+      stack: 'Digital Ocean Droplet, Django, Postgres, React, Jquery, SCSS, Nginx, Gunicorn, Redis, Celery, Jenkins'
     },
     {
       imgSrc: '/portfolio/CoffeeBytes.jpg',
@@ -31,20 +31,20 @@ const Portfolio = (): JSX.Element => {
       stack: 'Digital Ocean Droplet, Hugo (Prev. React + Headless WP), Nginx, Jenkins'
     },
     {
-      imgSrc: '/portfolio/GoCoffeeApi.jpg',
-      title: 'Go Coffee shops API',
-      info: 'API backend written in Go from scratch and raw SQL. User management, JWT, coffee shops CRUD, following system, likes system, search by user\'s location, FTS, logging, rate limiting and tests. Docs generated with swaggo',
-      websiteLink: 'https://go-coffee-api.vercel.app/',
-      sourceCodeLink: 'https://github.com/EduardoZepeda/go-coffee-api',
-      stack: 'Vercel, Postgres, PostGIS, Go, Gorilla, React, MUI'
-    },
-    {
       imgSrc: '/portfolio/Tamper.jpg',
       title: 'Tamper',
       info: 'Geo location app that, given a location, finds the nearest speciality coffee shops in Guadalajara. Furthermore, a social network app for coffee lovers: accounts, asymmetrical following system, likes, feed, rating and reviews system.',
       websiteLink: 'https://django-gis-coffee.fly.dev/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/django-gis-coffee',
       stack: 'Fly.io, Django, Vanilla CSS & JS, Postgres, PostGIS, Leaflet'
+    },
+    {
+      imgSrc: '/portfolio/GoCoffeeApi.jpg',
+      title: 'Go Coffee shops API',
+      info: 'API backend written in Go from scratch and raw SQL. User accounts, JWT auth, coffee shops CRUD, following and likes system, search by user\'s location, FTS, logging, rate limiting and tests. Swaggo docs',
+      websiteLink: 'https://go-coffee-api.vercel.app/',
+      sourceCodeLink: 'https://github.com/EduardoZepeda/go-coffee-api',
+      stack: 'Vercel, Postgres, PostGIS, Go, Gorilla, React, MUI'
     },
     {
       imgSrc: '/portfolio/MineSweeper.jpg',

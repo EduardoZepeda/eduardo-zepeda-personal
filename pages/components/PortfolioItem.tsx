@@ -26,12 +26,12 @@ const PortfolioItem = ({ imgSrc, title, info, websiteLink, sourceCodeLink, stack
         <div className={styles.portfolioDescription}><p>{info}</p></div>
         <div className={styles.stack}>{stack}</div>
         <div className={styles.iconContainer}>
-          <span><a target='_blank' rel='noreferrer noopener' title={`Link to ${title}`} href={websiteLink} className={styles.icon} aria-label={`${Pluralize(title)} website`}><FontAwesomeIcon size={iconSize} icon={faLink} /></a></span>
+          <span><a target='_blank' rel='noreferrer noopener' title={`Link to ${title}`} href={websiteLink} className={styles.icon} aria-label={`${Pluralize(title)} website`}><FontAwesomeIcon size={iconSize} icon={faLink} /><span>{'  '}<strong>Link</strong></span></a></span>
           {sourceCodeLink !== undefined
             ? (
               <span>
                 <a href={sourceCodeLink} target='_blank' rel='noreferrer noopener' className={styles.icon} aria-label={`${Pluralize(title)} source code`}>
-                  <FontAwesomeIcon title={`${Pluralize(title)} source code`} size={iconSize} icon={faGithubAlt} />
+                  <FontAwesomeIcon title={`${Pluralize(title)} source code`} size={iconSize} icon={faGithubAlt} /><span>{'  '}<strong>Code</strong></span>
                 </a>
               </span>)
             : null}

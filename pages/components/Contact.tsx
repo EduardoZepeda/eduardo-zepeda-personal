@@ -3,18 +3,17 @@ import { openSidebarContext } from '@lib/OpenSidebarContext'
 
 import styles from '@styles/Home.module.css'
 
-
 function UnicodeDecodeB64(str: string): string {
-  return decodeURIComponent(window.atob(str));
+  return decodeURIComponent(window.atob(str))
 }
 
 const Contact = (): JSX.Element => {
-  const [decodedEmail, setDecodedEmail] = useState<string>("")
+  const [decodedEmail, setDecodedEmail] = useState<string>('')
   const { socialMediaLinks } = useContext(openSidebarContext)
 
   useEffect(() => {
     setDecodedEmail(UnicodeDecodeB64(socialMediaLinks.email))
-  }, [])
+  }, [socialMediaLinks.email])
 
   return (
     <section id='contact'>
@@ -26,7 +25,7 @@ const Contact = (): JSX.Element => {
       <a href={`mailto:${decodedEmail}`} aria-label='Email contact'>
         <button className={styles.btn}>Say hi to Eduardo</button>
       </a>
-    </section >
+    </section>
   )
 }
 

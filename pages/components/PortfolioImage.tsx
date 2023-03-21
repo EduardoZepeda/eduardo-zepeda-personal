@@ -35,7 +35,8 @@ const PortfolioImage = ({ imgSrc, websiteLink, title }: PortfolioImageProps): JS
             src={`${createSrcSet}.jpg`}
             loading='lazy'
             className={styles.portfolioImage}
-            alt={`Screenshot of ${title} website`} />
+            alt={`Screenshot of ${title} website`}
+          />
         </picture>
       </a>
     </div>
