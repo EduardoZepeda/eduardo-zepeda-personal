@@ -18,7 +18,7 @@ const Home: NextPage = () => {
   const [hideSidebar, setHideSidebar] = useState<boolean>(true)
   const socialMediaLinks = {
     github: 'https://github.com/eduardoZepeda',
-    instagram: 'https://www.instagram.com/coffeebytes.dev/',
+    instagram: 'https://www.instagram.com/eduardozepeda.dev/',
     linkedin: 'https://linkedin.com/in/eduardomzepeda',
     twitter: 'https://twitter.com/hello_wired',
     email: 'ZWR1YXJkb3plcGVkYUBjb2ZmZWVieXRlcy5kZXY='
@@ -39,7 +39,6 @@ const Home: NextPage = () => {
           <meta property='profile:last_name ' content={authorLastName} />
           <meta property='profile:username' content={username} />
           <meta property='profile:gender' content={gender} />
-
           <meta property='og:url' content={siteUrl} />
           <meta property='og:title' content={siteTitle} />
           <meta property='twitter:title' content={siteTitle} />
