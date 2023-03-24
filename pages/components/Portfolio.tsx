@@ -23,12 +23,12 @@ const Portfolio = (): JSX.Element => {
       stack: 'Digital Ocean Droplet, Django, Postgres, React, Jquery, SCSS, Nginx, Gunicorn, Redis, Celery, Jenkins'
     },
     {
-      imgSrc: '/portfolio/CoffeeBytes.jpg',
-      title: 'Coffee bytes',
-      info: 'My web development blog, +100 entries/tutorials and +200 subscribed developers and +500 followers on Ig. I write new posts for developers every week.',
-      websiteLink: 'https://coffeebytes.dev',
-      sourceCodeLink: 'https://github.com/EduardoZepeda/coffeebytes',
-      stack: 'Digital Ocean Droplet, Hugo (Prev. React + Headless WP), Nginx, Jenkins'
+      imgSrc: '/portfolio/Biodek.jpg',
+      title: 'Biodek',
+      info: 'Responsive landing page frontend with psychedelic neon colors and smooth animations.',
+      websiteLink: 'https://biodek-landing-page.vercel.app/',
+      sourceCodeLink: 'https://github.com/EduardoZepeda/biodek-landing-page/',
+      stack: 'Vercel, Nextjs, Typescript'
     },
     {
       imgSrc: '/portfolio/Tamper.jpg',
@@ -37,6 +37,14 @@ const Portfolio = (): JSX.Element => {
       websiteLink: 'https://django-gis-coffee.fly.dev/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/django-gis-coffee',
       stack: 'Fly.io, Django, Vanilla CSS & JS, Postgres, PostGIS, Leaflet'
+    },
+    {
+      imgSrc: '/portfolio/CoffeeBytes.jpg',
+      title: 'Coffee bytes',
+      info: 'My web development blog, +100 entries/tutorials and +200 subscribed developers and +500 followers on Ig. I write new posts for developers every week.',
+      websiteLink: 'https://coffeebytes.dev',
+      sourceCodeLink: 'https://github.com/EduardoZepeda/coffeebytes',
+      stack: 'Digital Ocean Droplet, Hugo (Prev. React + Headless WP), Nginx, Jenkins'
     },
     {
       imgSrc: '/portfolio/GoCoffeeApi.jpg',
