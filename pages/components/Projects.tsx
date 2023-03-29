@@ -11,6 +11,12 @@ interface Project {
 
 const projectData: Project[] = [
   {
+    title: 'go-web-crawler',
+    description: 'A concurrent web crawler written in go that looks for exposed .git and .env uris.',
+    stack: 'Go',
+    link: 'https://github.com/EduardoZepeda/go-web-crawler'
+  },
+  {
     title: 'django-payments-mercadopago',
     description: 'Make your payments easier with this mercadopago payment gateway backend for django-payments. Available on PyPI.',
     stack: 'Python, Django',
@@ -23,17 +29,11 @@ const projectData: Project[] = [
     link: 'https://github.com/EduardoZepeda/django-postalcodes-mexico'
   },
   {
-    title: 'go-web-crawler',
-    description: 'A concurrent web crawler written in go that looks for exposed .git and .env uris.',
-    stack: 'Go',
-    link: 'https://github.com/EduardoZepeda/go-web-crawler'
-  },
-  {
     title: 'hugo-theme-latte',
     description: 'Hugo theme for my programming blog. Responsive, dark and light theme, and excellent stats in Lighthouse',
     stack: 'Go, Hugo',
     link: 'https://github.com/EduardoZepeda/hugo-theme-latte'
-  },
+  }
 ]
 
 const Projects = (): JSX.Element => {
