@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from '@styles/Home.module.css'
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { SizeProp } from '@fortawesome/fontawesome-svg-core'

@@ -33,10 +33,10 @@ const Portfolio = (): JSX.Element => {
     {
       imgSrc: '/portfolio/Tamper.jpg',
       title: 'Tamper',
-      info: 'Geo location app that, given a location, finds the nearest speciality coffee shops in Guadalajara. Furthermore, a social network app for coffee lovers: accounts, asymmetrical following system, likes, feed, rating and reviews system.',
-      websiteLink: 'https://django-gis-coffee.fly.dev/',
+      info: 'Geo location app that, given a location, finds the nearest speciality coffee shops in Guadalajara. Furthermore, a social network app for coffee lovers: accounts, asymmetrical following system, likes, user\'s feed, rating and reviews system.',
+      websiteLink: 'https://django-gis-coffee.vercel.app/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/django-gis-coffee',
-      stack: 'Fly.io, Django, Vanilla CSS & JS, Postgres, PostGIS, Leaflet'
+      stack: 'Fly.io, DRF, Nextjs, React query, Vanilla CSS, Postgres, PostGIS, Leaflet'
     },
     {
       imgSrc: '/portfolio/CoffeeBytes.jpg',

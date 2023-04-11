@@ -3,7 +3,7 @@ import { openSidebarContext } from '@lib/OpenSidebarContext'
 
 import styles from '@styles/Home.module.css'
 
-function UnicodeDecodeB64(str: string): string {
+function UnicodeDecodeB64 (str: string): string {
   return decodeURIComponent(window.atob(str))
 }
 
