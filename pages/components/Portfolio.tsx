@@ -18,9 +18,17 @@ const Portfolio = (): JSX.Element => {
     {
       imgSrc: '/portfolio/Enfok.jpg',
       title: 'Enfok shop',
-      info: 'Ecommerce website for a +14k likes fanpage with tons of customers. Lots of features were added, for instance: Mercado pago integration, competition price crawling, Fb pixel events integration, receipt payment method, advanced dashboard functions and statistics, newsletter with customized affilate link system and much more.',
+      info: 'Ecommerce website for a +14k likes fanpage with tons of customers. Lots of extended features were added, for instance: Newsletter with affilate link system, competition price crawling, facebook group publishing bot, Mercado pago gateway and many advanced dashboard functions and statistics.',
       websiteLink: 'https://enfokshop.com/es-mx/',
       stack: 'Digital Ocean Droplet, Django, Postgres, React, Jquery, SCSS, Nginx, Gunicorn, Redis, Celery, Jenkins'
+    },
+    {
+      imgSrc: '/portfolio/Tamper.jpg',
+      title: 'Tamper',
+      info: 'Geo location app that, given a location, finds the nearest speciality coffee shops in Guadalajara. Furthermore, social network capabilities: real time chat, accounts, asymmetrical following system, likes, user\'s feed, rating and reviews system.',
+      websiteLink: 'https://django-gis-coffee.vercel.app/',
+      sourceCodeLink: 'https://github.com/EduardoZepeda/django-gis-coffee',
+      stack: 'Fly.io, DRF, Nextjs, Typescript, React query, Vanilla CSS, Postgres, PostGIS, Leaflet'
     },
     {
       imgSrc: '/portfolio/Biodek.jpg',
@@ -29,14 +37,6 @@ const Portfolio = (): JSX.Element => {
       websiteLink: 'https://biodek-landing-page.vercel.app/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/biodek-landing-page/',
       stack: 'Vercel, Nextjs, Typescript'
-    },
-    {
-      imgSrc: '/portfolio/Tamper.jpg',
-      title: 'Tamper',
-      info: 'Geo location app that, given a location, finds the nearest speciality coffee shops in Guadalajara. Furthermore, a social network app for coffee lovers: accounts, asymmetrical following system, likes, user\'s feed, rating and reviews system.',
-      websiteLink: 'https://django-gis-coffee.vercel.app/',
-      sourceCodeLink: 'https://github.com/EduardoZepeda/django-gis-coffee',
-      stack: 'Fly.io, DRF, Nextjs, React query, Vanilla CSS, Postgres, PostGIS, Leaflet'
     },
     {
       imgSrc: '/portfolio/CoffeeBytes.jpg',
