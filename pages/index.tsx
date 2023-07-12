@@ -13,8 +13,8 @@ const Home: NextPage = () => {
   const authorLastName = 'Zepeda'
   const username = 'EduardoZepeda'
   const gender = 'male'
-  const siteDescription = 'Eduardo Zepeda full stack developer web specialized in Python, Javascript, Typescript, Django, React, Nextjs, DRF and vast GNU linux experience'
-  const siteTitle = 'Eduardo Zepeda Fullstack Developer'
+  const siteDescription = 'Eduardo Zepeda web developer web, frontend and backend specialized in Go, Python, Javascript, Typescript, Django, React, Nextjs, DRF and vast GNU linux experience. Comfortable with HTML and CSS too'
+  const siteTitle = 'Eduardo Zepeda Web Developer'
   const [hideSidebar, setHideSidebar] = useState<boolean>(true)
   const socialMediaLinks = {
     github: 'https://github.com/eduardoZepeda',
