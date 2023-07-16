@@ -21,7 +21,7 @@ const Home: NextPage = () => {
     instagram: 'https://www.instagram.com/eduardozepeda.dev/',
     linkedin: 'https://linkedin.com/in/eduardomzepeda',
     twitter: 'https://twitter.com/hello_wired',
-    email: 'ZWR1YXJkb3plcGVkYUBjb2ZmZWVieXRlcy5kZXY='
+    email: 'aGVsbG9AZWR1YXJkb3plcGVkYS5kZXYK'
   }
 
   return (
