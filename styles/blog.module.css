@@ -1,0 +1,103 @@
+.container {
+    max-width: 64ch;
+    margin: var(--margin-3x) var(--margin);
+}
+
+.postsContainer {
+    margin: var(--margin-3x) 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--margin);
+    padding: 0 5rem;
+}
+
+.postItem {
+    width: 350px;
+}
+
+.container p {
+    font-size: 1.2rem;
+}
+
+.post {
+    margin: var(--margin-2x) 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container a {
+    color: var(--title);
+}
+
+.imageContainer {
+    position: relative;
+    height: 190px;
+}
+
+.postTitle {
+    font-size: 1.1rem;
+    margin: var(--margin) 0;
+}
+
+.postDate {
+    margin: var(--margin) 0;
+    font-size: 1.2rem;
+    color: var(--light-gray);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: var(--margin-2x);
+    margin: var(--margin-3x) 0;
+    text-align: center;
+    list-style-position: inside;
+    flex-wrap: wrap;
+}
+
+.paginationItem {}
+
+.paginationLink {
+    display: block;
+    padding: 0.6rem 2rem;
+    border-radius: 50px;
+}
+
+.paginationActive {
+    border: 2px solid var(--green);
+}
+
+.readingTime {
+    display: inline-block;
+    padding: var(--padding);
+    border: 2px solid var(--green);
+    border-radius: var(--border-sm);
+    margin: var(--margin) 0;
+}
+
+@media (min-width: 768px) {
+    .postItem {
+        width: 500px;
+    }
+
+    .imageContainer {
+        position: relative;
+        width: 450px;
+        height: 270px;
+    }
+
+    .container {
+        max-width: 64ch;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 370px;
+    }
+
+}

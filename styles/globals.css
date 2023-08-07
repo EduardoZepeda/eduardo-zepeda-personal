@@ -11,15 +11,29 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 
 p {
   line-height: 2em;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 ol,
 ul {
+  position: relative;
+  display: inline-block;
   list-style: none;
+  width: 100%;
+  margin: auto;
+  padding: 0;
+}
+
+li {
+  line-height: normal;
 }
 
 * {
@@ -31,6 +45,9 @@ h2 {
   margin: 0;
   font-size: 4rem;
   color: var(--title);
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 
@@ -72,4 +89,40 @@ section {
   src: local('Raleway-Medium'), url('/fonts/Raleway-Medium.woff2') format('woff2');
   font-display: fallback;
   font-style: normal;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  color: var(--background-dark);
+}
+
+table thead tr {
+  background-color: var(--green);
+  color: var(--white);
+  text-align: left;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  font-size: 0.9rem;
+}
+
+table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: var(--white);
+}
+
+table tbody tr:nth-of-type(odd) {
+  background-color: var(--white);
+}
+
+table tbody tr:last-of-type {
+  border-bottom: 2px solid var(--green);
 }
