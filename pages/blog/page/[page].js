@@ -91,7 +91,7 @@ function Blog ({ posts: { data, page, lastPage } }) {
                     <Image
                       loading='lazy'
                       alt={frontmatter.title}
-                      src={`/posts/${slug}/${frontmatter.coverImage}`}
+                      src={`blog/content/posts/${slug}/${frontmatter.coverImage}`}
                       fill
                       style={{ objectFit: 'contain' }}
                     />
