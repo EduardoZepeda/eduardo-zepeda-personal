@@ -100,4 +100,7 @@
         max-width: 370px;
     }
 
+    .postsContainer {
+        padding: 0;
+    }
 }
