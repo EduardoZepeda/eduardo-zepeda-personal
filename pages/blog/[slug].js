@@ -9,7 +9,7 @@ const md = require('markdown-it')()
 
 export async function getStaticPaths () {
   try {
-    const files = fs.readdirSync('public/posts')
+    const files = fs.readdirSync('public/blog/content/posts')
 
     const paths = files.map((directory) => ({
       params: {
@@ -33,7 +33,7 @@ export async function getStaticPaths () {
 
 export async function getStaticProps ({ params: { slug } }) {
   try {
-    const fileName = fs.readFileSync(`public/posts/${slug}/index.en.md`, 'utf-8')
+    const fileName = fs.readFileSync(`public/blog/content/posts/${slug}/index.en.md`, 'utf-8')
     const { data: frontmatter, content } = matter(fileName)
 
     return {

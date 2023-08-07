@@ -12,7 +12,7 @@ const ITEMS_PER_PAGE = 9
 export async function getStaticProps ({ params: { page } }) {
   const currentPage = parseInt(page)
   try {
-    const files = fs.readdirSync('public/posts')
+    const files = fs.readdirSync('public/blog/content/posts')
     const lastPage = Math.ceil(files.length / ITEMS_PER_PAGE)
     const firstPage = 1
     if (currentPage > lastPage || currentPage < firstPage) {
@@ -21,7 +21,7 @@ export async function getStaticProps ({ params: { page } }) {
       }
     }
     const rawPosts = files.map((directory) => {
-      const readFile = fs.readFileSync(`public/posts/${directory}/index.en.md`, 'utf-8')
+      const readFile = fs.readFileSync(`public/blog/content/posts/${directory}/index.en.md`, 'utf-8')
       const { data: frontmatter } = matter(readFile)
       return {
         params: {
@@ -56,7 +56,7 @@ export async function getStaticProps ({ params: { page } }) {
 
 export async function getStaticPaths () {
   try {
-    const files = fs.readdirSync('public/posts')
+    const files = fs.readdirSync('public/blog/content/posts')
     const lastPage = Math.ceil(files.length / ITEMS_PER_PAGE)
     const paths = [...Array(lastPage).keys()]
       .map(page => page + 1)
