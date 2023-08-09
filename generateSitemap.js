@@ -1,6 +1,17 @@
 const fs = require('fs')
 const matter = require('gray-matter')
 
+const slugify = (text) =>
+    text
+        .toString()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, '-')
+        .replace(/[^\w-]+/g, '')
+        .replace(/--+/g, '-')
+
 const date = new Date()
 
 async function generateSitemap () {
@@ -17,8 +28,13 @@ async function generateSitemap () {
     })
     // sort posts by date
     .sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
-    .filter(post => process.env.NODE_ENV === 'production' ? !post.frontmatter.draft : true)
-    rawPosts.forEach(({slug, frontmatter})=>content+=`<url><loc>https://eduardozepeda.dev/blog/${slug}/</loc><lastmod>${frontmatter.date}</lastmod></url>`)
+    .filter(post => !post.frontmatter.draft)
+    rawPosts.forEach(({slug, frontmatter})=>content+=`
+    <url>
+      <loc>https://eduardozepeda.dev/blog/${slugify(frontmatter?.title)}/</loc>
+      <lastmod>${frontmatter.date}</lastmod>
+    </url>
+    `)
   } catch (e) {
     console.error(e)
   }
