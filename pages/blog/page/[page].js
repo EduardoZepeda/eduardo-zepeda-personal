@@ -6,6 +6,7 @@ import styles from '@styles/blog.module.css'
 import Metadata from '@components/Post/Metadata'
 import Pagination from '@components/Pagination/Pagination'
 import generatePagination from '@utils/generatePagination'
+import slugify from '@utils/slugify'
 
 const ITEMS_PER_PAGE = 9
 
@@ -25,8 +26,9 @@ export async function getStaticProps ({ params: { page } }) {
       const { data: frontmatter } = matter(readFile)
       return {
         params: {
-          slug: directory,
-          frontmatter
+          slug: slugify(frontmatter?.title),
+          frontmatter,
+          directory
         }
       }
     })
@@ -83,7 +85,7 @@ function Blog ({ posts: { data, page, lastPage } }) {
         data
         // sort posts by date
 
-          .map(({ params: { slug, frontmatter } }) => {
+          .map(({ params: { slug, frontmatter, directory } }) => {
             return (
               <div key={slug} className={styles.postItem}>
                 <div className={styles.imageContainer}>
@@ -92,7 +94,7 @@ function Blog ({ posts: { data, page, lastPage } }) {
                       loading='lazy'
                       alt={frontmatter.title}
                       // absolute url since url depends on pagination
-                      src={`/blog/content/posts/${slug}/${frontmatter.coverImage}`}
+                      src={`/blog/content/posts/${directory}/${frontmatter.coverImage}`}
                       fill
                       style={{ objectFit: 'contain' }}
                     />

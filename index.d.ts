@@ -1,3 +1,7 @@
+interface generateRoutesProps {
+  route: string
+}
+
 interface MetadataProps {
   metadata: Metadata
 }

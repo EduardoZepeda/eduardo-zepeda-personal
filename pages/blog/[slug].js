@@ -3,6 +3,7 @@ import matter from 'gray-matter'
 // import md from 'markdown-it'
 import styles from '@styles/blog.module.css'
 import Metadata from '@components/Post/Metadata'
+import slugify from '@utils/slugify'
 
 const md = require('markdown-it')()
   .use(require('markdown-it-highlightjs'), { auto: true, inline: true })
@@ -10,30 +11,47 @@ const md = require('markdown-it')()
 export async function getStaticPaths () {
   try {
     const files = fs.readdirSync('public/blog/content/posts')
-
-    const paths = files.map((directory) => ({
-      params: {
-        slug: directory
-      }
-    }))
-
+    const paths = files.map((directory) => {
+        const readFile = fs.readFileSync(`public/blog/content/posts/${directory}/index.en.md`, 'utf-8')
+        const { data: frontmatter } = matter(readFile)
+        return {
+            params: {
+                // Pages' names are generated using the translated title from the frontmatter
+                slug: slugify(frontmatter?.title),
+            }
+        }
+    })
     return {
-      paths,
-      fallback: 'blocking'
+        paths,
+        fallback: 'blocking'
     }
-  } catch (error) {
+} catch (error) {
     console.error(error)
 
     return {
-      paths: [],
-      fallback: false
+        paths: [],
+        fallback: false
     }
-  }
-};
+}
+}
 
-export async function getStaticProps ({ params: { slug } }) {
+export async function getStaticProps ({ params:{ slug } }) {
+  // TODO Unfortunately this could be a bottleneck, but as today nextjs doesn't have a proper way to pass an extra parameter to
+  // getStaticProps other than the required parameter, and caching would add up an extra layer of complexity, for small blogs it's ok
   try {
-    const fileName = fs.readFileSync(`public/blog/content/posts/${slug}/index.en.md`, 'utf-8')
+    // Read all the  (for every file, here is the bottlenexk), find the one with the same slug as the one from the params
+    const files = fs.readdirSync('public/blog/content/posts')
+    const foundFile = files.map((directory) => {
+      const readFile = fs.readFileSync(`public/blog/content/posts/${directory}/index.en.md`, 'utf-8')
+      const { data: frontmatter } = matter(readFile)
+      return {
+          params: {
+              slug: slugify(frontmatter?.title),
+              directory,
+          }
+      }
+  }).find(post=>post.params.slug===slug)
+    const fileName = fs.readFileSync(`public/blog/content/posts/${foundFile.params.directory}/index.en.md`, 'utf-8')
     const { data: frontmatter, content } = matter(fileName)
 
     return {
