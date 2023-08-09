@@ -1,6 +1,6 @@
 .container {
     max-width: 64ch;
-    margin: var(--margin-3x) var(--margin);
+    margin: var(--margin-3x) 0;
 }
 
 .postsContainer {
@@ -50,7 +50,6 @@
 .pagination {
     display: flex;
     justify-content: center;
-    gap: var(--margin-2x);
     margin: var(--margin-3x) 0;
     text-align: center;
     list-style-position: inside;

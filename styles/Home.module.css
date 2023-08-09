@@ -90,6 +90,7 @@
   justify-content: center;
   align-items: center;
   transition: var(--transition);
+  padding: var(--padding);
 }
 
 .main .introductionHeader {
@@ -386,6 +387,10 @@
 
   .footer.blurry {
     filter: blur(4px);
+  }
+
+  .nav {
+    padding: 0 var(--padding);
   }
 
   .nav .menu {
