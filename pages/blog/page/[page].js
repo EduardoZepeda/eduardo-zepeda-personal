@@ -80,6 +80,7 @@ export async function getStaticPaths () {
 function Blog ({ posts: { data, page, lastPage } }) {
   return (
     <>
+      <h1>My articles</h1>
       <div className={styles.postsContainer}>
         {
         data

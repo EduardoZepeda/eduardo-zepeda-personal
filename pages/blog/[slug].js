@@ -4,6 +4,7 @@ import matter from 'gray-matter'
 import styles from '@styles/blog.module.css'
 import Metadata from '@components/Post/Metadata'
 import slugify from '@utils/slugify'
+import Head from 'next/head'
 
 const md = require('markdown-it')()
   .use(require('markdown-it-highlightjs'), { auto: true, inline: true })
@@ -71,11 +72,26 @@ export async function getStaticProps ({ params:{ slug } }) {
 function Post ({ frontmatter, content }) {
   frontmatter.numWords = Math.floor(content.split(' ').length)
   return (
-    <div className={styles.container}>
-      <h1>{frontmatter.title}</h1>
-      <Metadata metadata={frontmatter} />
-      <div dangerouslySetInnerHTML={{ __html: md.render(content) }} />
-    </div>
+    <>
+      <Head>
+        <title>Eduardo Zepeda | {frontmatter?.title}</title>
+        <link rel='icon' href='/favicon.ico' />
+        <meta property='og:locale' content='en_US' />
+        <meta name='description' content={frontmatter?.description?frontmatter?.description: content.slice(0,120) } />
+        <meta name='author' content={frontmatter?.authors? frontmatter?.authors.join(", "): "Anonymous"} />
+        <meta name='og:description' content={frontmatter?.description?frontmatter?.description: content.slice(0,120)} />
+        <meta property='og:type' content='blog' />
+        <meta property='og:url' content={`/blog/${slugify(frontmatter?.title)}`} />
+        <meta property='og:title' content={frontmatter?.title} />
+        <meta property='twitter:title' content={frontmatter?.title} />
+        <meta property='twitter:description' content={frontmatter?.description?frontmatter?.description: content.slice(0,120)} />
+      </Head>
+      <div className={styles.container}>
+        <h1>{frontmatter.title}</h1>
+        <Metadata metadata={frontmatter} />
+        <div dangerouslySetInnerHTML={{ __html: md.render(content) }} />
+      </div>
+    </>
   )
 };
 
