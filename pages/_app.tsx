@@ -10,8 +10,8 @@ import { useState } from 'react'
 
 import type { AppProps } from 'next/app'
 
-function MyApp ({ Component, pageProps }: AppProps): JSX.Element {
-  const [hideSidebar, setHideSidebar] = useState<boolean>(false)
+function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+  const [hideSidebar, setHideSidebar] = useState<boolean>(true)
   const authorFirstName = 'Eduardo'
   const authorLastName = 'Zepeda'
   const socialMediaLinks = {
