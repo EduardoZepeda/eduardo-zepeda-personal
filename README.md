@@ -1,6 +1,6 @@
 # Eduardo Zepeda's personal website
 
-My personal website written using nextjs. 
+My personal website written using nextjs, and it uses markdown for posts.
 
 See it working on my personal website [eduardozepeda.dev](https://eduardozepeda.dev/)
 
@@ -8,6 +8,7 @@ See it working on my personal website [eduardozepeda.dev](https://eduardozepeda.
 
 My personal website consists of:
 
+- A blog based on Hugo's layout
 - About me
 - Portfolio
 - Open Source Projects
