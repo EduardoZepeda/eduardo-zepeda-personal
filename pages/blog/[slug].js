@@ -9,6 +9,18 @@ import Head from 'next/head'
 const md = require('markdown-it')()
   .use(require('markdown-it-highlightjs'), { auto: true, inline: true })
 
+
+  // Add rules to markdown renderer
+  md.renderer.rules.image = function (tokens, idx, options, env, slf) {
+    const token = tokens[idx]
+    token.attrs[token.attrIndex('alt')][1] = slf.renderInlineAsText(token.children, options, env)
+    // make loading lazy the default behaviour
+    token.attrSet('loading', 'lazy')
+    // add custom class to images
+    token.attrSet('class', styles.postImage)
+    return slf.renderToken(tokens, idx, options)
+  }
+
 export async function getStaticPaths () {
   try {
     const files = fs.readdirSync('public/blog/content/posts')
@@ -58,7 +70,8 @@ export async function getStaticProps ({ params:{ slug } }) {
     return {
       props: {
         frontmatter,
-        content
+        content,
+        directory: foundFile.params.directory
       }
     }
   } catch (error) {
@@ -69,7 +82,7 @@ export async function getStaticProps ({ params:{ slug } }) {
   }
 };
 
-function Post ({ frontmatter, content }) {
+function Post ({ frontmatter, content, directory }) {
   frontmatter.numWords = Math.floor(content.split(' ').length)
   return (
     <>
@@ -89,7 +102,7 @@ function Post ({ frontmatter, content }) {
       <div className={styles.container}>
         <h1>{frontmatter.title}</h1>
         <Metadata metadata={frontmatter} />
-        <div dangerouslySetInnerHTML={{ __html: md.render(content) }} />
+        <div dangerouslySetInnerHTML={{ __html: md.render(content.replaceAll("(images/", `(/blog/content/posts/${directory}/images/`)) }} />
       </div>
     </>
   )

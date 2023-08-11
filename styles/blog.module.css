@@ -76,6 +76,10 @@
     margin: var(--margin) 0;
 }
 
+.postImage {
+    width: 100%;
+}
+
 @media (min-width: 768px) {
     .postItem {
         width: 500px;
