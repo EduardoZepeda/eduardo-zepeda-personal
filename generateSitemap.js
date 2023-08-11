@@ -46,7 +46,7 @@ async function generateSitemap () {
      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
       <url>
           <loc>https://eduardozepeda.dev/</loc>
-          <lastmod>${date}</lastmod>
+          <lastmod>${date.toISOString().split('T')[0]}</lastmod>
           <changefreq>monthly</changefreq>
           <priority>0.9</priority>
       </url>
