@@ -33,6 +33,8 @@ async function generateSitemap () {
     <url>
       <loc>https://eduardozepeda.dev/blog/${slugify(frontmatter?.title)}/</loc>
       <lastmod>${frontmatter.date}</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
     </url>
     `)
   } catch (e) {
@@ -45,6 +47,8 @@ async function generateSitemap () {
       <url>
           <loc>https://eduardozepeda.dev/</loc>
           <lastmod>${date}</lastmod>
+          <changefreq>monthly</changefreq>
+          <priority>0.9</priority>
       </url>
       ${content}
   </urlset>`
