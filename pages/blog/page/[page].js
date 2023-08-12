@@ -79,10 +79,11 @@ export async function getStaticPaths () {
 }
 
 function Blog ({ posts: { data, page, lastPage } }) {
+  const pageTitle = `Blog | page ${page.toString()}`
   return (
     <>
       <Head>
-        <title>{`Blog | page ${page.toString()}`}</title>
+        <title>{pageTitle}</title>
       </Head>
       <h1>Blog</h1>
       <div className={styles.postsContainer}>
