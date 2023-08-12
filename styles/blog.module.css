@@ -3,6 +3,14 @@
     margin: var(--margin-3x) 0;
 }
 
+.container ul li::before {
+    content: '- '
+}
+
+.container ul li {
+    margin-left: 5px;
+}
+
 .postsContainer {
     margin: var(--margin-3x) 0;
     width: 100%;

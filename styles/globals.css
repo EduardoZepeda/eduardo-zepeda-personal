@@ -126,3 +126,9 @@ table tbody tr:nth-of-type(odd) {
 table tbody tr:last-of-type {
   border-bottom: 2px solid var(--green);
 }
+
+blockquote {
+  background-color: var(--blue-gray);
+  padding: var(--padding) var(--padding-2x);
+  border-radius: var(--border-radius);
+}
