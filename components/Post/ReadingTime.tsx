@@ -3,9 +3,10 @@ import styles from '@styles/blog.module.css'
 
 const ReadingTime = ({ numWords }: ReadingTimeProps): JSX.Element => {
   const wordsPerMinute = 250
+  const minutes = Math.floor(numWords / wordsPerMinute)
   return (
     <div className={styles.readingTime}>
-      {Math.floor(numWords / wordsPerMinute)} minutes reading
+      {`${minutes} ${minutes > 1 ? 'minutes ' : 'minute '} reading`}
     </div>
   )
 }
