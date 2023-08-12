@@ -2,15 +2,15 @@ const fs = require('fs')
 const matter = require('gray-matter')
 
 const slugify = (text) =>
-    text
-        .toString()
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
-        .toLowerCase()
-        .trim()
-        .replace(/\s+/g, '-')
-        .replace(/[^\w-]+/g, '')
-        .replace(/--+/g, '-')
+  text
+    .toString()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w-]+/g, '')
+    .replace(/--+/g, '-')
 
 const date = new Date()
 
@@ -22,14 +22,14 @@ async function generateSitemap () {
       const readFile = fs.readFileSync(`public/blog/content/posts/${directory}/index.en.md`, 'utf-8')
       const { data: frontmatter } = matter(readFile)
       return {
-          slug: directory,
-          frontmatter
+        slug: directory,
+        frontmatter
       }
     })
     // sort posts by date
-    .sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
-    .filter(post => !post.frontmatter.draft)
-    rawPosts.forEach(({slug, frontmatter})=>content+=`
+      .sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
+      .filter(post => !post.frontmatter.draft)
+    rawPosts.forEach(({ slug, frontmatter }) => content += `
     <url>
       <loc>https://eduardozepeda.dev/blog/${slugify(frontmatter?.title)}/</loc>
       <lastmod>${frontmatter.date}</lastmod>
@@ -53,6 +53,5 @@ async function generateSitemap () {
       ${content}
   </urlset>`
   fs.writeFileSync('public/sitemap.xml', sitemap)
-
 }
 generateSitemap()
