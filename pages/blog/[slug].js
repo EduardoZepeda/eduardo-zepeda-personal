@@ -84,14 +84,16 @@ export async function getStaticProps ({ params:{ slug } }) {
 
 function Post ({ frontmatter, content, directory }) {
   frontmatter.numWords = Math.floor(content.split(' ').length)
+  const authors = frontmatter?.authors? frontmatter?.authors.join(", "): "Anonymous"
+
   return (
     <>
       <Head>
-        <title>Eduardo Zepeda | {frontmatter?.title}</title>
+        <title>{`${frontmatter?.title} | ${authors}`} </title>
         <link rel='icon' href='/favicon.ico' />
         <meta property='og:locale' content='en_US' />
         <meta name='description' content={frontmatter?.description?frontmatter?.description: content.slice(0,120) } />
-        <meta name='author' content={frontmatter?.authors? frontmatter?.authors.join(", "): "Anonymous"} />
+        <meta name='author' content={authors} />
         <meta name='og:description' content={frontmatter?.description?frontmatter?.description: content.slice(0,120)} />
         <meta property='og:type' content='blog' />
         <meta property='og:url' content={`/blog/${slugify(frontmatter?.title)}`} />

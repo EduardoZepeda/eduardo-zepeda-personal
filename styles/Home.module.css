@@ -380,6 +380,10 @@
   transition: var(--transition-reveal);
 }
 
+.mY {
+  margin: var(--margin-3x) 0;
+}
+
 @media (max-width: 768px) {
   .main.blurry {
     filter: blur(4px);

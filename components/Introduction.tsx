@@ -9,9 +9,11 @@ const Introduction = (): JSX.Element => {
         <p className={styles.introductionHeader}>Turning ideas and coffee into &lt;code&gt;</p>
         <h2 className={styles.introduction}>Python, JavaScript, TypeScript, Go, GNU/Linux</h2>
       </div>
-      <a href='#contact' aria-label='Email contact'>
-        <button className={styles.btn}>Contact Eduardo</button>
-      </a>
+      <div className={styles.mY}>
+        <a className={styles.btn} href='#contact' aria-label='Contact Eduardo'>
+          Contact Eduardo
+        </a>
+      </div>
     </section>
   )
 }

@@ -7,6 +7,7 @@ import Metadata from '@components/Post/Metadata'
 import Pagination from '@components/Pagination/Pagination'
 import generatePagination from '@utils/generatePagination'
 import slugify from '@utils/slugify'
+import Head from 'next/head'
 
 const ITEMS_PER_PAGE = 9
 
@@ -80,7 +81,10 @@ export async function getStaticPaths () {
 function Blog ({ posts: { data, page, lastPage } }) {
   return (
     <>
-      <h1>My articles</h1>
+      <Head>
+        <title>{`Blog | page ${page.toString()}`}</title>
+      </Head>
+      <h1>Blog</h1>
       <div className={styles.postsContainer}>
         {
         data

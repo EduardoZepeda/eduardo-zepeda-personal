@@ -3,7 +3,7 @@ import { openSidebarContext } from '@lib/OpenSidebarContext'
 
 import styles from '@styles/Home.module.css'
 
-function UnicodeDecodeB64 (str: string): string {
+function UnicodeDecodeB64(str: string): string {
   return decodeURIComponent(window.atob(str))
 }
 
@@ -22,9 +22,11 @@ const Contact = (): JSX.Element => {
         <p>Let's keep in touch. My inbox is open for you and I'm always listening to new offers. I'd be delighted to hear about you.
         </p>
       </div>
-      <a href={`mailto:${decodedEmail}`} aria-label='Email contact'>
-        <button className={styles.btn}>Say hi to Eduardo</button>
-      </a>
+      <div className={styles.mY}>
+        <a className={styles.btn} href={`mailto:${decodedEmail}`} aria-label='Say hi to Eduardo by email'>
+          Say hi to Eduardo
+        </a>
+      </div>
     </section>
   )
 }
