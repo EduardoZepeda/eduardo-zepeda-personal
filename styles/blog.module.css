@@ -11,6 +11,19 @@
     margin-left: 5px;
 }
 
+.categories {
+    margin: var(--margin-2x) 0;
+}
+
+.category {
+    font-family: monospace;
+    border-radius: var(--border-radius);
+    padding: 10px;
+    margin-right: var(--margin);
+    border: 1px solid var(--secondary-green);
+    color: var(--secondary-green);
+}
+
 .postsContainer {
     margin: var(--margin-3x) 0;
     width: 100%;
@@ -78,9 +91,6 @@
 
 .readingTime {
     display: inline-block;
-    padding: var(--padding);
-    border: 2px solid var(--green);
-    border-radius: var(--border-sm);
     margin: var(--margin) 0;
 }
 

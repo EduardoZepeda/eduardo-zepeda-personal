@@ -6,6 +6,10 @@ interface MetadataProps {
   metadata: Metadata
 }
 
+interface CategoriesProps {
+  categories: string[]
+}
+
 interface Metadata {
   date: string
   numWords: number

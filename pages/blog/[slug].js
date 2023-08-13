@@ -7,6 +7,8 @@ import Metadata from '@components/Post/Metadata'
 import slugify from '@utils/slugify'
 import Head from 'next/head'
 import mermaid from 'mermaid'
+import Categories from '@components/Post/Categories'
+import Link from 'next/link'
 
 const md = require('markdown-it')()
   .use(require('markdown-it-highlightjs'), { auto: true, inline: true })
@@ -29,7 +31,6 @@ md.renderer.rules.image = function (tokens, idx, options, env, slf) {
   <figcaption>${fc}</figcaption>
 </figure>`
 }
-
 
 export async function getStaticPaths () {
   try {
@@ -62,7 +63,7 @@ export async function getStaticProps ({ params: { slug } }) {
   // TODO Unfortunately this could be a bottleneck, but as today nextjs doesn't have a proper way to pass an extra parameter to
   // getStaticProps other than the required parameter, and caching would add up an extra layer of complexity, for small blogs it's ok
   try {
-    // Read all the  (for every file, here is the bottlenexk), find the one with the same slug as the one from the params
+    // Read all the  (for every file, here is the bottleneck), find the one with the same slug as the one from the params
     const files = fs.readdirSync('public/blog/content/posts')
     const foundFile = files.map((directory) => {
       const readFile = fs.readFileSync(`public/blog/content/posts/${directory}/index.en.md`, 'utf-8')
@@ -121,6 +122,8 @@ function Post ({ frontmatter, content, directory }) {
       <div className={styles.container}>
         <h1>{frontmatter.title}</h1>
         <Metadata metadata={frontmatter} />
+        <Categories categories={frontmatter.categories} />
+        {/* Replace default img route to the nextjs project */}
         <div dangerouslySetInnerHTML={{ __html: md.render(content.replaceAll('(images/', `(/blog/content/posts/${directory}/images/`)) }} />
       </div>
     </>
