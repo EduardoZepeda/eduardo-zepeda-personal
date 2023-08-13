@@ -9,28 +9,13 @@ import Head from 'next/head'
 import mermaid from 'mermaid'
 import Categories from '@components/Post/Categories'
 import Link from 'next/link'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
+// IMPORTANT use cjs instead of esm to prevent unexpected token error
+//
+import {vscDarkPlus} from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
-const md = require('markdown-it')()
-  .use(require('markdown-it-highlightjs'), { auto: true, inline: true })
-
-// Add rules to markdown renderer
-md.renderer.rules.image = function (tokens, idx, options, env, slf) {
-  const token = tokens[idx]
-  // Make lazy loading the default loading method for images
-  token.attrSet('loading', 'lazy')
-  token.attrSet('class', styles.postImage)
-  let fc
-  // If there is a title, use it as a figcaption
-  try{
-    fc = token.attrs[token.attrIndex('title')][1]
-  } catch(e) {
-    fc = ''
-  }
-  return `<figure>
-  ${slf.renderToken(tokens, idx, options)}
-  <figcaption>${fc}</figcaption>
-</figure>`
-}
 
 export async function getStaticPaths () {
   try {
@@ -124,7 +109,44 @@ function Post ({ frontmatter, content, directory }) {
         <Metadata metadata={frontmatter} />
         <Categories categories={frontmatter.categories} />
         {/* Replace default img route to the nextjs project */}
-        <div dangerouslySetInnerHTML={{ __html: md.render(content.replaceAll('(images/', `(/blog/content/posts/${directory}/images/`)) }} />
+        {/* <div dangerouslySetInnerHTML={{ __html: md.render(content.replaceAll('(images/', `(/blog/content/posts/${directory}/images/`)) }} /> */}
+        <ReactMarkdown components={{
+                a: ({ node, ...props }) => {
+                  let c
+                  try {
+                     c = props.children[0]
+                  } catch {
+                    return <></>
+                  }
+                  return (
+                    <Link href={props.href}>
+                        {c}
+                    </Link>
+                  );
+                },
+                img: ({ node, ...props }) => {
+                  return (
+                    <img className={styles.postImage} src={props.src.replace('images/', `/blog/content/posts/${directory}/images/`)} loading='lazy' alt={props.alt} title={props.title}/>
+                  )
+                },
+                code({node, inline, className, children, ...props}) {
+                  const match = /language-(?!mermaid)(\w+)/.exec(className || '')
+                  return !inline && match ? (
+                    <SyntaxHighlighter
+                      {...props}
+                      // eslint-disable-next-line
+                      children={String(children).replace(/\n$/, '')}
+                      style={vscDarkPlus}
+                      language={match[1]}
+                    />
+                  ) : (
+                    <code {...props} className={className}>
+                      {children}
+                    </code>
+                  )
+                }
+                // eslint-disable-next-line
+              }} children={content} remarkPlugins={[remarkGfm]} />
       </div>
     </>
   )
