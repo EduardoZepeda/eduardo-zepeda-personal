@@ -4,7 +4,7 @@
      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
       <url>
           <loc>https://eduardozepeda.dev/</loc>
-          <lastmod>2023-08-11</lastmod>
+          <lastmod>2023-08-15</lastmod>
           <changefreq>monthly</changefreq>
           <priority>0.9</priority>
       </url>
@@ -115,7 +115,7 @@
     </url>
     
     <url>
-      <loc>https://eduardozepeda.dev/blog/git-submodules-and-workflow/</loc>
+      <loc>https://eduardozepeda.dev/blog/git-submodules-and-its-workflow/</loc>
       <lastmod>2022-05-18</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
@@ -129,7 +129,7 @@
     </url>
     
     <url>
-      <loc>https://eduardozepeda.dev/blog/best-practices-and-design-of-a-rest-api/</loc>
+      <loc>https://eduardozepeda.dev/blog/rest-api-best-practices-and-design/</loc>
       <lastmod>2022-04-28</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
@@ -150,7 +150,7 @@
     </url>
     
     <url>
-      <loc>https://eduardozepeda.dev/blog/debounce-y-throttle-en-javascript/</loc>
+      <loc>https://eduardozepeda.dev/blog/debounce-and-throttle-in-javascript/</loc>
       <lastmod>2022-03-23</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
@@ -199,7 +199,7 @@
     </url>
     
     <url>
-      <loc>https://eduardozepeda.dev/blog/go-channels-understanding-the-deadlocks/</loc>
+      <loc>https://eduardozepeda.dev/blog/go-channels-understanding-the-goroutines-deadlocks/</loc>
       <lastmod>2022-01-26</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
@@ -234,7 +234,7 @@
     </url>
     
     <url>
-      <loc>https://eduardozepeda.dev/blog/go-cadenas-runas-y-bytes/</loc>
+      <loc>https://eduardozepeda.dev/blog/go-string-runes-and-bytes-explained/</loc>
       <lastmod>2021-12-28</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
@@ -248,7 +248,7 @@
     </url>
     
     <url>
-      <loc>https://eduardozepeda.dev/blog/go-slices-y-arrays/</loc>
+      <loc>https://eduardozepeda.dev/blog/go-slices-y-arrays-characteristicas-and-basic-uses/</loc>
       <lastmod>2021-12-14</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
@@ -290,7 +290,7 @@
     </url>
     
     <url>
-      <loc>https://eduardozepeda.dev/blog/python-vs-go-2023-which-is-the-best/</loc>
+      <loc>https://eduardozepeda.dev/blog/python-vs-go-which-is-the-best/</loc>
       <lastmod>2021-11-02</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
@@ -304,7 +304,7 @@
     </url>
     
     <url>
-      <loc>https://eduardozepeda.dev/blog/types-para-react-components-con-children/</loc>
+      <loc>https://eduardozepeda.dev/blog/types-for-react-components-with-children/</loc>
       <lastmod>2021-10-19</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
@@ -346,7 +346,7 @@
     </url>
     
     <url>
-      <loc>https://eduardozepeda.dev/blog/caching-in-django-rest-framework-with-memcached/</loc>
+      <loc>https://eduardozepeda.dev/blog/caching-in-django-rest-framework-using-memcached/</loc>
       <lastmod>2021-09-07</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
@@ -367,7 +367,7 @@
     </url>
     
     <url>
-      <loc>https://eduardozepeda.dev/blog/login-con-django-rest-framework-drf/</loc>
+      <loc>https://eduardozepeda.dev/blog/login-using-django-rest-framework-drf/</loc>
       <lastmod>2021-08-17</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
@@ -397,13 +397,6 @@
     <url>
       <loc>https://eduardozepeda.dev/blog/django-and-htmx-modern-web-apps-without-writing-js/</loc>
       <lastmod>2021-07-14</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-    </url>
-    
-    <url>
-      <loc>https://eduardozepeda.dev/blog/dont-use-jwt-to-manage-sessions-translation/</loc>
-      <lastmod>2021-06-22</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
     </url>
@@ -444,7 +437,7 @@
     </url>
     
     <url>
-      <loc>https://eduardozepeda.dev/blog/how-do-permissions-and-groups-work-in-django/</loc>
+      <loc>https://eduardozepeda.dev/blog/how-do-permissions-and-permissions-groups-work-in-django/</loc>
       <lastmod>2021-04-17</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
@@ -528,7 +521,7 @@
     </url>
     
     <url>
-      <loc>https://eduardozepeda.dev/blog/python-vs-javascript-2023-which-one-is-better/</loc>
+      <loc>https://eduardozepeda.dev/blog/python-vs-javascript-which-one-is-better/</loc>
       <lastmod>2020-12-10</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
@@ -675,7 +668,7 @@
     </url>
     
     <url>
-      <loc>https://eduardozepeda.dev/blog/review-of-django-for-professionals/</loc>
+      <loc>https://eduardozepeda.dev/blog/django-for-professionals-review/</loc>
       <lastmod>2020-04-15</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
@@ -864,7 +857,7 @@
     </url>
     
     <url>
-      <loc>https://eduardozepeda.dev/blog/hello-world-how-did-i-learn-to-program/</loc>
+      <loc>https://eduardozepeda.dev/blog/hello-world-how-did-i-learn-to-code/</loc>
       <lastmod>2019-03-31</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
