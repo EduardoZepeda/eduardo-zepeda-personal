@@ -72,6 +72,7 @@ export async function getStaticProps ({ params: { slug } }) {
         }
       }
     })
+    .filter(post => process.env.NODE_ENV === 'production' ? !post?.params?.frontmatter?.draft : true)
     .sort((a, b) => new Date(b.params.frontmatter.date) - new Date(a.params.frontmatter.date))
     const foundFileIndex = posts.findIndex(post => post.params.slug === slug)
     const foundFile = posts[foundFileIndex]

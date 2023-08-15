@@ -11,7 +11,7 @@ import Head from 'next/head'
 
 const ITEMS_PER_PAGE = 9
 
-export async function getStaticProps ({ params: { page } }) {
+export async function getStaticProps({ params: { page } }: PageProps) {
   const currentPage = parseInt(page)
   try {
     const files = fs.readdirSync('public/blog/content/posts')
@@ -33,8 +33,8 @@ export async function getStaticProps ({ params: { page } }) {
         }
       }
     })
-    // sort posts by date
-      .sort((a, b) => new Date(b.params.frontmatter.date) - new Date(a.params.frontmatter.date))
+      // sort posts by date
+      .sort((a, b) => new Date(b?.params?.frontmatter?.date).valueOf() - new Date(a?.params?.frontmatter?.date).valueOf())
       .filter(post => process.env.NODE_ENV === 'production' ? !post.params.frontmatter.draft : true)
 
     const firstItem = (currentPage - 1) * ITEMS_PER_PAGE
@@ -57,7 +57,7 @@ export async function getStaticProps ({ params: { page } }) {
   }
 }
 
-export async function getStaticPaths () {
+export async function getStaticPaths() {
   try {
     const files = fs.readdirSync('public/blog/content/posts')
     const lastPage = Math.ceil(files.length / ITEMS_PER_PAGE)
@@ -78,7 +78,7 @@ export async function getStaticPaths () {
   }
 }
 
-function Blog ({ posts: { data, page, lastPage } }) {
+function Blog({ posts: { data, page, lastPage } }: PostProps) {
   const pageTitle = `Blog | page ${page.toString()}`
   return (
     <>
@@ -88,30 +88,30 @@ function Blog ({ posts: { data, page, lastPage } }) {
       <h1>Blog</h1>
       <div className={styles.postsContainer}>
         {
-        data
-        // sort posts by date
+          data
+            // sort posts by date
 
-          .map(({ params: { slug, frontmatter, directory } }) => {
-            return (
-              <div key={slug} className={styles.postItem}>
-                <div className={styles.imageContainer}>
-                  <Link href={`/blog/${slug}`}>
-                    <Image
-                      loading='lazy'
-                      alt={frontmatter.title}
-                      // absolute url since url depends on pagination
-                      src={`/blog/content/posts/${directory}/${frontmatter.coverImage}`}
-                      fill
-                      style={{ objectFit: 'contain' }}
-                    />
-                  </Link>
+            .map(({ params: { slug, frontmatter, directory } }: PageFileParams) => {
+              return (
+                <div key={slug} className={styles.postItem}>
+                  <div className={styles.imageContainer}>
+                    <Link href={`/blog/${slug}`}>
+                      <Image
+                        loading='lazy'
+                        alt={frontmatter.title}
+                        // absolute url since url depends on pagination
+                        src={`/blog/content/posts/${directory}/${frontmatter.coverImage}`}
+                        fill
+                        style={{ objectFit: 'contain' }}
+                      />
+                    </Link>
+                  </div>
+                  <h2 className={styles.postTitle}>{frontmatter.title}</h2>
+                  <Metadata metadata={frontmatter} />
                 </div>
-                <h2 className={styles.postTitle}>{frontmatter.title}</h2>
-                <Metadata metadata={frontmatter} />
-              </div>
-            )
-          })
-      }
+              )
+            })
+        }
 
       </div>
       <Pagination currentPage={page} lastPage={lastPage} />
