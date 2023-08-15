@@ -6,7 +6,7 @@ const Metadata = ({ metadata: { date, numWords } }: MetadataProps): JSX.Element 
   return (
     <>
       <PostDate date={date} />
-      {!isNaN(numWords) && <ReadingTime numWords={numWords} />}
+      {numWords && !isNaN(numWords) && <ReadingTime numWords={numWords} />}
     </>
   )
 }

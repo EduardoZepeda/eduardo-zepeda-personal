@@ -2,6 +2,9 @@ import React from 'react'
 import styles from '@styles/blog.module.css'
 
 const ReadingTime = ({ numWords }: ReadingTimeProps): JSX.Element => {
+  if (numWords === undefined) {
+    return <></>
+  }
   const wordsPerMinute = 250
   const minutes = Math.floor(numWords / wordsPerMinute)
   return (

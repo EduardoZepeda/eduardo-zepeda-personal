@@ -3,24 +3,19 @@ interface generateRoutesProps {
 }
 
 interface MetadataProps {
-  metadata: Metadata
+  metadata: Frontmatter
 }
 
 interface CategoriesProps {
   categories: string[]
 }
 
-interface Metadata {
-  date: string
-  numWords: number
-}
-
 interface PostDateProps {
-  date: string
+  date: Date
 }
 
 interface ReadingTimeProps {
-  numWords: number
+  numWords: number | undefined
 }
 
 interface PaginationProps {
@@ -40,3 +35,41 @@ interface NextAndPreviousProps {
   previous: string
   next: string
 }
+
+interface PageProps {
+  params: pageParams
+}
+
+interface PageParams {
+  page: string
+}
+
+interface Frontmatter {
+  title: string;
+  date: Date;
+  categories?: string[];
+  coverImage?: string;
+  coverImageCredits?: string;
+  description?: string;
+  keywords?: string[];
+  authors?: string[];
+  numWords?: number;
+}
+
+interface PageFileParams {
+  params: {
+    frontmatter: Frontmatter,
+    slug: string,
+    directory: string,
+  }
+}
+
+interface PostProps {
+  posts: PaginationWithData
+
+}
+
+interface PaginationWithData extends Pagination {
+  data: PageFileParams[]
+}
+
