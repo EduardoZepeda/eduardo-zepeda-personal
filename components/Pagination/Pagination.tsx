@@ -2,7 +2,7 @@ import React from 'react'
 import styles from '@styles/blog.module.css'
 import Link from 'next/link'
 
-function numberInRange (num: number, low: number, high: number): boolean {
+function numberInRange(num: number, low: number, high: number): boolean {
   if (num > low && num < high) {
     return true
   }

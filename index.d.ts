@@ -35,3 +35,8 @@ interface Pagination {
   lastPage: number
   firstPage: number
 }
+
+interface NextAndPreviousProps {
+  previous: string
+  next: string
+}
