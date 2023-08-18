@@ -13,6 +13,9 @@
 
 .categories {
     margin: var(--margin-2x) 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--margin);
 }
 
 .category {
