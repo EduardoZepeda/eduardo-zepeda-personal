@@ -7,32 +7,16 @@ import slugify from '@utils/slugify'
 import Head from 'next/head'
 import mermaid from 'mermaid'
 import Categories from '@components/Post/Categories'
-import Link from 'next/link'
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
 import NextAndPrevious from '@components/NextAndPrevious'
-import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
-// IMPORTANT use cjs instead of esm to prevent unexpected token error
-//
-import {vscDarkPlus} from 'react-syntax-highlighter/dist/cjs/styles/prism'
-
+import MarkdownCodeHiglight from '@components/MarkdownCodeHiglight'
+import getPosts from '@utils/getPosts'
+import getSimilarPosts from '@utils/getSimilarPosts'
+import SimilarPosts from '@components/Post/SimilarPosts'
 
 export async function getStaticPaths () {
   try {
-    const files = fs.readdirSync('public/blog/content/posts')
-    const paths = files.map((directory) => {
-      const readFile = fs.readFileSync(`public/blog/content/posts/${directory}/index.en.md`, 'utf-8')
-      const { data: frontmatter } = matter(readFile)
-      return {
-        params: {
-          // Pages' names are generated using the translated title from the frontmatter
-          slug: slugify(frontmatter?.title),
-          frontmatter
-        }
-      }
-    })    
-    .filter(post => process.env.NODE_ENV === 'production' ? !post?.params?.frontmatter?.draft : true)
-    .map(post=>{
+    const posts = getPosts()
+    const paths = posts.map(post=>{
       return {
         params: {
           // Pages' names are generated using the translated title from the frontmatter
@@ -56,31 +40,17 @@ export async function getStaticPaths () {
 }
 
 export async function getStaticProps ({ params: { slug } }) {
-  // TODO Unfortunately this could be a bottleneck, but as today nextjs doesn't have a proper way to pass an extra parameter to
-  // getStaticProps other than the required parameter, and caching would add up an extra layer of complexity, for small blogs it's ok
   try {
-    // Read all the  (for every file, here is the bottleneck), find the one with the same slug as the one from the params
-    const files = fs.readdirSync('public/blog/content/posts')
-    const posts = files.map((directory) => {
-      const readFile = fs.readFileSync(`public/blog/content/posts/${directory}/index.en.md`, 'utf-8')
-      const { data: frontmatter } = matter(readFile)
-      return {
-        params: {
-          slug: slugify(frontmatter?.title),
-          directory,
-          frontmatter
-        }
-      }
-    })
-    .filter(post => process.env.NODE_ENV === 'production' ? !post?.params?.frontmatter?.draft : true)
-    .sort((a, b) => new Date(b.params.frontmatter.date) - new Date(a.params.frontmatter.date))
+    const posts = getPosts()
     const foundFileIndex = posts.findIndex(post => post.params.slug === slug)
     const foundFile = posts[foundFileIndex]
     const fileName = fs.readFileSync(`public/blog/content/posts/${foundFile.params.directory}/index.en.md`, 'utf-8')
     const { data: frontmatter, content } = matter(fileName)
+    const similarPosts = getSimilarPosts(frontmatter, content.slice(0,120)).slice(1,7)
 
     return {
       props: {
+        similarPosts,
         frontmatter,
         content,
         directory: foundFile.params.directory,
@@ -96,7 +66,7 @@ export async function getStaticProps ({ params: { slug } }) {
   }
 }
 
-function Post ({ frontmatter, content, directory, nextPost, previousPost }) {
+function Post ({ frontmatter, content, directory, nextPost, previousPost, similarPosts }) {
   useEffect(()=>{
     mermaid.initialize({ startOnLoad: false, theme: 'dark' });
     mermaid.run({
@@ -122,50 +92,16 @@ function Post ({ frontmatter, content, directory, nextPost, previousPost }) {
         <meta property='twitter:title' content={frontmatter?.title} />
         <meta property='twitter:description' content={frontmatter?.description ? frontmatter?.description : content.slice(0, 120)} />
       </Head>
-      <div className={styles.container}>
+      <article className={styles.container}>
         <h1>{frontmatter.title}</h1>
         <Metadata metadata={frontmatter} />
         <Categories categories={frontmatter.categories} />
-        <ReactMarkdown components={{
-                a: ({ node, ...props }) => {
-                  let c
-                  try {
-                     c = props.children[0]
-                  } catch {
-                    return <></>
-                  }
-                  return (
-                    <Link href={props.href}>
-                        {c}
-                    </Link>
-                  );
-                },
-                img: ({ node, ...props }) => {
-                  return (
-                    <img className={styles.postImage} src={props.src.replace('images/', `/blog/content/posts/${directory}/images/`)} loading='lazy' alt={props.alt} title={props.title}/>
-                  )
-                },
-                code({node, inline, className, children, ...props}) {
-                  // Exclude mermaid codeblocks from code parsing
-                  const match = /language-(?!mermaid)(\w+)/.exec(className || '')
-                  return !inline && match ? (
-                    <SyntaxHighlighter
-                      {...props}
-                      // eslint-disable-next-line
-                      children={String(children).replace(/\n$/, '')}
-                      style={vscDarkPlus}
-                      language={match[1]}
-                    />
-                  ) : (
-                    <code {...props} className={className}>
-                      {children}
-                    </code>
-                  )
-                }
-                // eslint-disable-next-line
-              }} children={content} remarkPlugins={[remarkGfm]} />
-              <NextAndPrevious previous={previousPost} next={nextPost}/>
-      </div>
+        <MarkdownCodeHiglight content={content} directory={directory}/>
+        <NextAndPrevious previous={previousPost} next={nextPost}/>
+      </article>
+      <section className={styles.container}>
+        <SimilarPosts posts={similarPosts}/>
+      </section>
     </>
   )
 };

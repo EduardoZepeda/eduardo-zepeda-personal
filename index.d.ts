@@ -73,3 +73,21 @@ interface PaginationWithData extends Pagination {
   data: PageFileParams[]
 }
 
+interface CodeHighlightProps {
+  content: string
+  directory: string
+}
+
+interface SimilarPost {
+  similarity: number
+  title: string
+  slug: string
+  description: string
+  image: string
+  directory: string
+}
+
+interface SimilarPostProps {
+  posts: SimilarPost[]
+  content: string
+}

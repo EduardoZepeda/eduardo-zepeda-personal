@@ -98,6 +98,8 @@
     max-width: 100%;
 }
 
+
+
 .nextAndPrevious {
     margin: var(--margin-3x) 0;
     display: flex;
@@ -116,6 +118,23 @@
 
 .previousButton {
     border-radius: 0 20px 20px 0;
+}
+
+.relatedSummary {
+    font-size: 0.95rem;
+    color: var(--main-text);
+}
+
+.relatedPost {
+    display: flex;
+    align-items: center;
+    gap: var(--margin-3x);
+    margin: var(--margin-2x) 0;
+}
+
+.relatedImg {
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 @media (min-width: 768px) {
@@ -143,5 +162,9 @@
 
     .postsContainer {
         padding: 0;
+    }
+
+    .relatedSummary {
+        display: none;
     }
 }
