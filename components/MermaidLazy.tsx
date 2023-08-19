@@ -27,7 +27,7 @@ const MermaidLazy = ({ className, children, ...props }: React.HTMLProps<HTMLElem
 
     return (
         // Prevent mermaid overflow that creates a shift in layout 
-        <code {...props} ref={ref} className={className} style={{ display: 'flex', overflow: 'scroll' }}>
+        <code {...props} ref={ref} className={className} style={{ display: 'flex', overflow: 'auto' }}>
             {children}
         </code>
     )
