@@ -1,6 +1,5 @@
 import '@styles/main.css'
 import '@styles/globals.css'
-import '@styles/monokai.css'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import Layout from '@components/Layout'
 import { openSidebarContext } from '@lib/OpenSidebarContext'
