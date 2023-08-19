@@ -1,11 +1,9 @@
-import { useEffect } from 'react'
 import fs from 'fs'
 import matter from 'gray-matter'
 import styles from '@styles/blog.module.css'
 import Metadata from '@components/Post/Metadata'
 import slugify from '@utils/slugify'
 import Head from 'next/head'
-import mermaid from 'mermaid'
 import Categories from '@components/Post/Categories'
 import NextAndPrevious from '@components/NextAndPrevious'
 import MarkdownCodeHiglight from '@components/MarkdownCodeHiglight'
@@ -67,13 +65,6 @@ export async function getStaticProps ({ params: { slug } }) {
 }
 
 function Post ({ frontmatter, content, directory, nextPost, previousPost, similarPosts }) {
-  useEffect(()=>{
-    mermaid.initialize({ startOnLoad: false, theme: 'dark' });
-    mermaid.run({
-      querySelector: '.language-mermaid',
-  })
-  })
-
   frontmatter.numWords = Math.floor(content.split(' ').length)
   const authors = frontmatter?.authors ? frontmatter?.authors.join(', ') : 'Anonymous'
   const postTitle = `${frontmatter?.title} | ${authors}`

@@ -5,6 +5,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 // IMPORTANT use cjs instead of esm to prevent unexpected token error
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 import remarkGfm from 'remark-gfm'
+import MermaidLazy from '@components/MermaidLazy'
 
 const MarkdownCodeHiglight = ({ content, directory }: CodeHighlightProps): JSX.Element => {
 
@@ -40,9 +41,9 @@ const MarkdownCodeHiglight = ({ content, directory }: CodeHighlightProps): JSX.E
                         language={match[1]}
                     />
                 ) : (
-                    <code {...props} className={className}>
+                    <MermaidLazy {...props} className={className}>
                         {children}
-                    </code>
+                    </MermaidLazy>
                 )
             }
             // eslint-disable-next-line
