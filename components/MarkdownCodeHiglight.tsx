@@ -1,7 +1,7 @@
 import ReactMarkdown from 'react-markdown'
 import Link from 'next/link'
 import styles from '@styles/blog.module.css'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 // IMPORTANT use cjs instead of esm to prevent unexpected token error
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 import remarkGfm from 'remark-gfm'

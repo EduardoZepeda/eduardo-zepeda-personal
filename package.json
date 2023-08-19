@@ -6,6 +6,7 @@
     "dev": "next dev",
     "sitemap": "node generateSitemap.js",
     "build": "next build",
+    "build:analyze": "ANALYZE=true npm run build",
     "start": "next start",
     "export": "next export",
     "ts-lint": "ts-standard --fix"
