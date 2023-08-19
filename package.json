@@ -16,15 +16,11 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.1.19",
     "eslint-config-next": "^13.4.13",
-    "gray-matter": "^4.0.3",
     "mermaid": "^10.3.0",
     "next": "^13.4.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-intersection-observer": "^9.5.2",
-    "react-markdown": "^8.0.7",
-    "react-syntax-highlighter": "^15.5.0",
-    "remark-gfm": "^3.0.1"
+    "react-intersection-observer": "^9.5.2"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^13.4.16",
@@ -34,6 +30,10 @@
     "@types/react-syntax-highlighter": "^15.5.7",
     "cross-env": "^7.0.3",
     "eslint-import-resolver-node": "^0.3.9",
+    "gray-matter": "^4.0.3",
+    "react-markdown": "^8.0.7",
+    "react-syntax-highlighter": "^15.5.0",
+    "remark-gfm": "^3.0.1",
     "string-similarity-js": "^2.1.4",
     "ts-standard": "^11.0.0",
     "typescript": "4.6.3"
