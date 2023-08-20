@@ -6,7 +6,6 @@ import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 import remarkGfm from 'remark-gfm'
 import MermaidLazy from '@components/MermaidLazy'
-import Image from 'next/image'
 
 const MarkdownCodeHiglight = ({ content, directory }: CodeHighlightProps): JSX.Element => {
 
@@ -27,11 +26,12 @@ const MarkdownCodeHiglight = ({ content, directory }: CodeHighlightProps): JSX.E
             },
             img: ({ node, ...props }) => {
                 return (
-                    props?.src ? <Image className={styles.postImage}
+                    props?.src ? <img className={styles.postImage}
                         src={props?.src?.replace('images/', `/blog/content/posts/${directory}/images/`)}
                         loading='lazy'
-                        alt={props?.alt || ''}
-                        title={props.title} /> : null
+                        alt={props?.title || ''}
+                        aria-label={props?.title}
+                        title={props?.title} /> : null
                 )
             },
             code({ node, inline, className, children, ...props }) {
