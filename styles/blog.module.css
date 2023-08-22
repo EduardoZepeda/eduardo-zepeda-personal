@@ -42,6 +42,7 @@
     margin: var(--margin) 0;
     display: flex;
     flex-direction: column;
+    gap: var(--margin);
 }
 
 .postItem {
@@ -73,8 +74,6 @@
 }
 
 .postDate {
-    margin: var(--margin) 0;
-    font-size: 1.2rem;
     color: var(--light-gray);
 }
 
@@ -99,17 +98,14 @@
     border: 2px solid var(--green);
 }
 
-.readingTime,
-.authors {
-    display: inline-block;
-    margin: var(--margin) 0;
+.authorAndDate {
+    display: flex;
+    gap: 0.5rem;
 }
 
 .postImage {
     max-width: 100%;
 }
-
-
 
 .nextAndPrevious {
     margin: var(--margin-3x) 0;

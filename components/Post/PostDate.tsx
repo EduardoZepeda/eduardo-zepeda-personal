@@ -7,7 +7,7 @@ const PostDate = ({ date }: PostDateProps): JSX.Element => {
   const formatedDate = pub.toLocaleDateString('en-US', options)
   return (
     <div className={styles.postDate}>
-      <small>{formatedDate}</small>
+      {formatedDate}
     </div>
   )
 }
