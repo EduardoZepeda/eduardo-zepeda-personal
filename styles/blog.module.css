@@ -1,4 +1,5 @@
-.container {
+.container,
+.relatedContent {
     max-width: 64ch;
     margin: var(--margin-3x) 0;
 }
@@ -35,6 +36,12 @@
     justify-content: center;
     gap: var(--margin);
     padding: 0 5rem;
+}
+
+.metadataContainer {
+    margin: var(--margin) 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .postItem {
@@ -92,7 +99,8 @@
     border: 2px solid var(--green);
 }
 
-.readingTime {
+.readingTime,
+.authors {
     display: inline-block;
     margin: var(--margin) 0;
 }

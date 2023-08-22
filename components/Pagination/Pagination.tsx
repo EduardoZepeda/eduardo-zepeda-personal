@@ -14,11 +14,11 @@ const Pagination = ({ currentPage, lastPage }: PaginationProps): JSX.Element => 
   const paths = [...Array(lastPage).keys()].map(page => page + 1).filter(page => (page === 1 || page === lastPage || numberInRange(page, currentPage - 3, currentPage + 3)))
 
   return (
-    <div>
+    <section>
       <ol className={styles.pagination}>
         {paths.map((page, index) => <li key={`${page}-${index}`} className={styles.paginationItem}><Link className={`${styles.paginationLink} ${currentPage === page ? styles.paginationActive : ''}`} href={`/blog/page/${page}`}>{page}</Link></li>)}
       </ol>
-    </div>
+    </section>
   )
 }
 

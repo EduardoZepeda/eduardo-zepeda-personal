@@ -6,9 +6,9 @@ import Image from 'next/image'
 const SimilarPosts = ({ posts }: SimilarPostProps): JSX.Element => {
     const id = useId()
     return (
-        <div className={styles.relatedContent}>
+        <section className={styles.relatedContent}>
             <h2>Related content</h2>
-            <ol>
+            <ul>
                 {posts.map((post, index) => <li className={styles.relatedPost} key={`${id}-${index}`}>
                     <div>
                         <Link href={`/blog/${post.slug}`} aria-label={`${post.title} related content`}>
@@ -22,8 +22,8 @@ const SimilarPosts = ({ posts }: SimilarPostProps): JSX.Element => {
                         </Link>
                     </div>
                 </li>)}
-            </ol>
-        </div>
+            </ul>
+        </section>
     )
 }
 export default SimilarPosts

@@ -90,7 +90,7 @@ function Post ({ frontmatter, content, directory, nextPost, previousPost, simila
         <MarkdownCodeHiglight content={content} directory={directory}/>
         <NextAndPrevious previous={previousPost} next={nextPost}/>
       </article>
-      <section className={styles.container}>
+      <section className={styles.relatedContent}>
         <SimilarPosts posts={similarPosts}/>
       </section>
     </>

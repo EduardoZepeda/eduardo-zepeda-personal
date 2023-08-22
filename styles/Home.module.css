@@ -384,6 +384,12 @@
   margin: var(--margin-3x) 0;
 }
 
+.credits {
+  display: flex;
+  flex-direction: column;
+  gap: var(--margin-2x);
+}
+
 @media (max-width: 768px) {
   .main.blurry {
     filter: blur(4px);

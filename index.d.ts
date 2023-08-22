@@ -91,3 +91,7 @@ interface SimilarPostProps {
   posts: SimilarPost[]
   content: string
 }
+
+interface AuthorsProps {
+  authors: string[] | undefined
+}

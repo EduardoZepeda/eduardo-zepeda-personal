@@ -6,6 +6,15 @@ const nextConfig = {
     unoptimized: true
   },
   trailingSlash: true,
+  redirects() {
+    return [
+      {
+        source: '/EduardoZepeda/',
+        destination: '/',
+        permanent: true,
+      },
+    ]
+    },
   webpack (config) {
     config.resolve.fallback = {
       ...config.resolve.fallback, // if you miss it, all the other options in fallback, specified
