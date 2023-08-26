@@ -9,6 +9,7 @@ const Metadata = ({ metadata: { date, numWords, authors } }: MetadataProps): JSX
     <div className={styles.metadataContainer}>
       <div className={styles.authorAndDate}>
         <Authors authors={authors} />
+        {`•`}
         <PostDate date={date} />
       </div>
       {numWords && !isNaN(numWords) && <ReadingTime numWords={numWords} />}
