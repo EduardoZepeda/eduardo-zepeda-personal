@@ -6,7 +6,7 @@ const Authors = ({ authors }: AuthorsProps): JSX.Element => {
     const id = useId()
     return (
         <div className={styles.authors}>
-            By {authors && authors.map((author, index) => <Link key={`${id}-${index}`} href={`/authors/${author.replaceAll(' ', '')}`}>{author}</Link>)}
+            By {authors && authors.map((author, index) => <Link rel='author' key={`${id}-${index}`} href={`/authors/${author.replaceAll(' ', '')}`}>{author}</Link>)}
         </div>
     )
 }
