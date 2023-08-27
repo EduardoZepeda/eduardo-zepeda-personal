@@ -8,11 +8,12 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 import remarkGfm from 'remark-gfm'
 import MermaidLazy from '@components/MermaidLazy'
 import FsLightbox from "fslightbox-react"
-
+import generateImageUrl from "@utils/generateImageUrl"
+import generateImageGallery from "@utils/generateImageGallery"
 const MarkdownCodeHiglight = ({ content, directory }: CodeHighlightProps): JSX.Element => {
     const [toggler, setToggler] = useState<boolean>(false)
-    const regexp = /!\[.*?\]\(((.+?\.(?:png|jpg|gif|webp))[^)]*)\)/g
-    const imageGallery = [...content.matchAll(regexp)].map(image => image[2]).map(imgSrc => imgSrc.replace('images/', `/blog/content/posts/${directory}/images/`))
+    const imageGallery = generateImageGallery(content, directory)
+
     return (
         <>
             <ReactMarkdown components={{
@@ -32,7 +33,7 @@ const MarkdownCodeHiglight = ({ content, directory }: CodeHighlightProps): JSX.E
                 img: ({ node, ...props }) => {
                     return (
                         props?.src ? <img onClick={() => setToggler(!toggler)} className={styles.postImage}
-                            src={props?.src?.replace('images/', `/blog/content/posts/${directory}/images/`)}
+                            src={generateImageUrl(props.src, directory)}
                             loading='lazy'
                             alt={props?.title || ''}
                             aria-label={props?.title}
