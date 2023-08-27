@@ -16,7 +16,7 @@ const Footer = (): JSX.Element => {
       <section className={styles.credits}>
         <CreditsCode />
         <div><small>Coded with ♥ by Eduardo Zepeda.</small></div>
-        <div><small>Design insdivired by Brittany Chiang</small></div>
+        <div><small>Design inspired by Brittany Chiang</small></div>
       </section>
     </footer>
   )
