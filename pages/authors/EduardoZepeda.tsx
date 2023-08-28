@@ -1,17 +1,18 @@
-import { useEffect } from "react"
-import { useRouter } from "next/router"
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 
-function EduardoZepeda() {
-    // Simple plain page that redirects to main page from author links
-    const router = useRouter()
+function EduardoZepeda (): JSX.Element {
+  // Simple plain page that redirects to main page from author links
+  const router = useRouter()
 
-    useEffect(() => {
-        router.replace("/")
-        return
+  useEffect(() => {
+    const redirectToHome = async (): Promise<void> => {
+      await router.replace('/')
+    }
+    void redirectToHome()
+  }, [])
 
-    }, [])
-
-    return <></>
+  return <></>
 }
 
 export default EduardoZepeda

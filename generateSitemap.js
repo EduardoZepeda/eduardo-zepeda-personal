@@ -29,14 +29,16 @@ async function generateSitemap () {
     // sort posts by date
       .sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
       .filter(post => !post.frontmatter.draft)
-    rawPosts.forEach(({ slug, frontmatter }) => content += `
+    rawPosts.forEach(({ slug, frontmatter }) => {
+      content += `
     <url>
       <loc>https://eduardozepeda.dev/blog/${slugify(frontmatter?.title)}/</loc>
       <lastmod>${frontmatter.date}</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
     </url>
-    `)
+    `
+    })
   } catch (e) {
     console.error(e)
   }

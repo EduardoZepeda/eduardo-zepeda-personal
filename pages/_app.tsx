@@ -4,12 +4,12 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 import Layout from '@components/Layout'
 import { openSidebarContext } from '@lib/OpenSidebarContext'
 import { useState } from 'react'
-import 'prismjs/themes/prism.css';
+import 'prismjs/themes/prism.css'
 // PurgeCSS in create-next-app eliminates fontawesome css, hence an implicit import is required
 
 import type { AppProps } from 'next/app'
 
-function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+function MyApp ({ Component, pageProps }: AppProps): JSX.Element {
   const [hideSidebar, setHideSidebar] = useState<boolean>(true)
   const authorFirstName = 'Eduardo'
   const authorLastName = 'Zepeda'

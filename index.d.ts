@@ -3,7 +3,7 @@ interface generateRoutesProps {
 }
 
 interface MetadataProps {
-  metadata: Frontmatter
+  metadata: frontmatter
 }
 
 interface CategoriesProps {
@@ -31,37 +31,31 @@ interface Pagination {
   firstPage: number
 }
 
+interface Post extends Pagination {
+  data: PageFileParams[]
+}
+
+interface PageFileParams {
+  params: PostData
+}
+
 interface NextAndPreviousProps {
   previous: string
   next: string
-}
-
-interface PageProps {
-  params: pageParams
 }
 
 interface PageParams {
   page: string
 }
 
-interface Frontmatter {
-  title: string;
-  date: Date;
-  categories?: string[];
-  coverImage?: string;
-  coverImageCredits?: string;
-  description?: string;
-  keywords?: string[];
-  authors?: string[];
-  numWords?: number;
+interface PageProps {
+  params: pageParams
 }
 
-interface PageFileParams {
-  params: {
-    frontmatter: Frontmatter,
-    slug: string,
-    directory: string,
-  }
+interface PostData {
+  frontmatter: frontmatter
+  slug: string
+  directory: string
 }
 
 interface PostProps {
@@ -94,4 +88,8 @@ interface SimilarPostProps {
 
 interface AuthorsProps {
   authors: string[] | undefined
+}
+
+interface Frontmatter {
+  [key: string]: any
 }

@@ -8,20 +8,28 @@ import Pagination from '@components/Pagination/Pagination'
 import generatePagination from '@utils/generatePagination'
 import slugify from '@utils/slugify'
 import Head from 'next/head'
+import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
+import { ParsedUrlQuery } from 'querystring'
+import { NextPage } from 'next'
 
 const ITEMS_PER_PAGE = 9
+const MAIN_DIRECTORY = 'public/blog/content/posts'
 
-export async function getStaticProps({ params: { page } }: PageProps) {
+interface PageGetStaticProps {
+  posts?: Post
+}
+
+interface PaginationPathParams extends ParsedUrlQuery {
+  page: string
+}
+
+export const getStaticProps: GetStaticProps<PageGetStaticProps, PaginationPathParams> = async (context) => {
+  const page = context.params?.page
+  if (page === undefined) return { notFound: true }
   const currentPage = parseInt(page)
   try {
-    const files = fs.readdirSync('public/blog/content/posts')
+    const files = fs.readdirSync(MAIN_DIRECTORY)
     const lastPage = Math.ceil(files.length / ITEMS_PER_PAGE)
-    const firstPage = 1
-    if (currentPage > lastPage || currentPage < firstPage) {
-      return {
-        notFound: true
-      }
-    }
     const rawPosts = files.map((directory) => {
       const readFile = fs.readFileSync(`public/blog/content/posts/${directory}/index.en.md`, 'utf-8')
       const { data: frontmatter } = matter(readFile)
@@ -35,7 +43,7 @@ export async function getStaticProps({ params: { page } }: PageProps) {
     })
       // sort posts by date
       .sort((a, b) => new Date(b?.params?.frontmatter?.date).valueOf() - new Date(a?.params?.frontmatter?.date).valueOf())
-      .filter(post => process.env.NODE_ENV === 'production' ? !post.params.frontmatter.draft : true)
+      .filter(post => process.env.NODE_ENV === 'production' ? !post?.params?.frontmatter?.draft : true)
 
     const firstItem = (currentPage - 1) * ITEMS_PER_PAGE
     // If the calculated last item is greater than the maximum number of items, return the last item instead
@@ -50,16 +58,13 @@ export async function getStaticProps({ params: { page } }: PageProps) {
     }
   } catch (error) {
     console.error(error)
-
-    return {
-      props: {}
-    }
+    return { notFound: true }
   }
 }
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths<PaginationPathParams> = async () => {
   try {
-    const files = fs.readdirSync('public/blog/content/posts')
+    const files = fs.readdirSync(MAIN_DIRECTORY)
     const lastPage = Math.ceil(files.length / ITEMS_PER_PAGE)
     const paths = [...Array(lastPage).keys()]
       .map(page => page + 1)
@@ -78,7 +83,11 @@ export async function getStaticPaths() {
   }
 }
 
-function Blog({ posts: { data, page, lastPage } }: PostProps) {
+function Blog(props: InferGetStaticPropsType<typeof getStaticProps>) {
+  if (props.posts === undefined) {
+    return null
+  }
+  const { page, data, lastPage } = props?.posts
   const pageTitle = `Blog | page ${page.toString()}`
   return (
     <>
@@ -90,7 +99,6 @@ function Blog({ posts: { data, page, lastPage } }: PostProps) {
         {
           data
             // sort posts by date
-
             .map(({ params: { slug, frontmatter, directory } }: PageFileParams) => {
               return (
                 <div key={slug} className={styles.postItem}>
@@ -98,25 +106,24 @@ function Blog({ posts: { data, page, lastPage } }: PostProps) {
                     <Link href={`/blog/${slug}`}>
                       <Image
                         loading='lazy'
-                        alt={frontmatter.title}
+                        alt={frontmatter?.title}
                         // absolute url since url depends on pagination
-                        src={`/blog/content/posts/${directory}/${frontmatter.coverImage}`}
+                        src={`/blog/content/posts/${directory}/${frontmatter?.coverImage ?? ''}`}
                         fill
                         style={{ objectFit: 'contain' }}
                       />
                     </Link>
                   </div>
-                  <h2 className={styles.postTitle}>{frontmatter.title}</h2>
+                  <h2 className={styles.postTitle}>{frontmatter?.title}</h2>
                   <Metadata metadata={frontmatter} />
                 </div>
               )
             })
         }
-
       </div>
       <Pagination currentPage={page} lastPage={lastPage} />
     </>
   )
-};
+}
 
 export default Blog

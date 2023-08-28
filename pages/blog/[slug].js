@@ -14,11 +14,11 @@ import SimilarPosts from '@components/Post/SimilarPosts'
 export async function getStaticPaths () {
   try {
     const posts = getPosts()
-    const paths = posts.map(post=>{
+    const paths = posts.map(post => {
       return {
         params: {
           // Pages' names are generated using the translated title from the frontmatter
-          slug: post?.params?.slug,
+          slug: post?.params?.slug
         }
       }
     })
@@ -44,7 +44,7 @@ export async function getStaticProps ({ params: { slug } }) {
     const foundFile = posts[foundFileIndex]
     const fileName = fs.readFileSync(`public/blog/content/posts/${foundFile.params.directory}/index.en.md`, 'utf-8')
     const { data: frontmatter, content } = matter(fileName)
-    const similarPosts = getSimilarPosts(frontmatter, content.slice(0,120)).slice(1,7)
+    const similarPosts = getSimilarPosts(frontmatter, content.slice(0, 120)).slice(1, 7)
 
     return {
       props: {
@@ -52,12 +52,12 @@ export async function getStaticProps ({ params: { slug } }) {
         frontmatter,
         content,
         directory: foundFile.params.directory,
-        nextPost: foundFileIndex<posts.length-1 ? slugify("/"+posts[foundFileIndex+1].params.frontmatter.title):null,
-        previousPost: foundFileIndex>0 ? slugify("/"+posts[foundFileIndex-1].params.frontmatter.title): null
+        nextPost: foundFileIndex < posts.length - 1 ? slugify('/' + posts[foundFileIndex + 1].params.frontmatter.title) : null,
+        previousPost: foundFileIndex > 0 ? slugify('/' + posts[foundFileIndex - 1].params.frontmatter.title) : null
       }
     }
   } catch (error) {
-      console.error(error)
+    console.error(error)
     return {
       notFound: true
     }
@@ -87,11 +87,11 @@ function Post ({ frontmatter, content, directory, nextPost, previousPost, simila
         <h1>{frontmatter.title}</h1>
         <Metadata metadata={frontmatter} />
         <Categories categories={frontmatter.categories} />
-        <MarkdownCodeHiglight content={content} directory={directory}/>
-        <NextAndPrevious previous={previousPost} next={nextPost}/>
+        <MarkdownCodeHiglight content={content} directory={directory} />
+        <NextAndPrevious previous={previousPost} next={nextPost} />
       </article>
       <section className={styles.relatedContent}>
-        <SimilarPosts posts={similarPosts}/>
+        <SimilarPosts posts={similarPosts} />
       </section>
     </>
   )

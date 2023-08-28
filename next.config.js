@@ -6,15 +6,15 @@ const nextConfig = {
     unoptimized: true
   },
   trailingSlash: true,
-  redirects() {
+  redirects () {
     return [
       {
         source: '/EduardoZepeda/',
         destination: '/',
-        permanent: true,
-      },
+        permanent: true
+      }
     ]
-    },
+  },
   webpack (config) {
     config.resolve.fallback = {
       ...config.resolve.fallback, // if you miss it, all the other options in fallback, specified
@@ -27,7 +27,7 @@ const nextConfig = {
 }
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
+  enabled: process.env.ANALYZE === 'true'
 })
 
 module.exports = withBundleAnalyzer(nextConfig)
