@@ -68,8 +68,14 @@ interface PaginationWithData extends Pagination {
 }
 
 interface CodeHighlightProps {
+  post: boolean
   content: string
   directory: string
+}
+
+interface BlogPageProps {
+  frontmatter: Frontmatter
+  content: string
 }
 
 interface SimilarPost {
