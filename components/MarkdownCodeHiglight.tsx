@@ -54,22 +54,20 @@ const MarkdownCodeHiglight = ({ content, directory, post }: CodeHighlightProps):
           },
           code({ node, inline, className, children, ...props }) {
             // Exclude mermaid codeblocks from code parsing
-            const match = /language-(?!mermaid)(\w+)/.exec(className ?? '')
-            return inline !== undefined && (match != null)
-              ? (
-                <SyntaxHighlighter
-                  {...props}
-                  // eslint-disable-next-line
-                  children={String(children).replace(/\n$/, '')}
-                  style={vscDarkPlus}
-                  language={match[1]}
-                />
-              )
-              : (
-                <MermaidLazy {...props} className={className}>
-                  {children}
-                </MermaidLazy>
-              )
+            const match = /language-(?!mermaid)(\w+)/.exec(className || '')
+            return !inline && match ? (
+              <SyntaxHighlighter
+                {...props}
+                // eslint-disable-next-line
+                children={String(children).replace(/\n$/, '')}
+                style={vscDarkPlus}
+                language={match[1]}
+              />
+            ) : (
+              <MermaidLazy {...props} className={className}>
+                {children}
+              </MermaidLazy>
+            )
           }
           // eslint-disable-next-line
         }} children={content} remarkPlugins={[remarkGfm, remarkUnwrapImages]} />
