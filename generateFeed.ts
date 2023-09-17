@@ -38,7 +38,7 @@ async function generateFeed() {
     <channel>
       <title>${siteData["title"]}</title>
       <link>${siteData["siteUrl"]}</link>
-      <description>${siteData["siteDescription"]}</description>
+      <description>${siteData["siteDescription"] !== undefined ? siteData["siteDescription"] : ''}</description>
       ${content}
     </channel>
     
