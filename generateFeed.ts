@@ -40,7 +40,12 @@ async function generateFeed() {
       <title>${siteData["title"]}</title>
       <link>${siteData["siteUrl"]}</link>
       <description>${siteData["siteDescription"] !== undefined ? siteData["siteDescription"] : ''}</description>
-      <atom:link href="${siteData["siteUrl"]}/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom10:link
+        xmlns:atom10="http://www.w3.org/2005/Atom"
+        rel="self"
+        type="application/rss+xml"
+        href="${siteData["siteUrl"]}/feed.xml"
+      />
       <language>${siteData["language"]}</language>
       ${content}
     </channel>
