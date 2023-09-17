@@ -1,20 +1,10 @@
-const fs = require('fs')
-const matter = require('gray-matter')
+import fs from 'fs'
+import matter from 'gray-matter'
+import slugify from '@utils/slugify'
+import { siteData } from 'siteData'
 
-const slugify = (text) =>
-  text
-    .toString()
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/g, '-')
-    .replace(/[^\w-]+/g, '')
-    .replace(/--+/g, '-')
-
-const date = new Date()
-
-async function generateSitemap () {
+async function generateSitemap() {
+  const date = new Date()
   let content = ''
   try {
     const files = fs.readdirSync('public/blog/content/posts')
@@ -26,13 +16,13 @@ async function generateSitemap () {
         frontmatter
       }
     })
-    // sort posts by date
-      .sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
+      // sort posts by date
+      .sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
       .filter(post => !post.frontmatter.draft)
     rawPosts.forEach(({ slug, frontmatter }) => {
       content += `
     <url>
-      <loc>https://eduardozepeda.dev/blog/${slugify(frontmatter?.title)}/</loc>
+      <loc>${siteData["siteMapPrefix"]}${slugify(frontmatter?.title)}/</loc>
       <lastmod>${frontmatter.date}</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
@@ -47,7 +37,7 @@ async function generateSitemap () {
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
       <url>
-          <loc>https://eduardozepeda.dev/</loc>
+          <loc>${siteData["siteUrl"]}</loc>
           <lastmod>${date.toISOString().split('T')[0]}</lastmod>
           <changefreq>monthly</changefreq>
           <priority>0.9</priority>
@@ -56,4 +46,5 @@ async function generateSitemap () {
   </urlset>`
   fs.writeFileSync('public/sitemap.xml', sitemap)
 }
-generateSitemap()
+
+export default generateSitemap

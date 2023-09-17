@@ -1,33 +1,39 @@
 import type { NextPage } from 'next'
 import Main from '@components/Main'
 import Head from 'next/head'
+import generateSitemap from 'generateSitemap'
+import generateFeed from 'generateFeed'
+import { siteData } from 'siteData'
+
+export const getStaticProps = async () => {
+  await generateSitemap()
+  await generateFeed()
+
+  return {
+    props: {}
+  }
+}
 
 const Home: NextPage = () => {
-  const siteUrl = 'https://eduardozepeda.dev'
-  const authorFirstName = 'Eduardo'
-  const authorLastName = 'Zepeda'
-  const username = 'EduardoZepeda'
-  const gender = 'male'
-  const siteDescription = 'Eduardo Zepeda web developer web, frontend and backend specialized in Go, Python, Javascript, Typescript, Django, React, Nextjs, DRF and vast GNU linux experience. Comfortable with HTML and CSS too'
-  const siteTitle = 'Eduardo Zepeda Web Developer'
+
   return (
     <>
       <Head>
-        <title>Eduardo Zepeda</title>
+        <title>{siteData["title"]}</title>
         <link rel='icon' href='/favicon.ico' />
         <meta property='og:locale' content='en_US' />
-        <meta name='description' content={siteDescription} />
-        <meta name='author' content={authorFirstName + ' ' + authorLastName} />
-        <meta name='og:description' content={siteDescription} />
+        <meta name='description' content={siteData["siteDescription"]} />
+        <meta name='author' content={siteData["authorFirstName"] + ' ' + siteData["authorLastName"]} />
+        <meta name='og:description' content={siteData["siteDescription"]} />
         <meta property='og:type' content='profile' />
-        <meta property='profile:first_name' content={authorFirstName} />
-        <meta property='profile:last_name ' content={authorLastName} />
-        <meta property='profile:username' content={username} />
-        <meta property='profile:gender' content={gender} />
-        <meta property='og:url' content={siteUrl} />
-        <meta property='og:title' content={siteTitle} />
-        <meta property='twitter:title' content={siteTitle} />
-        <meta property='twitter:description' content={siteDescription} />
+        <meta property='profile:first_name' content={siteData["authorFirstName"]} />
+        <meta property='profile:last_name ' content={siteData["authorLastName"]} />
+        <meta property='profile:username' content={siteData["username"]} />
+        <meta property='profile:gender' content={siteData["gender"]} />
+        <meta property='og:url' content={siteData["siteUrl"]} />
+        <meta property='og:title' content={siteData["siteTitle"]} />
+        <meta property='twitter:title' content={siteData["siteTitle"]} />
+        <meta property='twitter:description' content={siteData["siteDescription"]} />
       </Head>
       <Main />
     </>
