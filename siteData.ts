@@ -19,4 +19,5 @@ export const siteData = {
     copyright: `All rights reserved ${date.getFullYear()}, Eduardo Zepeda`,
     updated: date,
     generator: "",
+    language: 'en-us',
 }

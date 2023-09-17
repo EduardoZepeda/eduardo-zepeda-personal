@@ -26,6 +26,7 @@ async function generateFeed() {
         <title>${frontmatter?.title}</title>
         <link>${siteData["rssPrefix"]}${slugify(frontmatter?.title)}/</link>
         <description>${frontmatter?.description}</description>
+        <guid>${siteData["rssPrefix"]}${slugify(frontmatter?.title)}/</guid>
     </item>
     `
         })
@@ -39,6 +40,8 @@ async function generateFeed() {
       <title>${siteData["title"]}</title>
       <link>${siteData["siteUrl"]}</link>
       <description>${siteData["siteDescription"] !== undefined ? siteData["siteDescription"] : ''}</description>
+      <atom:link href="${siteData["siteUrl"]}/feed.xml" rel="self" type="application/rss+xml"/>
+      <language>${siteData["language"]}</language>
       ${content}
     </channel>
     
