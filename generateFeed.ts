@@ -27,6 +27,7 @@ async function generateFeed() {
         <link>${siteData["rssPrefix"]}${slugify(frontmatter?.title)}/</link>
         <description>${frontmatter?.description}</description>
         <guid>${siteData["rssPrefix"]}${slugify(frontmatter?.title)}/</guid>
+        <pubDate>${frontmatter.date}</pubDate>
     </item>
     `
         })
