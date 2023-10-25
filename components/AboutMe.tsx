@@ -7,11 +7,11 @@ const AboutMe = (): JSX.Element => {
     <section id='about'>
       <h2>About me</h2>
       <div className={styles.aboutMe}>
-        <p>Web developer with experience in ecommerce sites. I'll be solving your web apps' necessities with awesome, mature and stable technologies such as Django, DRF, React, NextJS, Bootstrap, TailwindCSS, Go, Hugo and others.
+        <p>I value <strong>mature and well tested</strong> technologies over brand new frameworks: Django, DRF, React, NextJS, Bootstrap, Go, Hugo.
         </p>
-        <p>Experienced GNU/Linux user and have been using GNU/Linux environments for more than a decade, whether it be for personal or commercial projects.</p>
-        <p>I'm a big fan of Digital Ocean and Azure, Microsoft <a href='https://www.credly.com/badges/17608a52-2cb7-4268-a907-613459559911/public_url' rel='noreferrer noopener' target='_blank' aria-label='Coffee bytes website'>AZ-900 certified.</a></p>
-        <p>Author at <a href='https://coffeebytes.dev' rel='noreferrer noopener' target='_blank' aria-label='Coffee bytes website'>Coffee bytes, </a>+100 entries about web developing, +500 devs subscribed. Read the entries in english the <Link href='/blog/page/1'>blog section.</Link></p>
+        <p>I've been using GNU/Linux for <strong>more than 10 years.</strong></p>
+        <p>I'm a big fan of Digital Ocean and Azure, Microsoft <a href='https://www.credly.com/badges/17608a52-2cb7-4268-a907-613459559911/public_url' rel='noreferrer noopener' target='_blank' aria-label='AZ-900 certification link'>AZ-900 certified.</a></p>
+        <p>Author at <a href='https://coffeebytes.dev' rel='noreferrer noopener' target='_blank' aria-label='Coffee bytes website'>Coffee bytes, </a>+100 entries about web developing, +500 devs subscribed.<Link href='/blog/page/1'> Read english version here.</Link></p>
       </div>
     </section>
   )
