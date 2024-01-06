@@ -35,3 +35,6 @@ yarn-error.log*
 *.tsbuildinfo
 public/sitemap.xml
 public/feed.xml
+
+#lunr index
+public/index.json
