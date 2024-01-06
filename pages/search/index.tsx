@@ -3,21 +3,6 @@ import lunr from 'lunr'
 import Link from 'next/link'
 import styles from '@styles/Home.module.css'
 
-interface Entry {
-    id: number
-    slug: string
-    title: string
-    description?: string
-    categories: string[]
-}
-
-interface CustomResult extends lunr.Index.Result{
-  title: string
-  slug: string
-  description: string | undefined
-}
-
-
 const Search = (): JSX.Element => {
   const [query, setQuery] = useState<string>('')
   const [index, setIndex] = useState<Entry[]>([])
@@ -60,11 +45,11 @@ const Search = (): JSX.Element => {
     <input className={styles.searchInput} onChange={handleChange} value={query} type="text"
                 placeholder="I wanna read about..."/> 
       <ul>
-        {results.map((result,index)=><li className={styles.searchResultItem} key={index}>
-          <Link className={styles.searchLink} href={`/blog/${result.ref}`}>{result.title}</Link>
+        {results.length>0 ? results.map((result,index)=><li className={styles.searchResultItem} key={index}>
+          <Link className={styles.searchLink} href={`/blog/${result.slug}`}>{result.title}</Link>
           <small></small>
           <p>{result.description}</p>
-          </li>)}
+          </li>): query.length<3? null:<p>I don't think I have an article about that.</p>}
       </ul>
 </div> 
   )

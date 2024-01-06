@@ -99,3 +99,17 @@ interface AuthorsProps {
 interface Frontmatter {
   [key: string]: any
 }
+
+interface Entry {
+  id: number
+  slug: string
+  title: string
+  description?: string
+  categories: string[]
+}
+
+interface CustomResult extends lunr.Index.Result{
+title: string
+slug: string
+description: string | undefined
+}
