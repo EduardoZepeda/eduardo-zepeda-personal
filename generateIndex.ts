@@ -17,18 +17,20 @@ async function generateIndex() {
             // sort posts by date
             .sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
             .filter(post => !post.frontmatter.draft)
+            .reverse()
         const index = rawPosts.map(({ slug, frontmatter }, index) => {
             return (
     {
         "date": frontmatter?.date,
-        "id": rawPosts.length-index,
+        "id": index,
         "slug": slugify(frontmatter?.title),
         "title": frontmatter?.title,
         "description": frontmatter?.description || '',
-        "categories": frontmatter?.categories
+        "categories": frontmatter?.categories,
+        "fake": true
     })
         })
-        fs.writeFileSync('public/index.json', JSON.stringify(index))
+        fs.writeFileSync('public/index.json', JSON.stringify(index).toLocaleLowerCase())
     } catch (e) {
         console.error(e)
     }
