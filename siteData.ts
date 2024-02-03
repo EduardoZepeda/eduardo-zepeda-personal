@@ -9,7 +9,7 @@ export const siteData = {
     gender: 'male',
     siteMapPrefix: `${siteURL}/blog/`,
     rssPrefix: `${siteURL}/blog/`,
-    siteDescription: 'Eduardo Zepeda web developer personal site, frontend and backend specialized in Go, Python, Javascript, Typescript, Django, React, Nextjs, DRF and vast GNU linux experience.',
+    siteDescription: 'Eduardo Zepeda web developer personal site and blog with programming tutorials, frontend and backend using Go, Python, Javascript, Typescript, Django, React, Nextjs.',
     siteTitle: 'Eduardo Zepeda Web Developer',
     title: "Eduardo Zepeda's Personal Site",
     id: siteURL,
