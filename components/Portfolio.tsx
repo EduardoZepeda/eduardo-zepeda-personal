@@ -23,6 +23,14 @@ const Portfolio = (): JSX.Element => {
       stack: 'Digital Ocean Droplet, Django, Postgres, React, Jquery, SCSS, Nginx, Gunicorn, Redis, Celery, Jenkins'
     },
     {
+      imgSrc: '/portfolio/GoCoffeeApi.jpg',
+      title: 'Go Coffee shops API',
+      info: 'API backend written in Go from scratch and raw SQL. User accounts, JWT auth, coffee shops CRUD, following and likes system, search by user\'s location, FTS, logging, rate limiting and tests. Swaggo docs',
+      websiteLink: 'https://go-coffee-api.vercel.app/',
+      sourceCodeLink: 'https://github.com/EduardoZepeda/go-coffee-api',
+      stack: 'Vercel, Postgres, PostGIS, Go, Gorilla, React, MUI'
+    },
+    {
       imgSrc: '/portfolio/Tamper.jpg',
       title: 'Tamper',
       info: 'Geo location app that, given a location, finds the nearest speciality coffee shops in Guadalajara. Furthermore, social network capabilities: real time chat, accounts, asymmetrical following system, likes, user\'s feed, rating and reviews system.',
@@ -45,14 +53,6 @@ const Portfolio = (): JSX.Element => {
       websiteLink: 'https://coffeebytes.dev',
       sourceCodeLink: 'https://github.com/EduardoZepeda/coffeebytes',
       stack: 'Digital Ocean Droplet, Hugo (Prev. React + Headless WP), Nginx, Jenkins'
-    },
-    {
-      imgSrc: '/portfolio/GoCoffeeApi.jpg',
-      title: 'Go Coffee shops API',
-      info: 'API backend written in Go from scratch and raw SQL. User accounts, JWT auth, coffee shops CRUD, following and likes system, search by user\'s location, FTS, logging, rate limiting and tests. Swaggo docs',
-      websiteLink: 'https://go-coffee-api.vercel.app/',
-      sourceCodeLink: 'https://github.com/EduardoZepeda/go-coffee-api',
-      stack: 'Vercel, Postgres, PostGIS, Go, Gorilla, React, MUI'
     },
     {
       imgSrc: '/portfolio/MineSweeper.jpg',
