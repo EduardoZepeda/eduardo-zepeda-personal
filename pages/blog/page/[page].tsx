@@ -71,7 +71,7 @@ export const getStaticPaths: GetStaticPaths<PaginationPathParams> = async () => 
       .map(path => ({ params: { page: (path).toString() } }))
     return {
       paths,
-      fallback: 'blocking'
+      fallback: false
     }
   } catch (error) {
     console.error(error)
