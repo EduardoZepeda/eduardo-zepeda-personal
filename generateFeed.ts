@@ -21,11 +21,12 @@ async function generateFeed() {
             .sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
             .filter(post => !post.frontmatter.draft)
         rawPosts.forEach(({ slug, frontmatter }) => {
+            // CDATA allows some html entities to coexist with the rss (xml) document
             content += `
     <item>
-        <title>${frontmatter?.title}</title>
+        <title>${`<![CDATA[${frontmatter?.title}]]>`}</title>
         <link>${siteData["rssPrefix"]}${slugify(frontmatter?.title)}/</link>
-        <description>${frontmatter?.description}</description>
+        <description>${`<![CDATA[${frontmatter?.description}]]>`}</description>
         <guid>${siteData["rssPrefix"]}${slugify(frontmatter?.title)}/</guid>
         <pubDate>${frontmatter.date}</pubDate>
     </item>
