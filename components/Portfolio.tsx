@@ -50,7 +50,7 @@ const Portfolio = (): JSX.Element => {
       imgSrc: '/portfolio/CoffeeBytes.jpg',
       title: 'Coffee bytes',
       info: 'My web development blog, +100 entries/tutorials and +200 subscribed developers and +500 followers on Ig. I write new posts for developers every week.',
-      websiteLink: 'https://coffeebytes.dev',
+      websiteLink: 'https://coffeebytes.dev/en/',
       sourceCodeLink: 'https://github.com/EduardoZepeda/coffeebytes',
       stack: 'Digital Ocean Droplet, Hugo (Prev. React + Headless WP), Nginx, Jenkins'
     },

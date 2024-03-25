@@ -2,14 +2,10 @@ import type { NextPage } from 'next'
 import Main from '@components/Main'
 import Head from 'next/head'
 import generateSitemap from 'generateSitemap'
-import generateFeed from 'generateFeed'
-import generateIndex from 'generateIndex'
 import { siteData } from 'siteData'
 
 export const getStaticProps = async () => {
   await generateSitemap()
-  await generateFeed()
-  await generateIndex()
 
   return {
     props: {}
