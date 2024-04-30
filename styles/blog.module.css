@@ -1,177 +1,32 @@
-.container,
-.relatedContent {
+.container {
     max-width: 64ch;
     margin: var(--margin-3x) 0;
 }
 
-.container ul li::before {
-    content: '- '
+.post, .postTitle {
+    line-height: 2.8rem;
 }
 
-.container ul li {
-    margin-left: 5px;
+.readMore {
+    text-decoration: underline;
 }
 
-.categories {
-    margin: var(--margin-2x) 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--margin);
+.pubDate {
+    opacity: 0.75;
 }
 
-.category {
-    font-family: monospace;
-    border-radius: var(--border-radius);
-    padding: 10px;
-    margin-right: var(--margin);
-    border: 1px solid var(--secondary-green);
-    color: var(--secondary-green);
-}
-
-.postsContainer {
-    margin: var(--margin-3x) 0;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--margin);
-    padding: 0 5rem;
-}
-
-.metadataContainer {
-    margin: var(--margin) 0;
-    display: flex;
-    flex-direction: column;
-    gap: var(--margin);
-}
-
-.postItem {
-    width: 350px;
-}
-
-.container p {
-    font-size: 1.2rem;
-}
-
-.post {
-    margin: var(--margin-2x) 0;
-    width: 100%;
-    height: 100%;
-}
-
-.container a {
-    color: var(--title);
-}
-
-.imageContainer {
-    position: relative;
-    height: 190px;
-}
-
-.postTitle {
-    font-size: 1.1rem;
-    margin: var(--margin) 0;
-}
-
-.postDate {
-    color: var(--light-gray);
-}
-
-.pagination {
-    display: flex;
-    justify-content: center;
-    margin: var(--margin-3x) 0;
-    text-align: center;
-    list-style-position: inside;
-    flex-wrap: wrap;
-}
-
-.paginationItem {}
-
-.paginationLink {
-    display: block;
-    padding: 0.6rem 2rem;
-    border-radius: 50px;
-}
-
-.paginationActive {
-    border: 2px solid var(--green);
-}
-
-.authorAndDate {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.postImage {
-    max-width: 100%;
-}
-
-.nextAndPrevious {
-    margin: var(--margin-3x) 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.nextPreviousButton {
-    padding: var(--padding) var(--padding-2x);
-    border: 1px solid var(--green);
-}
-
-.nextButton {
-    border-radius: 20px 0 0 20px;
-}
-
-.previousButton {
-    border-radius: 0 20px 20px 0;
-}
-
-.relatedSummary {
-    font-size: 0.95rem;
-    color: var(--main-text);
-}
-
-.relatedPost {
-    display: flex;
-    align-items: center;
-    gap: var(--margin-3x);
-    margin: var(--margin-2x) 0;
-}
-
-.relatedImg {
-    object-fit: cover;
-    border-radius: 20px;
-}
 
 @media (min-width: 768px) {
-    .postItem {
-        width: 500px;
-    }
-
-    .imageContainer {
-        position: relative;
-        width: 450px;
-        height: 270px;
-    }
-
     .container {
         max-width: 64ch;
     }
-
-
 }
 
 @media (max-width: 768px) {
     .container {
         max-width: 350px;
     }
-
-    .postsContainer {
-        padding: 0;
-    }
-
-    .relatedSummary {
-        display: none;
+    .post-title {
+        font-size: 1rem;
     }
 }
