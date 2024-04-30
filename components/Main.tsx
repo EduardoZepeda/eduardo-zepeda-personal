@@ -4,6 +4,7 @@ import Portfolio from './Portfolio'
 import Projects from './Projects'
 import Contact from './Contact'
 import RevealElement from './Reveal'
+import Schema from './Schema'
 
 const Main = (): JSX.Element => {
   return (
@@ -13,6 +14,7 @@ const Main = (): JSX.Element => {
       <RevealElement><Portfolio /></RevealElement>
       <RevealElement><Projects /></RevealElement>
       <RevealElement><Contact /></RevealElement>
+      <Schema />
     </>
   )
 }

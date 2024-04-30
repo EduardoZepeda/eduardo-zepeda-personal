@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import styles from '@styles/blog.module.css';
-import type { GetStaticProps } from 'next'
 import extractUrlsFromRSS from '@utils/parseXml/parseXML';
+import { siteData } from 'siteData';
 
 export const getStaticProps = (async () => {
-    const url = "https://coffeebytes.dev/en/index.xml"
+    const url = siteData["blog"]["rss"]
     try {
         const response = await fetch(url, {
             method: 'GET',
@@ -35,19 +35,59 @@ export const getStaticProps = (async () => {
 
 
 export default function Blog({ data }: { data: PostFromXml[] }) {
-
+    const fullName = `${siteData["authorFirstName"]} ${siteData["authorLastName"]}`
     const NUMBER_OF_POSTS = 10
+
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": fullName,
+        "description": siteData["blog"]["description"],
+        "url": siteData["blog"]["url"],
+        "image": siteData["blog"]["image"],
+        "publisher": {
+            "@type": "Person",
+            "name": fullName
+        },
+        "author": {
+            "@type": "Person",
+            "name": fullName
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": siteData["blog"]["url"]
+        },
+        "blogPost": data?.slice(0, NUMBER_OF_POSTS).map(({ link, title, summary, pubDate }) => (
+            {
+                "@type": "BlogPosting",
+                "headline": title,
+                "description": summary,
+                "datePublished": pubDate,
+                "dateModified": pubDate,
+                "author": {
+                    "@type": "Person",
+                    "name": fullName
+                },
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": link
+                }
+            }
+        ))
+    }
+
 
     return (
         <div>
             <h1>My latests posts</h1>
             <div className={styles.container}>
                 <ul>
-                    {data?.slice(0, NUMBER_OF_POSTS).map(({ link, title, summary, pubDate }) => (
+                    {data?.slice(0, NUMBER_OF_POSTS).map(({ link, title, summary, pubDate, category }) => (
                         <li key={link}>
                             <Link title={title} aria-label={`Link to ${title}`} href={link}>
                                 <h2 className={styles.postTitle}>{title}</h2>
-                                <small className={styles.pubDate}>{new Date(pubDate).toJSON().slice(0, 10)}</small>
+                                <small className={styles.pubDate}><ol className={styles.categories}>{typeof category === "string" ? <li className={styles.category}>{category}</li> : category.map(cat => <li className={styles.category} key={title + cat}>{cat}</li>)}</ol></small>
+                                <small><time>{new Date(pubDate).toJSON().slice(0, 10)}</time></small>
                                 <p className={styles.post}>{summary?.slice(0, 280)}...</p>
                                 <p className={styles.readMore}>Read more</p>
                             </Link>
@@ -55,6 +95,10 @@ export default function Blog({ data }: { data: PostFromXml[] }) {
                     ))}
                 </ul>
             </div>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
         </div>
     )
 }

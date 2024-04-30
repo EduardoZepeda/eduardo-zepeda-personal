@@ -15,6 +15,19 @@
     opacity: 0.75;
 }
 
+.categories {
+    margin: 1rem 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.category {
+    padding: 0rem 0.7rem;
+    border: 1px solid var(--green);
+    color: var(--green);
+    border-radius: 4px;
+}
+
 
 @media (min-width: 768px) {
     .container {

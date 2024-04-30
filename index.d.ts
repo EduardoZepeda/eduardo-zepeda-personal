@@ -10,5 +10,5 @@ interface PostFromXml {
   summary: string;
   link: string;
   pubDate: string | number | Date;
-  categories: string[];
+  category: string | string[];
 }

@@ -4,21 +4,16 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 import Layout from '@components/Layout'
 import { openSidebarContext } from '@lib/OpenSidebarContext'
 import { useState } from 'react'
+import { siteData } from 'siteData'
 // PurgeCSS in create-next-app eliminates fontawesome css, hence an implicit import is required
 
 import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   const [hideSidebar, setHideSidebar] = useState<boolean>(true)
-  const authorFirstName = 'Eduardo'
-  const authorLastName = 'Zepeda'
-  const socialMediaLinks = {
-    github: 'https://github.com/eduardoZepeda',
-    instagram: 'https://www.instagram.com/eduardozepeda.dev/',
-    linkedin: 'https://linkedin.com/in/eduardomzepeda',
-    twitter: 'https://twitter.com/hello_wired',
-    email: 'aGVsbG9AZWR1YXJkb3plcGVkYS5kZXYK'
-  }
+  const authorFirstName = siteData["authorFirstName"]
+  const authorLastName = siteData["authorLastName"]
+  const socialMediaLinks = siteData["socialMediaLinks"]
   return (
     <openSidebarContext.Provider value={{ hideSidebar, setHideSidebar, socialMediaLinks, authorFirstName, authorLastName }}>
       <Layout>
