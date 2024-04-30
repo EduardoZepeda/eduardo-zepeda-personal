@@ -2,7 +2,7 @@
 
 My personal website written using nextjs, and it uses markdown for posts.
 
-See it working on my personal website [eduardozepeda.dev](https://eduardozepeda.dev/)
+See it working on my personal website [zeedu.dev](https://zeedu.dev/).
 
 ## Sections
 

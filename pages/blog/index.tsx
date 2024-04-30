@@ -81,6 +81,7 @@ export default function Blog({ data }: { data: PostFromXml[] }) {
         <div>
             <h1>My latests posts</h1>
             <div className={styles.container}>
+                <p>{`My posts are hosted on my blog `}<strong>{`where I've published ${data.length} so far. `}</strong>{`Posts are ordered cronologically feel free to dive into one of them.`}</p>
                 <ul>
                     {data?.slice(0, NUMBER_OF_POSTS).map(({ link, title, summary, pubDate, category }) => (
                         <li key={link}>

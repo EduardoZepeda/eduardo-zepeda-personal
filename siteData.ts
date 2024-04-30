@@ -1,4 +1,4 @@
-const siteURL = 'https://eduardozepeda.dev'
+const siteURL = 'https://zeedu.dev'
 const date = new Date()
 
 export const siteData = {
@@ -19,8 +19,6 @@ export const siteData = {
     gender: 'male',
     phone: '',
     otherProfiles: ['https://linkedin.com/in/eduardomzepeda', 'https://twitter.com/hello_wired', 'https://www.instagram.com/eduardozepeda.dev/', 'https://github.com/eduardoZepeda'],
-    siteMapPrefix: `${siteURL}/blog/`,
-    rssPrefix: `${siteURL}/blog/`,
     siteDescription: 'Eduardo Zepeda web developer personal site and blog with programming tutorials, frontend and backend using Go, Python, Javascript, Typescript, Django, React, Nextjs.',
     siteTitle: 'Eduardo Zepeda Web Developer',
     title: "Eduardo Zepeda's Personal Site",
