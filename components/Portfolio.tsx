@@ -39,6 +39,13 @@ const Portfolio = (): JSX.Element => {
       stack: 'Fly.io, DRF, Nextjs, Typescript, React query, Vanilla CSS, Postgres, PostGIS, Leaflet'
     },
     {
+      imgSrc: '/portfolio/Camerashuttercount.jpg',
+      title: 'Camera Shutter Count',
+      info: 'Multilingual web application that reads shutter count and EXIF metadata from any picture, it also contains graphs and tables related to shutter count data for almost all professional cameras.',
+      websiteLink: 'https://camerashuttercount.net/',
+      stack: 'Nextjs, Typescript, DaisyUI, Sqlite'
+    },
+    {
       imgSrc: '/portfolio/Biodek.jpg',
       title: 'Biodek',
       info: 'Responsive landing page frontend with psychedelic neon colors and smooth animations.',
