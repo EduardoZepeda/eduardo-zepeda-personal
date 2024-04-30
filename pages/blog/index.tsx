@@ -97,7 +97,7 @@ export default function Blog({ data }: { data: PostFromXml[] }) {
                     ))}
                 </ul>
             </div>
-            <div className={mainStyles.mY}>
+            <div className={mainStyles.portfolioBtn}>
                 <a className={mainStyles.btn} href={siteData["blog"]["url"]} aria-label='Go to read all posts'>
                     Read all posts
                 </a>
