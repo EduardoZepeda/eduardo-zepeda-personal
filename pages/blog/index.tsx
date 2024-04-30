@@ -2,6 +2,7 @@ import Link from 'next/link';
 import styles from '@styles/blog.module.css';
 import extractUrlsFromRSS from '@utils/parseXml/parseXML';
 import { siteData } from 'siteData';
+import mainStyles from '@styles/Home.module.css'
 
 export const getStaticProps = (async () => {
     const url = siteData["blog"]["rss"]
@@ -95,6 +96,11 @@ export default function Blog({ data }: { data: PostFromXml[] }) {
                         </li>
                     ))}
                 </ul>
+            </div>
+            <div className={mainStyles.mY}>
+                <a className={mainStyles.btn} href={siteData["blog"]["url"]} aria-label='Go to read all posts'>
+                    Read all posts
+                </a>
             </div>
             <script
                 type="application/ld+json"

@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://eduardozepeda.dev/sitemap.xml
+Sitemap: https://zeedu.dev/sitemap.xml
