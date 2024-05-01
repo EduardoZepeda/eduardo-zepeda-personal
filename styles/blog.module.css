@@ -21,6 +21,11 @@
     gap: 2rem;
 }
 
+.postLi {
+    margin: 80px 0;
+
+}
+
 .category {
     padding: 0rem 0.7rem;
     border: 1px solid var(--green);
