@@ -1,4 +1,4 @@
-import React from 'react'
+
 import styles from '@styles/Home.module.css'
 import { faLink } from '@fortawesome/free-solid-svg-icons'
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons'

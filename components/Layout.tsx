@@ -3,7 +3,7 @@ import styles from '@styles/Home.module.css'
 import Nav from '@components/Nav'
 import Footer from '@components/Footer'
 import { openSidebarContext } from '@lib/OpenSidebarContext'
-import SocialMedia from './SocialMedia'
+import SocialMedia from '@components/SocialMedia'
 
 const Layout: FC = ({ children }) => {
   const { hideSidebar, setHideSidebar } = useContext(openSidebarContext)

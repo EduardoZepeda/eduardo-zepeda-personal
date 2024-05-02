@@ -1,4 +1,4 @@
-import React from 'react'
+
 import styles from '@styles/Home.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons'

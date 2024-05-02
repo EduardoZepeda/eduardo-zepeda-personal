@@ -1,10 +1,10 @@
-import AboutMe from './AboutMe'
-import Introduction from './Introduction'
-import Portfolio from './Portfolio'
-import Projects from './Projects'
-import Contact from './Contact'
-import RevealElement from './Reveal'
-import Schema from './Schema'
+import AboutMe from '@components/AboutMe'
+import Introduction from '@components/Introduction'
+import Portfolio from '@components/Portfolio'
+import Projects from '@components/Projects'
+import Contact from '@components/Contact'
+import RevealElement from '@components/Reveal'
+import Schema from '@components/Schema'
 
 const Main = (): JSX.Element => {
   return (

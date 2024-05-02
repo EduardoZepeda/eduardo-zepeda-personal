@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import PortfolioItem from './PortfolioItem'
 import styles from '@styles/Home.module.css'
 
