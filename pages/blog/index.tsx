@@ -80,8 +80,8 @@ export default function Blog({ data }: { data: PostFromXml[] }) {
 
 
     return (
-        <div>
-            <h1>My latests posts</h1>
+        <div className={styles.container}>
+            <h1>{`${fullName}'s latests posts`}</h1>
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="description" content={siteData["blog"]["description"]} />
@@ -98,15 +98,15 @@ export default function Blog({ data }: { data: PostFromXml[] }) {
                 <meta property="twitter:title" content={`My latests posts | ${fullName}`} />
                 <meta property="twitter:description" content={siteData["blog"]["description"]} />
             </Head>
-            <div className={styles.container}>
-                <p>{`My posts are hosted on my blog `}<strong>{`where I've published ${data.length} so far. `}</strong>{`Posts are ordered cronologically feel free to dive into one of them.`}</p>
+            <div>
+                <p>{`My posts are hosted on my blog `}<strong>{`where I've published ${data.length} so far. `}</strong>{`Posts are ordered cronologically feel free to read any of them.`}</p>
                 <ul>
                     {data?.slice(0, NUMBER_OF_POSTS).map(({ link, title, summary, pubDate, category }) => (
                         <li className={styles.postLi} key={link}>
                             <Link title={title} aria-label={`Link to ${title}`} href={link}>
                                 <h2 className={styles.postTitle}>{title}</h2>
                                 <small className={styles.pubDate}><ol className={styles.categories}>{typeof category === "string" ? <li className={styles.category}>{category}</li> : category.map(cat => <li className={styles.category} key={title + cat}>{cat}</li>)}</ol></small>
-                                <small><time>{new Date(pubDate).toJSON().slice(0, 10)}</time></small>
+                                <small><time>{new Date(pubDate).toDateString()}</time></small>
                                 <p className={styles.post}>{summary?.slice(0, 280)}...</p>
                                 <p className={styles.readMore}>Read more</p>
                             </Link>
