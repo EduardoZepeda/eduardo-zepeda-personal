@@ -1,4 +1,5 @@
-import { FC, useContext } from 'react'
+import { useContext } from 'react'
+import type { FC } from 'react'
 import styles from '@styles/Home.module.css'
 import Nav from '@components/Nav'
 import Footer from '@components/Footer'

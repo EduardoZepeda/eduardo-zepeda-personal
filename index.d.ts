@@ -12,3 +12,19 @@ interface PostFromXml {
   pubDate: string | number | Date;
   category: string | string[];
 }
+
+interface PortfolioProject {
+  imgSrc: string
+  title: string
+  info: string
+  websiteLink: string
+  sourceCodeLink?: string
+  stack: string
+}
+
+interface Project {
+  title: string
+  description: string
+  stack: string
+  link: string
+}

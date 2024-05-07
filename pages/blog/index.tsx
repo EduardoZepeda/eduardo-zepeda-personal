@@ -83,6 +83,7 @@ export default function Blog({ data }: { data: PostFromXml[] }) {
         <div className={styles.container}>
             <h1>{`${fullName}'s latests posts`}</h1>
             <Head>
+                <title>{`${fullName}'s blog`}</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="description" content={siteData["blog"]["description"]} />
                 <meta name="author" content={fullName} />

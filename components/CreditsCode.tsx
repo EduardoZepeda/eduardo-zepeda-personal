@@ -1,12 +1,11 @@
 
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { SizeProp } from '@fortawesome/fontawesome-svg-core'
+import type { SizeProp } from '@fortawesome/fontawesome-svg-core'
+import { sourceCodeUrl } from 'siteData'
 
 const CreditsCode = (): JSX.Element => {
   const iconSize: SizeProp = 'sm'
-
-  const sourceCodeUrl: string = 'https://github.com/EduardoZepeda/eduardo-zepeda-personal'
 
   return (
     <div>
