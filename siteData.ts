@@ -14,7 +14,7 @@ export const siteData = {
         url: 'https://coffeebytes.dev'
     },
     authorEmail: 'eduardomzepeda [at] outlook [dot] com',
-    authorDescription: "Web developer and GNU/Linux enthusiast always learning something new. I believe in choosing the right tool for the job and that simplicity is the ultimate sophistication. I'm under the impression that being perfect is the enemy of getting things done. I also believe in the goodnesses of cryptocurrencies outside of monetary speculation.",
+    authorDescription: "Web developer and GNU/Linux user, furthermore SEO enthusiast. I believe in choosing the right tool for the job and that simplicity is the ultimate sophistication. I'm under the impression that being perfect is the enemy of getting things done. I also believe in the goodnesses of cryptocurrencies outside of monetary speculation.",
     jobTitle: 'Freelance web developer',
     knowsAbout: 'Django, DRF, Nextjs, Python, React, Go, Typescript, SEO, Postgres, Redis',
     gender: 'male',
@@ -26,7 +26,7 @@ export const siteData = {
         'https://github.com/eduardoZepeda',
         'https://coffeebytes.dev/en/authors/eduardo-zepeda'
     ],
-    siteDescription: 'Eduardo Zepeda web developer personal site and blog with programming tutorials, frontend and backend using Go, Python, Javascript, Typescript, Django, React, Nextjs.',
+    siteDescription: 'Eduardo Zepeda web developer personal site and blog with programming tutorials, frontend and backend using Go, Python, Javascript, Typescript, Django, React, Nextjs and SEO.',
     siteTitle: 'Eduardo Zepeda Web Developer',
     title: "Eduardo Zepeda's Personal Site",
     id: siteURL,
@@ -75,7 +75,7 @@ export const portfolioData: PortfolioProject[] = [
     {
         imgSrc: '/portfolio/Camerashuttercount.jpg',
         title: 'Camera Shutter Count',
-        info: 'Multilingual web application that reads shutter count and EXIF metadata from any picture, it also contains graphs and tables related to shutter count data for almost all professional cameras.',
+        info: 'Multilingual web application that reads shutter count and EXIF metadata from any picture, it also contains graphs and tables related to shutter count data for almost all professional cameras. SEO friendly.',
         websiteLink: 'https://camerashuttercount.net/',
         stack: 'Nextjs, Typescript, DaisyUI, Sqlite'
     },

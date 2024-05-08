@@ -2,13 +2,13 @@
   --green: #8ef68a;
   --secondary-green: #8AF6BC;
   --dark: #18262c;
-  --black: #07131afa;
+  --dark-bg: #07131afa;
   --light-gray: #97aab1;
   --dark-gray: #3f4f55;
   --blue-gray: #1a1b22;
   --white: #FFF;
   --background: var(--dark);
-  --background-dark: var(--black);
+  --background-dark: var(--dark-bg);
   --title: var(--green);
   --link: var(--title);
   --subtitle: var(--white);
