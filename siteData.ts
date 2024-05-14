@@ -43,7 +43,7 @@ export const siteData = {
         linkedin: 'https://linkedin.com/in/eduardomzepeda',
         twitter: 'https://twitter.com/hello_wired',
         // Email is created at run time, to prevent spam
-        email: 'ZWR1YXJkb216ZXBlZGFAb3V0bG9vay5jb20'
+        email: 'aGVsbG9AemVlZHUuZGV2'
     }
 }
 
