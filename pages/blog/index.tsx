@@ -103,10 +103,10 @@ export default function Blog({ data }: { data: PostFromXml[] }) {
                 <p>{`My posts are hosted on my blog `}<strong>{`where I've published ${data.length} so far. `}</strong>{`Posts are ordered cronologically feel free to read any of them.`}</p>
                 <ul>
                     {data?.slice(0, NUMBER_OF_POSTS).map(({ link, title, summary, pubDate, category }) => (
-                        <li className={styles.postLi} key={link}>
+                        category && <li className={styles.postLi} key={link}>
                             <Link title={title} aria-label={`Link to ${title}`} href={link}>
                                 <h2 className={styles.postTitle}>{title}</h2>
-                                <small className={styles.pubDate}><ol className={styles.categories}>{typeof category === "string" ? <li className={styles.category}>{category}</li> : category.map(cat => <li className={styles.category} key={title + cat}>{cat}</li>)}</ol></small>
+                                <small className={styles.pubDate}><ol className={styles.categories}>{typeof category === "string" ? <li className={styles.category}>{category}</li> : category?.map(cat => <li className={styles.category} key={title + cat}>{cat}</li>)}</ol></small>
                                 <small><time>{new Date(pubDate).toDateString()}</time></small>
                                 <p className={styles.post}>{summary?.slice(0, 280)}...</p>
                                 <p className={styles.readMore}>Read more</p>
