@@ -28,3 +28,11 @@ interface Project {
   stack: string
   link: string
 }
+
+interface paginatorObject {
+  currentPageItems: PostFromXml[]
+  currentPage: number | null
+  nextPage: number | null
+  previousPage: number | null
+  totalPages: number | null
+}

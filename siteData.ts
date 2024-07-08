@@ -50,9 +50,16 @@ export const siteData = {
 
 export const portfolioData: PortfolioProject[] = [
     {
+        imgSrc: '/portfolio/GoCoffeeApi.jpg',
+        title: 'Fotosan price tracker',
+        info: 'Daily price tracking web crawler. Multiple stores, even Mercado Libre via its API, more than 500k prices and 15k products, Newsletter with affilate link system,',
+        websiteLink: 'https://fotosan.net/',
+        stack: 'Digital Ocean Droplet, Django, Postgres, TailwindCSS, Nginx, Uvicorn'
+    },
+    {
         imgSrc: '/portfolio/Enfok.jpg',
         title: 'Enfok shop',
-        info: 'Ecommerce website for a +14k likes fanpage with tons of customers. Lots of extended features were added, for instance: Newsletter with affilate link system, competition price crawling, facebook group publishing bot, Mercado pago gateway and many advanced dashboard functions and statistics.',
+        info: 'Ecommerce website for a +14k likes fanpage with tons of customers. Lots of extended features were added, for instance: facebook group publishing bot, Mercado pago gateway and many advanced dashboard functions and statistics.',
         websiteLink: 'https://enfokshop.com/es-mx/',
         stack: 'Digital Ocean Droplet, Django, Postgres, React, Jquery, SCSS, Nginx, Gunicorn, Redis, Celery, Jenkins'
     },
