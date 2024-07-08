@@ -15,12 +15,14 @@ export const getStaticPaths = (async () => {
     const paths = new Array(totalPages ? totalPages + 1 : 1).fill(0).reduce((a, _, i) => [...a, i], [])
     return {
         paths: paths.map((number: number) => { return { params: { page: number.toString() } } }),
-        fallback: false, // false or "blocking"
+        fallback: false,
     }
 })
 
 export const getStaticProps = (async ({ params: { page } }: { params: { page: string } }) => {
     const url = siteData["blog"]["rss"]
+    // This is making a request per page, which can be reduced to one, for now it's ok since 
+    // this is a SSG site and only happens once in a while
     const posts = await fetchPosts(url)
     const paginator = paginate(posts, NUMBER_OF_POSTS, parseInt(page))
     return { props: { data: paginator } }
