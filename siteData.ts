@@ -57,13 +57,6 @@ export const portfolioData: PortfolioProject[] = [
         stack: 'Django, Postgres, TailwindCSS, Nginx, Uvicorn, DO droplet'
     },
     {
-        imgSrc: '/portfolio/Enfok.jpg',
-        title: 'Enfok shop',
-        info: 'Ecommerce website for a +14k likes fanpage with tons of customers. Lots of extended features were added, for instance: facebook group publishing bot, Mercado pago gateway and many advanced dashboard functions and statistics.',
-        websiteLink: 'https://enfokshop.com/es-mx/',
-        stack: 'Django, Postgres, React, Jquery, SCSS, Nginx, Gunicorn, Redis, Celery, Jenkins, DO droplet'
-    },
-    {
         imgSrc: '/portfolio/GoCoffeeApi.jpg',
         title: 'Go Coffee shops API',
         info: 'API backend written in Go from scratch and raw SQL. User accounts, JWT auth, coffee shops CRUD, following and likes system, search by user\'s location, FTS, logging, rate limiting and tests. Swaggo docs',
