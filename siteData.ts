@@ -22,7 +22,7 @@ export const siteData = {
     otherProfiles: [
         'https://linkedin.com/in/eduardomzepeda',
         'https://twitter.com/hello_wired',
-        'https://www.instagram.com/eduardozepeda.dev/',
+        'https://www.instagram.com/zeedu.dev/',
         'https://github.com/eduardoZepeda',
         'https://coffeebytes.dev/en/authors/eduardo-zepeda'
     ],
