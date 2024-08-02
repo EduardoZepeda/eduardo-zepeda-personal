@@ -39,7 +39,7 @@ export const siteData = {
     language: 'en-us',
     socialMediaLinks: {
         github: 'https://github.com/eduardoZepeda',
-        instagram: 'https://www.instagram.com/eduardozepeda.dev/',
+        instagram: 'https://www.instagram.com/zeedu.dev/',
         linkedin: 'https://linkedin.com/in/eduardomzepeda',
         twitter: 'https://twitter.com/hello_wired',
         // Email is created at run time, to prevent spam
@@ -47,6 +47,24 @@ export const siteData = {
     }
 }
 
+export const aboutMe = {
+    description: `<p>Your projects and ideas deserve stable mature and battle-tested technologies: Django, DRF, React, NextJS, Go, Hugo Postgres, etc. Deployed on the most stable and reliable system of all: GNU/Linux, which I've been using for more than 10 years.</p>
+        <p>I got the <a href='https://www.credly.com/badges/17608a52-2cb7-4268-a907-613459559911/public_url' rel='noreferrer noopener nofollow' target='_blank' aria-label='AZ-900 certification link'>Microsoft AZ-900 certification</a></p>
+        <p>Author at <a href='https://coffeebytes.dev/en/' rel='noreferrer noopener' target='_blank' aria-label='Coffee bytes website'>Coffee Bytes</a> where I write about web development and technology to more than 500 subscribed devs.</p>`
+}
+
+export const introduction = {
+    greeting: 'Hey there, my name is',
+    name: 'Eduardo Zepeda',
+    introductionHeader: 'Turning your ideas into <code>',
+    introductionText: 'Web Developer skilled in Python, TypeScript, Go, GNU/Linux',
+    contact: 'Contact Ed'
+}
+
+export const contact = {
+    message: "Let's keep in touch. My inbox is open for you and I'm always listening to new offers. I'd be delighted to hear about you.",
+    buttonText: "Say hi to Ed"
+}
 
 export const portfolioData: PortfolioProject[] = [
     {
@@ -67,7 +85,7 @@ export const portfolioData: PortfolioProject[] = [
     {
         imgSrc: '/portfolio/Enfok.jpg',
         title: 'Enfok shop',
-        info: 'Ecommerce website for a +14k likes fanpage with tons of customers. Lots of extended features were added, for instance: facebook group publishing bot, Mercado pago gateway and many advanced dashboard functions and statistics.',
+        info: 'Ecommerce website with lots of added features. Lots of extended features were added, for instance: facebook group publishing bot, Mercado pago gateway and many advanced dashboard functions and statistics.',
         websiteLink: 'https://enfokshop.com/es-mx/',
         stack: 'Django, Postgres, React, Jquery, SCSS, Nginx, Gunicorn, Redis, Celery, Jenkins, DO droplet'
     },
@@ -180,3 +198,6 @@ export const projectData: Project[] = [
 ]
 
 export const sourceCodeUrl: string = 'https://github.com/EduardoZepeda/eduardo-zepeda-personal'
+
+
+

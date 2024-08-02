@@ -1,17 +1,19 @@
 import styles from '@styles/Home.module.css'
+import { introduction } from 'siteData'
 
 const Introduction = (): JSX.Element => {
+  const { greeting, name, introductionText, introductionHeader, contact } = introduction
   return (
     <section id='introduction'>
       <div className={styles.introduction}>
-        <p>Hey there, my name is</p>
-        <h1 className={styles.name}>Eduardo Zepeda</h1>
-        <p className={styles.introductionHeader}>Turning ideas and coffee into &lt;code&gt;</p>
-        <h2 className={styles.introduction}>Web Developer skilled in Python, TypeScript, Go, GNU/Linux</h2>
+        <p>{greeting}</p>
+        <h1 className={styles.name}>{name}</h1>
+        <p className={styles.introductionHeader}>{introductionHeader}</p>
+        <h2 className={styles.introduction}>{introductionText}</h2>
       </div>
       <div className={styles.mY}>
-        <a className={styles.btn} href='#contact' aria-label='Contact Eduardo'>
-          Contact Eduardo
+        <a className={styles.btn} href='#contact' aria-label={`${contact}`}>
+          {contact}
         </a>
       </div>
     </section>

@@ -30,7 +30,7 @@ export const getStaticProps = (async ({ params: { page } }: { params: { page: st
 
 
 
-export default function Blog({ data: { currentPageItems, previousPage, nextPage } }: { data: paginatorObject }) {
+export default function Blog({ data: { currentPageItems, previousPage, nextPage, currentPage } }: { data: paginatorObject }) {
     const fullName = `${siteData["authorFirstName"]} ${siteData["authorLastName"]}`
 
     const jsonLd = {
@@ -76,7 +76,7 @@ export default function Blog({ data: { currentPageItems, previousPage, nextPage 
         <div className={styles.container}>
             <h1>{`${fullName}'s latests posts`}</h1>
             <Head>
-                <title>{`${fullName}'s blog`}</title>
+                <title>{`${fullName}'s blog`}{` `}{`Page ${currentPage}`}</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="description" content={siteData["blog"]["description"]} />
                 <meta name="author" content={fullName} />
