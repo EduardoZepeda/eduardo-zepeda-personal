@@ -70,14 +70,14 @@ export const portfolioData: PortfolioProject[] = [
     {
         imgSrc: '/portfolio/Fotosan.jpg',
         title: 'Fotosan price tracker',
-        info: 'SAAS, daily price tracking web crawler for a wide variety of niche online stores, even Mercado Libre (via its API) and Amazon manually, more than 35k products tracked, drop price alert system and newsletter with affilate link system for recent offers.',
+        info: 'SAAS, daily price tracking web crawler for a wide variety of niche online stores, even Mercado Libre (via its API) and Amazon manually, more than 50k products tracked, drop price alert system and newsletter with affilate link system for recent offers.',
         websiteLink: 'https://fotosan.net/',
         stack: 'Django, Postgres, TailwindCSS, Nginx, Uvicorn, DO droplet'
     },
     {
         imgSrc: '/portfolio/GoCoffeeApi.jpg',
         title: 'Go Coffee shops API',
-        info: 'API backend written in Go from scratch and raw SQL. User accounts, JWT auth, coffee shops CRUD, following and likes system, search by user\'s location, FTS, logging, rate limiting and tests. Swaggo docs',
+        info: 'Social Media API backend written in Go from scratch and raw SQL. User accounts, JWT auth, coffee shops CRUD, following and likes system, search by user\'s location, FTS, logging, rate limiting and tests. Swaggo docs',
         websiteLink: 'https://go-coffee-api.vercel.app/',
         sourceCodeLink: 'https://github.com/EduardoZepeda/go-coffee-api',
         stack: 'Go, Postgres, PostGIS, Gorilla, React, MUI, Vercel'
@@ -85,14 +85,14 @@ export const portfolioData: PortfolioProject[] = [
     {
         imgSrc: '/portfolio/Enfok.jpg',
         title: 'Enfok shop',
-        info: 'Ecommerce website with lots of added features. Lots of extended features were added, for instance: facebook group publishing bot, Mercado pago gateway and many advanced dashboard functions and statistics.',
+        info: 'Ecommerce website with lots of added features: facebook group publishing bot, Mercado pago gateway and many advanced dashboard functions and statistics.',
         websiteLink: 'https://enfokshop.com/es-mx/',
         stack: 'Django, Postgres, React, Jquery, SCSS, Nginx, Gunicorn, Redis, Celery, Jenkins, DO droplet'
     },
     {
         imgSrc: '/portfolio/Tamper.jpg',
         title: 'Tamper',
-        info: 'Geo location app that, given a location, finds the nearest speciality coffee shops in Guadalajara. Furthermore, social network capabilities: real time chat, accounts, asymmetrical following system, likes, user\'s feed, rating and reviews system.',
+        info: 'Social Media Geo location app that, given a location, finds the nearest speciality coffee shops in Guadalajara. Furthermore, social network capabilities: real time chat, accounts, asymmetrical following system, likes, user\'s feed, rating and reviews system.',
         websiteLink: 'https://django-gis-coffee.vercel.app/',
         sourceCodeLink: 'https://github.com/EduardoZepeda/django-gis-coffee',
         stack: 'Django, DRF, Nextjs, Typescript, React query, Vanilla CSS, Postgres, PostGIS, Leaflet, Fly.io'
