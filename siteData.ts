@@ -75,20 +75,20 @@ export const portfolioData: PortfolioProject[] = [
         stack: 'Django, Postgres, TailwindCSS, Nginx, Uvicorn, DO droplet'
     },
     {
-        imgSrc: '/portfolio/GoCoffeeApi.jpg',
-        title: 'Go Coffee shops API',
-        info: 'Social Media API backend written in Go from scratch and raw SQL. User accounts, JWT auth, coffee shops CRUD, following and likes system, search by user\'s location, FTS, logging, rate limiting and tests. Swaggo docs',
-        websiteLink: 'https://go-coffee-api.vercel.app/',
-        sourceCodeLink: 'https://github.com/EduardoZepeda/go-coffee-api',
-        stack: 'Go, Postgres, PostGIS, Gorilla, React, MUI, Vercel'
-    },
-    {
         imgSrc: '/portfolio/Tamper.jpg',
         title: 'Tamper',
         info: 'Social Media Geo location app that, given a location, finds the nearest speciality coffee shops in Guadalajara. Furthermore, social network capabilities: real time chat, accounts, asymmetrical following system, likes, user\'s feed, rating and reviews system.',
         websiteLink: 'https://django-gis-coffee.vercel.app/',
         sourceCodeLink: 'https://github.com/EduardoZepeda/django-gis-coffee',
         stack: 'Django, DRF, Nextjs, Typescript, React query, Vanilla CSS, Postgres, PostGIS, Leaflet, Fly.io'
+    },
+    {
+        imgSrc: '/portfolio/GoCoffeeApi.jpg',
+        title: 'Go Coffee shops API',
+        info: 'Social Media API backend written in Go from scratch and raw SQL. User accounts, JWT auth, coffee shops CRUD, following and likes system, search by user\'s location, FTS, logging, rate limiting and tests. Swaggo docs',
+        websiteLink: 'https://go-coffee-api.vercel.app/',
+        sourceCodeLink: 'https://github.com/EduardoZepeda/go-coffee-api',
+        stack: 'Go, Postgres, PostGIS, Gorilla, React, MUI, Vercel'
     },
     {
         imgSrc: '/portfolio/Camerashuttercount.jpg',
