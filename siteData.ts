@@ -70,7 +70,7 @@ export const portfolioData: PortfolioProject[] = [
     {
         imgSrc: '/portfolio/Fotosan.jpg',
         title: 'Fotosan price tracker',
-        info: 'SAAS, daily price tracking web crawler for a wide variety of niche online stores, even Mercado Libre (via its API) and Amazon manually, more than 50k products tracked, drop price alert system and newsletter with affilate link system for recent offers.',
+        info: 'SAAS, daily price tracking web crawler for a wide variety of niche online stores, even Mercado Libre (via its API) and Amazon manually, more than +80k products tracked, +1M prices, drop price alert system and newsletter with affilate link system for recent offers.',
         websiteLink: 'https://fotosan.net/',
         stack: 'Django, Postgres, TailwindCSS, Nginx, Uvicorn, DO droplet'
     },
@@ -83,6 +83,13 @@ export const portfolioData: PortfolioProject[] = [
         stack: 'Django, DRF, Nextjs, Typescript, React query, Vanilla CSS, Postgres, PostGIS, Leaflet, Fly.io'
     },
     {
+        imgSrc: '/portfolio/Camerashuttercount.jpg',
+        title: 'Camera Shutter Count',
+        info: 'Multilingual web application that reads shutter count and EXIF metadata from any picture, it also contains graphs and tables related to shutter count data for almost all professional cameras. SEO friendly.',
+        websiteLink: 'https://camerashuttercount.net/',
+        stack: 'Nextjs, Typescript, DaisyUI, Sqlite, Nginx'
+    },
+    {
         imgSrc: '/portfolio/GoCoffeeApi.jpg',
         title: 'Go Coffee shops API',
         info: 'Social Media API backend written in Go from scratch and raw SQL. User accounts, JWT auth, coffee shops CRUD, following and likes system, search by user\'s location, FTS, logging, rate limiting and tests. Swaggo docs',
@@ -91,11 +98,12 @@ export const portfolioData: PortfolioProject[] = [
         stack: 'Go, Postgres, PostGIS, Gorilla, React, MUI, Vercel'
     },
     {
-        imgSrc: '/portfolio/Camerashuttercount.jpg',
-        title: 'Camera Shutter Count',
-        info: 'Multilingual web application that reads shutter count and EXIF metadata from any picture, it also contains graphs and tables related to shutter count data for almost all professional cameras. SEO friendly.',
-        websiteLink: 'https://camerashuttercount.net/',
-        stack: 'Nextjs, Typescript, DaisyUI, Sqlite'
+        imgSrc: '/portfolio/GoogleColabFinetuneMistral.jpg',
+        title: 'Fine-tuned Mistral 7B',
+        info: 'Fine-tuning of Mistral 7b LLM on Linkedin job posting dataset, so it can generate job postings with more accuracy and faster.',
+        websiteLink: 'https://colab.research.google.com/drive/1Fe348rmXbDyvjoDPGEKrBtPurpfwnFgG#scrollTo=xkmpmhHTWzBZ',
+        sourceCodeLink: 'https://www.kaggle.com/code/eduardomzepeda/fine-tuning-mistral-7b-with-linkedin-job-posting',
+        stack: 'Pytorch, Kaggle, Hugging Face'
     },
     {
         imgSrc: '/portfolio/Biodek.jpg',
