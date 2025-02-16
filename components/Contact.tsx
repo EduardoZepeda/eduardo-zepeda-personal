@@ -14,8 +14,8 @@ const Contact = (): JSX.Element => {
   const { message, buttonText } = contact
 
   useEffect(() => {
-    setDecodedEmail(UnicodeDecodeB64(socialMediaLinks.email))
-  }, [socialMediaLinks.email])
+    setDecodedEmail(UnicodeDecodeB64(socialMediaLinks.base64Email))
+  }, [socialMediaLinks.base64Email])
 
   return (
     <section id='contact'>

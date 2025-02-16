@@ -43,7 +43,7 @@ export const siteData = {
         linkedin: 'https://linkedin.com/in/eduardomzepeda',
         twitter: 'https://twitter.com/hello_wired',
         // Email is created at run time, to prevent spam
-        email: 'aGVsbG9AemVlZHUuZGV2'
+        base64Email: 'aGVsbG9AemVlZHUuZGV2'
     }
 }
 
@@ -111,7 +111,7 @@ export const portfolioData: PortfolioProject[] = [
         info: 'My web development blog, +100 entries/tutorials and +200 subscribed developers and +500 followers on Ig. I write new posts for developers every week.',
         websiteLink: 'https://coffeebytes.dev/en/',
         sourceCodeLink: 'https://github.com/EduardoZepeda/coffeebytes',
-        stack: 'Hugo (Prev. React + Headless WP), Nginx, Jenkins, DO droplet'
+        stack: 'Hugo (Prev. React + Headless WP), Nginx, Jenkins, DO droplet, Vanilla CSS'
     },
     {
         imgSrc: '/portfolio/MineSweeper.jpg',

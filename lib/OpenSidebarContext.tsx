@@ -13,7 +13,7 @@ interface socialMediaProps {
   instagram: string
   linkedin: string
   twitter: string
-  email: string
+  base64Email: string
 }
 
 export const openSidebarContext = createContext<openSidebarContextProps>(
@@ -27,6 +27,6 @@ export const openSidebarContext = createContext<openSidebarContextProps>(
       instagram: '',
       linkedin: '',
       twitter: '',
-      email: ''
+      base64Email: ''
     }
   })
