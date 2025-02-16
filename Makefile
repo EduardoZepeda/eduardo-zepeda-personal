@@ -21,3 +21,9 @@ generate/jpg:
 	for f in ./public/images/*.jpg; do convert "$$f" -resize 400x "./public/portfolio/$$(basename -- "$$f" .jpg)-400w.jpg"; done
 	for f in ./public/images/*.jpg; do convert "$$f" -resize 800x "./public/portfolio/$$(basename -- "$$f" .jpg)-800w.jpg"; done
 	for f in ./public/images/*.jpg; do convert "$$f" -resize 1200x "./public/portfolio/$$(basename -- "$$f" .jpg)-1200w.jpg"; done
+
+## encode/email: Encode email using base64, so you can use it in the socialMediaData in siteData.ts file, remember to pass the email as an argument using make email=<your_email> encode/email 
+.PHONY: encode/email
+encode/email:
+	@echo 'Generating base64 encoding:'
+	@echo $(email) | base64
