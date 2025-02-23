@@ -48,9 +48,9 @@ export const siteData = {
 }
 
 export const aboutMe = {
-    description: `<p>Your projects and ideas deserve stable mature and battle-tested technologies: Django, DRF, React, NextJS, Go, Hugo Postgres, etc. Deployed on the most stable and reliable system of all: GNU/Linux, which I've been using for more than 10 years.</p>
-        <p>I got the <a href='https://www.credly.com/badges/17608a52-2cb7-4268-a907-613459559911/public_url' rel='noreferrer noopener nofollow' target='_blank' aria-label='AZ-900 certification link'>Microsoft AZ-900 certification</a></p>
-        <p>Author at <a href='https://coffeebytes.dev/en/' rel='noreferrer noopener' target='_blank' aria-label='Coffee bytes website'>Coffee Bytes</a> where I write about web development and technology to more than 500 subscribed devs.</p>`
+    description: `<p>Let's start <strong>building your dreams using only the best mature and battle-tested technologies</strong>, deployed on the most stable and reliable system of all: Linux. I know both and can help you with that.</p>
+        <p>Author at <a href='https://coffeebytes.dev/en/' rel='noreferrer noopener' target='_blank' aria-label='Coffee bytes website'>Coffee Bytes</a> where I write about web development and technology to more than 500 subscribed devs.</p>
+        <p>I posses the <a href='https://www.credly.com/badges/17608a52-2cb7-4268-a907-613459559911/public_url' rel='noreferrer noopener nofollow' target='_blank' aria-label='AZ-900 certification link'>Microsoft AZ-900 certification</a></p>`
 }
 
 export const introduction = {

@@ -336,10 +336,10 @@
 }
 
 .projectsContainer {
-  width: 100%;
   display: flex;
-  gap: 1rem;
   flex-wrap: wrap;
+  gap: 32px;
+  width: 100%;
 }
 
 .project {
@@ -414,6 +414,12 @@
   gap: var(--margin-2x);
 }
 
+@media(max-width: 1200px) {
+  .socialMedia.side {
+    visibility: hidden;
+  }
+}
+
 @media (max-width: 768px) {
   .main.blurry {
     filter: blur(4px);
@@ -429,10 +435,6 @@
 
   .nav .menu {
     display: none;
-  }
-
-  .socialMedia.side {
-    visibility: hidden;
   }
 
   .portfolioContainer {
