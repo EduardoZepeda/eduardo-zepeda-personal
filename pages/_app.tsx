@@ -5,6 +5,7 @@ import Layout from '@components/Layout'
 import { openSidebarContext } from '@lib/OpenSidebarContext'
 import { useState } from 'react'
 import { siteData } from 'siteData'
+import Flashlight from '@components/FlashlightCursor'
 // PurgeCSS in create-next-app eliminates fontawesome css, hence an implicit import is required
 
 import type { AppProps } from 'next/app'
@@ -16,6 +17,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   const socialMediaLinks = siteData["socialMediaLinks"]
   return (
     <openSidebarContext.Provider value={{ hideSidebar, setHideSidebar, socialMediaLinks, authorFirstName, authorLastName }}>
+      <Flashlight />
       <Layout>
         <Component {...pageProps} />
       </Layout>
