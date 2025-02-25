@@ -70,7 +70,16 @@ export default function Blog({ data: { currentPageItems, previousPage, nextPage,
             }
         ))
     }
-
+    function unescapeHtml(str: string) {
+        return str
+            .replace(/&amp;/g, "&")
+            .replace(/&lt;/g, "<")
+            .replace(/&#xA;/g, "")
+            .replace(/&gt;/g, ">")
+            .replace(/&quot;/g, "\"")
+            .replace(/&rsquo;/g, "'")
+            .replace(/&#039;/g, "'");
+    }
 
     return (
         <div className={styles.container}>
@@ -100,7 +109,7 @@ export default function Blog({ data: { currentPageItems, previousPage, nextPage,
                                 <h2 className={styles.postTitle}>{title}</h2>
                                 <small className={styles.pubDate}><ol className={styles.categories}>{typeof category === "string" ? <li className={styles.category}>{category}</li> : category?.map(cat => <li className={styles.category} key={title + cat}>{cat}</li>)}</ol></small>
                                 <small><time>{new Date(pubDate).toDateString()}</time></small>
-                                <p className={styles.post}>{summary?.slice(0, 280)}...</p>
+                                <p className={styles.post}>{unescapeHtml(summary?.slice(0, 280))}...</p>
                                 <p className={styles.readMore}>Read more</p>
                             </Link>
                         </li>
