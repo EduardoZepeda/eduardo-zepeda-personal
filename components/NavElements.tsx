@@ -9,7 +9,6 @@ const NavElements = (): JSX.Element => {
   return (
     <ul onClick={() => setHideSidebar(true)}>
       <li><Link className={styles.navLink} href='/blog/page/1'>Blog</Link></li>
-      <li><Link className={styles.navLink} href='/#'>Introduction</Link></li>
       <li><Link className={styles.navLink} href='/#about'>About me</Link></li>
       <li><Link className={styles.navLink} href='/#portfolio'>Portfolio</Link></li>
       <li><Link className={styles.navLink} href='/#projects'>OSS</Link></li>
