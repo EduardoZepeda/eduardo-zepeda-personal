@@ -6,14 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import PortfolioImage from './PortfolioImage'
 import Pluralize from '@lib/Pluralize'
 
-interface PortfolioItemProps {
-  imgSrc: string
-  title: string
-  info: string
-  websiteLink: string
-  sourceCodeLink: string | undefined
-  stack: string
-}
 
 const PortfolioItem = ({ imgSrc, title, info, websiteLink, sourceCodeLink, stack }: PortfolioItemProps): JSX.Element => {
   const iconSize = 'lg'
