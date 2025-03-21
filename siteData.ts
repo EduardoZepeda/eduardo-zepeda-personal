@@ -71,7 +71,7 @@ export const portfolioData: PortfolioProject[] = [
         imgSrc: '/portfolio/Fotosan.jpg',
         title: 'Fotosan price tracker',
         info: 'SAAS, daily price tracking web crawler for a wide variety of niche online stores, even Mercado Libre (via its API) and Amazon manually, more than +80k products tracked, +1M prices, drop price alert system and newsletter with affilate link system for recent offers.',
-        websiteLink: 'https://fotosan.net/',
+        websiteLink: 'https://fotosan.net/en/',
         stack: 'Django, Postgres, TailwindCSS, Nginx, Uvicorn, DO droplet'
     },
     {
