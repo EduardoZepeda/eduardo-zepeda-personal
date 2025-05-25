@@ -54,8 +54,8 @@ export const aboutMe = {
 }
 
 export const introduction = {
-    greeting: 'Hey there, my name is',
-    name: 'Eduardo Zepeda',
+    greeting: 'Hey there,',
+    name: 'I\'m Ed',
     introductionHeader: 'Turning your ideas into <code>',
     introductionText: 'Web Developer skilled in Python, TypeScript, Go, GNU/Linux',
     contact: 'Contact Ed'
