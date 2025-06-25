@@ -48,21 +48,21 @@ export const siteData = {
 }
 
 export const aboutMe = {
-    description: `<p>Let's start <strong>building your dreams using only the best mature and battle-tested technologies</strong>, deployed on the most stable and reliable system of all: Linux. I know both and can help you with that.</p>
+    description: `<p>Let's start <strong>building your dreams using only mature and battle-tested technologies</strong>, deployed on the most stable and reliable system of all: Linux. </p>
         <p>Author at <a href='https://coffeebytes.dev/en/' rel='noreferrer noopener' target='_blank' aria-label='Coffee bytes website'>Coffee Bytes</a> where I write about web development and technology to more than 500 subscribed devs.</p>
-        <p>I posses the <a href='https://www.credly.com/badges/17608a52-2cb7-4268-a907-613459559911/public_url' rel='noreferrer noopener nofollow' target='_blank' aria-label='AZ-900 certification link'>Microsoft AZ-900 certification</a></p>`
+        <p>I posses a <a href='https://www.credly.com/badges/17608a52-2cb7-4268-a907-613459559911/public_url' rel='noreferrer noopener nofollow' target='_blank' aria-label='AZ-900 certification link'>Microsoft AZ-900 certification</a></p>`
 }
 
 export const introduction = {
     greeting: 'Hey there,',
     name: 'I\'m Ed',
-    introductionHeader: 'Turning your ideas into <code>',
+    introductionHeader: 'Let\'ts turn your ideas into <code>',
     introductionText: 'Web Developer skilled in Python, TypeScript, Go, GNU/Linux',
     contact: 'Contact Ed'
 }
 
 export const contact = {
-    message: "Let's keep in touch. My inbox is open for you and I'm always listening to new offers. I'd be delighted to hear about you.",
+    message: "Let's keep in touch. I'm always open to talk about your ideas. Feel free to say hi.",
     buttonText: "Say hi to Ed"
 }
 
@@ -75,6 +75,13 @@ export const portfolioData: PortfolioProject[] = [
         stack: 'Django, Postgres, TailwindCSS, Nginx, Uvicorn, DO droplet'
     },
     {
+        imgSrc: '/portfolio/Camerashuttercount.jpg',
+        title: 'Camera Shutter Count',
+        info: 'Multilingual web application that reads shutter count and EXIF metadata from any picture, it also contains graphs and tables related to shutter count data for almost all professional cameras and a Blog. SEO friendly.',
+        websiteLink: 'https://camerashuttercount.net/',
+        stack: 'Nextjs, Typescript, DaisyUI, Sqlite, Nginx'
+    },
+    {
         imgSrc: '/portfolio/Tamper.jpg',
         title: 'Tamper',
         info: 'Social Media Geo location app that, given a location, finds the nearest speciality coffee shops in Guadalajara. Furthermore, social network capabilities: real time chat, accounts, asymmetrical following system, likes, user\'s feed, rating and reviews system.',
@@ -83,11 +90,12 @@ export const portfolioData: PortfolioProject[] = [
         stack: 'Django, DRF, Nextjs, Typescript, React query, Vanilla CSS, Postgres, PostGIS, Leaflet, Fly.io'
     },
     {
-        imgSrc: '/portfolio/Camerashuttercount.jpg',
-        title: 'Camera Shutter Count',
-        info: 'Multilingual web application that reads shutter count and EXIF metadata from any picture, it also contains graphs and tables related to shutter count data for almost all professional cameras. SEO friendly.',
-        websiteLink: 'https://camerashuttercount.net/',
-        stack: 'Nextjs, Typescript, DaisyUI, Sqlite, Nginx'
+        imgSrc: '/portfolio/CoffeeBytes.jpg',
+        title: 'Coffee bytes',
+        info: 'My web development blog, +100 entries/tutorials and +200 subscribed developers and +500 followers on Ig. I write new posts for developers every week.',
+        websiteLink: 'https://coffeebytes.dev/en/',
+        sourceCodeLink: 'https://github.com/EduardoZepeda/coffeebytes',
+        stack: 'Hugo (Prev. React + Headless WP), Nginx, Jenkins, DO droplet, Vanilla CSS'
     },
     {
         imgSrc: '/portfolio/GoCoffeeApi.jpg',
@@ -112,14 +120,6 @@ export const portfolioData: PortfolioProject[] = [
         websiteLink: 'https://biodek-landing-page.vercel.app/',
         sourceCodeLink: 'https://github.com/EduardoZepeda/biodek-landing-page/',
         stack: 'Nextjs, Typescript, Vercel'
-    },
-    {
-        imgSrc: '/portfolio/CoffeeBytes.jpg',
-        title: 'Coffee bytes',
-        info: 'My web development blog, +100 entries/tutorials and +200 subscribed developers and +500 followers on Ig. I write new posts for developers every week.',
-        websiteLink: 'https://coffeebytes.dev/en/',
-        sourceCodeLink: 'https://github.com/EduardoZepeda/coffeebytes',
-        stack: 'Hugo (Prev. React + Headless WP), Nginx, Jenkins, DO droplet, Vanilla CSS'
     },
     {
         imgSrc: '/portfolio/MineSweeper.jpg',
