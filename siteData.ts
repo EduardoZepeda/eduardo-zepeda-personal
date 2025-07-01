@@ -191,6 +191,12 @@ export const projectData: Project[] = [
         link: 'https://github.com/EduardoZepeda/django-postalcodes-mexico'
     },
     {
+        title: 'Rusty-yt-dlp-gui',
+        description: 'A Linux lightweight, multilingual, minimalist desktop GUI application for downloading YouTube videos and audio',
+        stack: 'Rust',
+        link: 'https://github.com/EduardoZepeda/rusty-yt-dlp-gui'
+    },
+    {
         title: 'hugo-theme-latte',
         description: 'Hugo theme for my programming blog. Responsive, dark and light theme, and excellent stats in Lighthouse',
         stack: 'Go, Hugo',
