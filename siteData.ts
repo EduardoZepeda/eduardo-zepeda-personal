@@ -70,16 +70,16 @@ export const portfolioData: PortfolioProject[] = [
     {
         imgSrc: '/portfolio/Fotosan.jpg',
         title: 'Fotosan price tracker',
-        info: 'SAAS, daily price tracking web crawler for a wide variety of niche online stores, even Mercado Libre (via its API) and Amazon manually, more than +80k products tracked, +1M prices, drop price alert system and newsletter with affilate link system for recent offers.',
+        info: 'SAAS, price tracking web app. Mercado Libre, Amazon and others, focused on Smartphones, more than +80k products tracked, +1M prices, drop price alert system, browser extension and newsletter with affilates link system for recent offers.',
         websiteLink: 'https://fotosan.net/en/',
-        stack: 'Django, Postgres, TailwindCSS, Nginx, Uvicorn, DO droplet'
+        stack: 'Django, Postgres, TailwindCSS, Nginx, Uvicorn, vps'
     },
     {
         imgSrc: '/portfolio/Camerashuttercount.jpg',
         title: 'Camera Shutter Count',
-        info: 'Multilingual web application that reads shutter count and EXIF metadata from any picture, it also contains graphs and tables related to shutter count data for almost all professional cameras and a Blog. SEO friendly.',
+        info: 'Multilingual web application that reads shutter count and EXIF metadata from any picture, shutter count ranking among other valuable information presented in a visually appealing way. Photography simulator. SEO friendly.',
         websiteLink: 'https://camerashuttercount.net/',
-        stack: 'Nextjs, Typescript, DaisyUI, Sqlite, Nginx'
+        stack: 'Nextjs, Typescript, DaisyUI, Sqlite, Nginx, vps'
     },
     {
         imgSrc: '/portfolio/Tamper.jpg',
