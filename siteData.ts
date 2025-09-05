@@ -70,7 +70,7 @@ export const portfolioData: PortfolioProject[] = [
     {
         imgSrc: '/portfolio/Fotosan.jpg',
         title: 'Fotosan price tracker',
-        info: 'SAAS, price tracking web app. Mercado Libre, Amazon and others, focused on Smartphones, more than +80k products tracked, +1M prices, drop price alert system, browser extension and newsletter with affilates link system for recent offers.',
+        info: 'SAAS, price tracking web app. Mercado Libre, Amazon and others, focused on Smartphones, more than +80k products tracked, +1M prices, drop price alert system, browser extension and newsletter with affilate link system for recent offers.',
         websiteLink: 'https://fotosan.net/en/',
         stack: 'Django, Postgres, TailwindCSS, Nginx, Uvicorn, vps'
     },
@@ -88,6 +88,14 @@ export const portfolioData: PortfolioProject[] = [
         websiteLink: 'https://django-gis-coffee.vercel.app/',
         sourceCodeLink: 'https://github.com/EduardoZepeda/django-gis-coffee',
         stack: 'Django, DRF, Nextjs, Typescript, React query, Vanilla CSS, Postgres, PostGIS, Leaflet, Fly.io'
+    },
+    {
+        imgSrc: '/portfolio/N8nSlashdot.jpg',
+        title: 'n8n\'s Slashdot To Social Media',
+        info: 'n8n workflow that reads slashdot\'s XML feed, filter posts by relevant topics and post summary and link on Linkedin and X, with a Google Sheets Tweets fallback',
+        websiteLink: 'https://github.com/EduardoZepeda/n8n-slashdot-to-x-and-ln',
+        sourceCodeLink: 'https://github.com/EduardoZepeda/n8n-slashdot-to-x-and-ln',
+        stack: 'n8n'
     },
     {
         imgSrc: '/portfolio/CoffeeBytes.jpg',
