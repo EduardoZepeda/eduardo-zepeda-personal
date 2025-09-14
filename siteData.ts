@@ -92,10 +92,10 @@ export const portfolioData: PortfolioProject[] = [
     {
         imgSrc: '/portfolio/N8nSlashdot.jpg',
         title: 'n8n\'s Slashdot To Social Media',
-        info: 'n8n workflow that reads slashdot\'s XML feed, filter posts by relevant topics and post summary and link on Linkedin and X, with a Google Sheets Tweets fallback',
+        info: 'n8n workflow that reads slashdot\'s XML feed, filter posts by relevant topics and post summary, create a digest using Artificial Intelligence and post it on Linkedin and X along with their links. If no relevant posts found grab a post from Google Sheets',
         websiteLink: 'https://github.com/EduardoZepeda/n8n-slashdot-to-x-and-ln',
         sourceCodeLink: 'https://github.com/EduardoZepeda/n8n-slashdot-to-x-and-ln',
-        stack: 'n8n'
+        stack: 'n8n, AI'
     },
     {
         imgSrc: '/portfolio/CoffeeBytes.jpg',
