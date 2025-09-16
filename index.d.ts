@@ -79,3 +79,8 @@ interface socialMediaProps {
   twitter: string
   base64Email: string
 }
+
+
+interface propsWithChildren {
+  children: React.ReactNode
+}

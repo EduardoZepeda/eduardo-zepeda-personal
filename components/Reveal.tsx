@@ -1,10 +1,6 @@
 import { useRef, useEffect } from 'react'
 import styles from '@styles/Home.module.css'
 
-interface propsWithChildren {
-  children: React.ReactNode
-}
-
 const RevealElement = ({ children }: propsWithChildren): React.ReactElement => {
   const visibleElementWrapper = useRef<HTMLDivElement>(null)
 
