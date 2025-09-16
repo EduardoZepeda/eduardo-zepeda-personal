@@ -82,20 +82,12 @@ export const portfolioData: PortfolioProject[] = [
         stack: 'Nextjs, Typescript, DaisyUI, Sqlite, Nginx, vps'
     },
     {
-        imgSrc: '/portfolio/Tamper.jpg',
-        title: 'Tamper',
-        info: 'Social Media Geo location app that, given a location, finds the nearest speciality coffee shops in Guadalajara. Furthermore, social network capabilities: real time chat, accounts, asymmetrical following system, likes, user\'s feed, rating and reviews system.',
-        websiteLink: 'https://django-gis-coffee.vercel.app/',
-        sourceCodeLink: 'https://github.com/EduardoZepeda/django-gis-coffee',
-        stack: 'Django, DRF, Nextjs, Typescript, React query, Vanilla CSS, Postgres, PostGIS, Leaflet, Fly.io'
-    },
-    {
         imgSrc: '/portfolio/N8nSlashdot.jpg',
-        title: 'n8n\'s Slashdot To Social Media',
-        info: 'n8n workflow that reads slashdot\'s XML feed, filter posts by relevant topics and post summary, create a digest using Artificial Intelligence and post it on Linkedin and X along with their links. If no relevant posts found grab a post from Google Sheets',
+        title: 'n8n\'s Slashdot AI summarizer To Social Media',
+        info: 'n8n Automation Workflow that reads slashdot\'s XML feed, filter posts by relevant topics and post summary, create a digest using Artificial Intelligence and post it on Linkedin and X along with their links. If no relevant posts found grab a post from Google Sheets',
         websiteLink: 'https://github.com/EduardoZepeda/n8n-slashdot-to-x-and-ln',
         sourceCodeLink: 'https://github.com/EduardoZepeda/n8n-slashdot-to-x-and-ln',
-        stack: 'n8n, AI'
+        stack: 'n8n, AI, vps'
     },
     {
         imgSrc: '/portfolio/CoffeeBytes.jpg',
@@ -104,6 +96,14 @@ export const portfolioData: PortfolioProject[] = [
         websiteLink: 'https://coffeebytes.dev/en/',
         sourceCodeLink: 'https://github.com/EduardoZepeda/coffeebytes',
         stack: 'Hugo (Prev. React + Headless WP), Nginx, Jenkins, DO droplet, Vanilla CSS'
+    },
+    {
+        imgSrc: '/portfolio/Tamper.jpg',
+        title: 'Tamper',
+        info: 'Social Media Geo location app that, given a location, finds the nearest speciality coffee shops in Guadalajara. Furthermore, social network capabilities: real time chat, accounts, asymmetrical following system, likes, user\'s feed, rating and reviews system.',
+        websiteLink: 'https://django-gis-coffee.vercel.app/',
+        sourceCodeLink: 'https://github.com/EduardoZepeda/django-gis-coffee',
+        stack: 'Django, DRF, Nextjs, Typescript, React query, Vanilla CSS, Postgres, PostGIS, Leaflet, Fly.io'
     },
     {
         imgSrc: '/portfolio/GoCoffeeApi.jpg',
@@ -161,22 +161,6 @@ export const portfolioData: PortfolioProject[] = [
         sourceCodeLink: 'https://github.com/EduardoZepeda/elementalNames',
         stack: 'React, TailwindCSS, Vercel'
     },
-    {
-        imgSrc: '/portfolio/MiReflex.jpg',
-        title: 'Mi reflex',
-        info: 'Landing page that integrates facebook pixel events, for retargeting, and Mailchimp registration API.',
-        websiteLink: 'https://eduardozepeda.github.io/landingPageMyReflex/',
-        sourceCodeLink: 'https://github.com/EduardoZepeda/landingPageMyReflex',
-        stack: 'NextJS, TailwindCSS, Github pages'
-    },
-    {
-        imgSrc: '/portfolio/Chiserstagram.jpg',
-        title: 'Chiserstagram',
-        info: 'Simple frontend instagram clone, with likes, share, save and responsiveness.',
-        websiteLink: 'https://chiserstagram.netlify.app/',
-        sourceCodeLink: 'https://github.com/EduardoZepeda/chiserstagramPractice',
-        stack: 'Netlify, Svelte'
-    }
 ]
 
 export const projectData: Project[] = [
