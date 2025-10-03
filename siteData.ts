@@ -68,9 +68,9 @@ export const contact = {
 
 export const portfolioData: PortfolioProject[] = [
     {
-        imgSrc: '/portfolio/Fotosan.jpg',
+        imgSrc: '/portfolio/MeibelPriceTracking.jpg',
         title: 'Fotosan price tracker',
-        info: 'SAAS, price tracking web app. Mercado Libre, Amazon and others, focused on Smartphones, more than +80k products tracked, +1M prices, drop price alert system, browser extension and newsletter with affilate link system for recent offers.',
+        info: 'SAAS, price tracking web app. Mercado Libre, Amazon and others, focused on Smartphones, more than +80k products tracked, +1M prices, drop price alert system, browser extension and newsletter with affiliate link system for recent offers.',
         websiteLink: 'https://fotosan.net/en/',
         stack: 'Django, Postgres, TailwindCSS, Nginx, Uvicorn, vps'
     },
