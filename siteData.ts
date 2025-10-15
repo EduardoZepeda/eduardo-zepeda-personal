@@ -90,20 +90,20 @@ export const portfolioData: PortfolioProject[] = [
         stack: 'n8n, AI, vps'
     },
     {
-        imgSrc: '/portfolio/CoffeeBytes.jpg',
-        title: 'Coffee bytes',
-        info: 'My web development blog, +100 entries/tutorials and +200 subscribed developers and +500 followers on Ig. I write new posts for developers every week.',
-        websiteLink: 'https://coffeebytes.dev/en/',
-        sourceCodeLink: 'https://github.com/EduardoZepeda/coffeebytes',
-        stack: 'Hugo (Prev. React + Headless WP), Nginx, Jenkins, DO droplet, Vanilla CSS'
-    },
-    {
         imgSrc: '/portfolio/Tamper.jpg',
         title: 'Tamper',
         info: 'Social Media Geo location app that, given a location, finds the nearest speciality coffee shops in Guadalajara. Furthermore, social network capabilities: real time chat, accounts, asymmetrical following system, likes, user\'s feed, rating and reviews system.',
         websiteLink: 'https://django-gis-coffee.vercel.app/',
         sourceCodeLink: 'https://github.com/EduardoZepeda/django-gis-coffee',
         stack: 'Django, DRF, Nextjs, Typescript, React query, Vanilla CSS, Postgres, PostGIS, Leaflet, Fly.io'
+    },
+    {
+        imgSrc: '/portfolio/CoffeeBytes.jpg',
+        title: 'Coffee bytes',
+        info: 'My web development blog, +100 entries/tutorials and +200 subscribed developers and +500 followers on Ig. I write new posts for developers every week.',
+        websiteLink: 'https://coffeebytes.dev/en/',
+        sourceCodeLink: 'https://github.com/EduardoZepeda/coffeebytes',
+        stack: 'Hugo (Prev. React + Headless WP), Nginx, Jenkins, DO droplet, Vanilla CSS'
     },
     {
         imgSrc: '/portfolio/GoCoffeeApi.jpg',
