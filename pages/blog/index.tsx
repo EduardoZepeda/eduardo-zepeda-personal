@@ -4,6 +4,9 @@ import extractUrlsFromRSS from '@utils/parseXml/parseXML';
 import { siteData } from 'siteData';
 import mainStyles from '@styles/Home.module.css'
 import Head from 'next/head';
+import { stripHtml, stripHtmlEntities } from '@utils/html/clean';
+
+
 
 export const getStaticProps = (async () => {
     const url = siteData["blog"]["rss"]
@@ -25,7 +28,9 @@ export const getStaticProps = (async () => {
             }
         }
         const result = await response.text();
-        const parsedData = extractUrlsFromRSS(result)
+        // Since the endpoint changed and it nows returns HTML, we strip it and remove html entities
+        const parsedData = extractUrlsFromRSS(result).map((data) => { return { ...data, summary: stripHtmlEntities(stripHtml(data?.summary)) } });
+
         return { props: { data: parsedData } }
 
     } catch (e) {
@@ -77,8 +82,7 @@ export default function Blog({ data }: { data: PostFromXml[] }) {
             }
         ))
     }
-
-
+    console.log(data)
     return (
         <div className={styles.container}>
             <h1>{`${fullName}'s latests posts`}</h1>
@@ -127,3 +131,5 @@ export default function Blog({ data }: { data: PostFromXml[] }) {
         </div>
     )
 }
+
+
