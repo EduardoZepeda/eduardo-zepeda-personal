@@ -82,7 +82,6 @@ export default function Blog({ data }: { data: PostFromXml[] }) {
             }
         ))
     }
-    console.log(data)
     return (
         <div className={styles.container}>
             <h1>{`${fullName}'s latests posts`}</h1>

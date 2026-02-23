@@ -5,6 +5,7 @@ import mainStyles from '@styles/Home.module.css'
 import Head from 'next/head';
 import paginate from '@utils/paginator/paginate';
 import fetchPosts from '@utils/fetch/posts';
+import { stripHtml, stripHtmlEntities } from '@utils/html/clean';
 
 const NUMBER_OF_POSTS = 10
 
@@ -24,7 +25,8 @@ export const getStaticProps = (async ({ params: { page } }: { params: { page: st
     // This is making a request per page, which can be reduced to one, for now it's ok since 
     // this is a SSG site and only happens once in a while
     const posts = await fetchPosts(url)
-    const paginator = paginate(posts, NUMBER_OF_POSTS, parseInt(page))
+    const parsedData = posts.map((data) => { return { ...data, summary: stripHtmlEntities(stripHtml(data?.summary)) } });
+    const paginator = paginate(parsedData, NUMBER_OF_POSTS, parseInt(page))
     return { props: { data: paginator } }
 })
 
