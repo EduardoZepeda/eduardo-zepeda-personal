@@ -1,8 +1,9 @@
+import generateSitemap from 'generateSitemap';
+import Head from 'next/head';
+import Main from '@components/Main';
+import { siteData } from 'siteData';
 import type { NextPage } from 'next'
-import Main from '@components/Main'
-import Head from 'next/head'
-import generateSitemap from 'generateSitemap'
-import { siteData } from 'siteData'
+
 export const getStaticProps = async () => {
   await generateSitemap()
 

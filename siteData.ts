@@ -69,7 +69,7 @@ export const portfolioData: PortfolioProject[] = [
     {
         imgSrc: '/portfolio/MeibelPriceTracking.jpg',
         title: 'Melibel price tracker',
-        info: 'SAAS that tracks prices across Mercado Libre, Amazon and other stores. Tracks over 1M products and 10M+ price points. Sends alerts when prices drop and runs a newsletter with deals. Great for e-commerce monitoring.',
+        info: 'SAAS that tracks prices across Mercado Libre, Amazon and other stores. Tracks over 5M products and 30M+ price points. Sends alerts when prices drop and runs a newsletter with deals. Great for e-commerce monitoring.',
         websiteLink: 'https://melibel.app/en/',
         stack: 'Django, Postgres, TailwindCSS, Nginx, Uvicorn, vps'
     },

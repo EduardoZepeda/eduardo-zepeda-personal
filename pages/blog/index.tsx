@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import styles from '@styles/blog.module.css';
 import extractUrlsFromRSS from '@utils/parseXml/parseXML';
-import { siteData } from 'siteData';
-import mainStyles from '@styles/Home.module.css'
 import Head from 'next/head';
+import Link from 'next/link';
+import mainStyles from '@styles/Home.module.css';
+import styles from '@styles/blog.module.css';
+import { siteData } from 'siteData';
 import { stripHtml, stripHtmlEntities } from '@utils/html/clean';
 
 

@@ -1,10 +1,10 @@
+import fetchPosts from '@utils/fetch/posts';
+import Head from 'next/head';
 import Link from 'next/link';
+import mainStyles from '@styles/Home.module.css';
+import paginate from '@utils/paginator/paginate';
 import styles from '@styles/blog.module.css';
 import { siteData } from 'siteData';
-import mainStyles from '@styles/Home.module.css'
-import Head from 'next/head';
-import paginate from '@utils/paginator/paginate';
-import fetchPosts from '@utils/fetch/posts';
 import { stripHtml, stripHtmlEntities } from '@utils/html/clean';
 
 const NUMBER_OF_POSTS = 10
