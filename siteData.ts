@@ -74,6 +74,13 @@ export const portfolioData: PortfolioProject[] = [
         stack: 'Django, Postgres, TailwindCSS, Nginx, Uvicorn, vps'
     },
     {
+        imgSrc: '/portfolio/Aiko.jpg',
+        title: "Aiko",
+        info: 'Virtual AI powered Assistant for businesses (demo available), replies to Whatsapp text messages, audios and images. It handles appointments, interacts with Google Sheets and sends reminders.',
+        websiteLink: 'https://landing-ai-automation-for-businesse.vercel.app/',
+        stack: 'n8n, AI, Nextjs'
+    },
+    {
         imgSrc: '/portfolio/Camerashuttercount.jpg',
         title: 'Camera Shutter Count',
         info: 'Check any photo\'s shutter count and EXIF data instantly. Used by photographers worldwide to check camera usage before buying. Includes ranking, photography simulator, gamification and gets great SEO results.',
@@ -87,14 +94,6 @@ export const portfolioData: PortfolioProject[] = [
         websiteLink: 'https://django-gis-coffee.vercel.app/',
         sourceCodeLink: 'https://github.com/EduardoZepeda/django-gis-coffee',
         stack: 'Django, DRF, Nextjs, Typescript, React query, Vanilla CSS, Postgres, PostGIS, Leaflet, Fly.io'
-    },
-    {
-        imgSrc: '/portfolio/N8nSlashdot.jpg',
-        title: "n8n's Slashdot AI summarizer",
-        info: 'Automated workflow that pulls tech news from Slashdot, filters by relevance using AI, and posts digests to LinkedIn and X. Keeps your social presence active without manual work.',
-        websiteLink: 'https://github.com/EduardoZepeda/n8n-slashdot-to-x-and-ln',
-        sourceCodeLink: 'https://github.com/EduardoZepeda/n8n-slashdot-to-x-and-ln',
-        stack: 'n8n, AI, vps'
     },
     {
         imgSrc: '/portfolio/CoffeeBytes.jpg',
