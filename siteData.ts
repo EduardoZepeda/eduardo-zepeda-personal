@@ -62,35 +62,35 @@ export const introduction = {
 
 export const contact = {
     message: "Got a project in mind? I'd love to hear about it. Whether you have a clear idea or just want to bounce some thoughts, drop me a message.",
-    buttonText: "Tell me about your project"
+    buttonText: "Let's talk about your project"
 }
 
 export const portfolioData: PortfolioProject[] = [
     {
         imgSrc: '/portfolio/MeibelPriceTracking.jpg',
         title: 'Melibel price tracker',
-        info: 'SAAS that tracks prices across Mercado Libre, Amazon and other stores. Tracks over 5M products and 30M+ price points. Sends alerts when prices drop and runs a newsletter with deals. Great for e-commerce monitoring.',
+        info: 'SAAS that tracks prices across Mercado Libre. Tracks over 5M products and 30M+ price points. Sends alerts when prices drop and runs a newsletter with deals. Telegram bot. Great for e-commerce monitoring.',
         websiteLink: 'https://melibel.app/en/',
         stack: 'Django, Postgres, TailwindCSS, Nginx, Uvicorn, vps'
     },
     {
         imgSrc: '/portfolio/Aiko.jpg',
         title: "Aiko",
-        info: 'Virtual AI powered Assistant for businesses (demo available), replies to Whatsapp text messages, audios and images. It handles appointments, interacts with Google Sheets and sends reminders.',
+        info: 'A virtual AI powered Assistant for businesses (demo available), replies to Whatsapp text, audio and image messages. It handles appointments and saves them to Google Sheets, it sends reminders.',
         websiteLink: 'https://landing-ai-automation-for-businesse.vercel.app/',
         stack: 'n8n, AI, Nextjs'
     },
     {
         imgSrc: '/portfolio/Camerashuttercount.jpg',
         title: 'Camera Shutter Count',
-        info: 'Check any photo\'s shutter count and EXIF data instantly. Used by photographers worldwide to check camera usage before buying. Includes ranking, photography simulator, gamification and gets great SEO results.',
+        info: 'Checks any photo\'s shutter count and EXIF data instantly. Used by photographers worldwide to check camera usage before buying or selling.  Includes ranking, photography simulator, gamification and gets great SEO results.',
         websiteLink: 'https://camerashuttercount.net/',
         stack: 'Nextjs, Typescript, DaisyUI, Sqlite, Nginx, vps'
     },
     {
         imgSrc: '/portfolio/Tamper.jpg',
         title: 'Tamper',
-        info: 'Find specialty coffee shops near any location in Guadalajara. User accounts, real-time chat between users, following system, reviews, ratings, and a social feed. A full geo-location app with social features.',
+        info: 'A social network Geo location coffee club app. It finds specialty coffee shops near any location in Guadalajara. User accounts, real-time chat between users, following system, reviews, ratings, and a social feed.',
         websiteLink: 'https://django-gis-coffee.vercel.app/',
         sourceCodeLink: 'https://github.com/EduardoZepeda/django-gis-coffee',
         stack: 'Django, DRF, Nextjs, Typescript, React query, Vanilla CSS, Postgres, PostGIS, Leaflet, Fly.io'
@@ -134,14 +134,6 @@ export const portfolioData: PortfolioProject[] = [
         websiteLink: 'https://eduardozepeda.github.io/mine-sweeper/',
         sourceCodeLink: 'https://github.com/EduardoZepeda/mine-sweeper',
         stack: 'React, Typescript, Github pages'
-    },
-    {
-        imgSrc: '/portfolio/NextJsPractice.jpg',
-        title: 'Coffee provider',
-        info: 'Coffee bookmark app with stats and visualizations. Uses real data from coffee books. Good example of Next.js with authentication.',
-        websiteLink: 'https://nextjs-practice-mauve.vercel.app/',
-        sourceCodeLink: 'https://github.com/EduardoZepeda/nextjsPractica',
-        stack: 'Typescript, NextJS, Typescript, TailwindCSS, Vercel'
     },
     {
         imgSrc: '/portfolio/TheNexus.jpg',
