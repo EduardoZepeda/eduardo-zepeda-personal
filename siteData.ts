@@ -48,8 +48,15 @@ export const siteData = {
 }
 
 export const aboutMe = {
-    description: `<p>I'm a freelance web developer who cares about building things that actually work. No overengineering nor unnecessary complexity (unless it is needed)—just solid, reliable solutions using tools that have stood the test of time. </p>
-        <p>I also write about web development on <a href='https://coffeebytes.dev/en/' rel='noreferrer noopener' target='_blank' aria-label='Coffee bytes website'>Coffee Bytes</a>, where I share what I've learned with other developers. Picked up a <a href='https://www.credly.com/badges/17608a52-2cb7-4268-a907-613459559911/public_url' rel='noreferrer noopener nofollow' target='_blank' aria-label='AZ-900 certification link'>Microsoft AZ-900 certification</a> along the way to back up the cloud stuff I build.</p>`
+    description: `<p>I turn "what if" into "it's live."</p>
+
+    <p>I use AI, handwritten code, or cloud tools—whatever works for you. But I always know what's happening under the hood. Always backed up by the most stable technologies, so you get a product you can rely on.</p>
+
+    <p>If that sounds like your kind of partner, take a look around. When you're ready, just say hi.</p>
+    
+    <h3>You've probably read some of my posts</h3>
+    
+    <p>I write about web development and tech on <a href='https://coffeebytes.dev/en/' rel='noreferrer noopener' target='_blank' aria-label='Coffee bytes website'>Coffee Bytes</a>. I also post on <a rel='noreferrer noopener' target='_blank' href="https://www.instagram.com/zeedu.dev">social media</a>, and hold an <a href='https://www.credly.com/badges/17608a52-2cb7-4268-a907-613459559911/public_url' rel='noreferrer noopener nofollow' target='_blank' aria-label='AZ-900 certification link'>Azure AZ-900 cert</a> (plus others) to back up the  stuff I build.</p>`
 }
 
 export const introduction = {
