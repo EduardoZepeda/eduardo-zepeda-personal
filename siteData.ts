@@ -48,21 +48,21 @@ export const siteData = {
 }
 
 export const aboutMe = {
-    description: `<p>I turn "what if" into "it's live."</p>
+    description: `<p>I handle the "make it real" part—whether that's a new feature, a full build, or untangling something that should work but doesn't.</p>
 
-    <p>I use AI, handwritten code, or cloud tools—whatever works for you. But I always know what's happening under the hood. Always backed up by the most stable technologies, so you get a product you can rely on.</p>
+    <p>I use <strong>AI tools when they save you money, write code by hand when they don't</strong>. Everything ships with proper backups and on stable and boring tech that won't disappear next year.</p>
 
-    <p>If that sounds like your kind of partner, take a look around. When you're ready, just say hi.</p>
+    <p>If that sounds like what you're looking for, poke around. When you're ready, just email me—no forms, no sales calls.</p>
     
-    <h3>You've probably read some of my posts</h3>
+    <h3>You might know me from Coffee Bytes</h3>
     
-    <p>I write about web development and tech on <a href='https://coffeebytes.dev/en/' rel='noreferrer noopener' target='_blank' aria-label='Coffee bytes website'>Coffee Bytes</a>. I also post on <a rel='noreferrer noopener' target='_blank' href="https://www.instagram.com/zeedu.dev">social media</a>, and hold an <a href='https://www.credly.com/badges/17608a52-2cb7-4268-a907-613459559911/public_url' rel='noreferrer noopener nofollow' target='_blank' aria-label='AZ-900 certification link'>Azure AZ-900 cert</a> (plus others) to back up the  stuff I build.</p>`
+    <p>I write about web development and tech on <a href='https://coffeebytes.dev/en/' rel='noreferrer noopener' target='_blank' aria-label='Coffee bytes website'>Coffee Bytes</a>. I also post for devs on <a rel='noreferrer noopener' target='_blank' href="https://www.instagram.com/zeedu.dev">social media</a>, and I hold an <a href='https://www.credly.com/badges/17608a52-2cb7-4268-a907-613459559911/public_url' rel='noreferrer noopener nofollow' target='_blank' aria-label='AZ-900 certification link'>Azure AZ-900 cert</a> (among others) so you don't have to take my word for the infrastructure stuff.</p>`
 }
 
 export const introduction = {
     greeting: 'Hey there,',
     name: "I'm Ed",
-    introductionHeader: "Let's develop your ideas into reliable <code>",
+    introductionHeader: "I build the thing you need, then I make sure it keeps working.",
     introductionText: 'Web Developer skilled in Python, TypeScript, Go, GNU/Linux',
     contact: "Let's talk"
 }
@@ -194,6 +194,3 @@ export const projectData: Project[] = [
 ]
 
 export const sourceCodeUrl: string = 'https://github.com/EduardoZepeda/eduardo-zepeda-personal'
-
-
-
