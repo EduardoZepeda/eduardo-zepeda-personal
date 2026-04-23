@@ -76,7 +76,7 @@ export const portfolioData: PortfolioProject[] = [
     {
         imgSrc: '/portfolio/MeibelPriceTracking.jpg',
         title: 'Melibel price tracker',
-        info: 'SAAS that tracks prices across Mercado Libre. Tracks over 5M products and 30M+ price points. Sends alerts when prices drop and runs a newsletter with deals. Telegram bot. Great for e-commerce monitoring.',
+        info: 'SAAS that tracks prices across Mercado Libre. Tracks over 5M products and 30M+ price points. Sends alerts when prices drop and runs a newsletter with deals. Telegram bot. Great for e-commerce monitoring and business intelligence.',
         websiteLink: 'https://melibel.app/en/',
         stack: 'Django, Postgres, TailwindCSS, Nginx, Uvicorn, vps'
     },
@@ -90,7 +90,7 @@ export const portfolioData: PortfolioProject[] = [
     {
         imgSrc: '/portfolio/Camerashuttercount.jpg',
         title: 'Camera Shutter Count',
-        info: 'Checks any photo\'s shutter count and EXIF data instantly. Used by photographers worldwide to check camera usage before buying or selling.  Includes ranking, photography simulator, gamification and gets great SEO results.',
+        info: 'Check any photo\'s shutter count and EXIF data instantly. Used by photographers worldwide to check camera usage before buying or selling.  Includes ranking, photography simulator, gamification and gets great SEO results.',
         websiteLink: 'https://camerashuttercount.net/',
         stack: 'Nextjs, Typescript, DaisyUI, Sqlite, Nginx, vps'
     },
