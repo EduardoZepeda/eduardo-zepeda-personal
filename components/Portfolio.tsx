@@ -4,7 +4,7 @@ import styles from '@styles/Home.module.css'
 import { portfolioData } from 'siteData'
 
 
-const Portfolio = (): JSX.Element => {
+const Portfolio = (): React.ReactElement => {
   const [visibleItems, setVisibleItems] = useState<number>(4)
 
   const portfolioItems = portfolioData.map(({ imgSrc, title, info, websiteLink, sourceCodeLink, stack }) => (

@@ -8,7 +8,7 @@ interface PortfolioImageProps {
 
 }
 
-const PortfolioImage = ({ imgSrc, websiteLink, title }: PortfolioImageProps): JSX.Element => {
+const PortfolioImage = ({ imgSrc, websiteLink, title }: PortfolioImageProps): React.ReactElement => {
   const createSrcSet = imgSrc?.replace('.jpg', '')
 
   return (

@@ -5,7 +5,7 @@ import CreditsCode from '@components/CreditsCode'
 
 import Icons from './Icons'
 
-const Footer = (): JSX.Element => {
+const Footer = (): React.ReactElement => {
   const { hideSidebar, setHideSidebar } = useContext(openSidebarContext)
 
   return (

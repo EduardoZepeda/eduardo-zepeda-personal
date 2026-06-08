@@ -2,7 +2,7 @@
 import styles from '@styles/Home.module.css'
 import { aboutMe } from 'siteData'
 
-const AboutMe = (): JSX.Element => {
+const AboutMe = (): React.ReactElement => {
   return (
     <section id='about'>
       <h2>About me</h2>

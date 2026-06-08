@@ -5,7 +5,7 @@ import { openSidebarContext } from '@lib/OpenSidebarContext'
 import styles from '@styles/Home.module.css'
 import type { SizeProp } from '@fortawesome/fontawesome-svg-core'
 
-const Icons = (): JSX.Element => {
+const Icons = (): React.ReactElement => {
   const { socialMediaLinks, authorFirstName, authorLastName } = useContext(openSidebarContext)
   const iconSize: SizeProp = 'lg'
 

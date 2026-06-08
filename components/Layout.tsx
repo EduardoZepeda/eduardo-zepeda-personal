@@ -6,7 +6,11 @@ import Footer from '@components/Footer'
 import { openSidebarContext } from '@lib/OpenSidebarContext'
 import SocialMedia from '@components/SocialMedia'
 
-const Layout: FC = ({ children }) => {
+type Props = {
+    children?: React.ReactNode
+}
+
+const Layout= ({ children }: Props)=> {
   const { hideSidebar, setHideSidebar } = useContext(openSidebarContext)
 
   return (

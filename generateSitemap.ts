@@ -17,13 +17,13 @@ async function generateSitemap() {
      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
       <url>
           <loc>${siteData["siteUrl"]}</loc>
-          <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+          <lastmod>${new Date().toISOString()?.split('T')[0]}</lastmod>
           <changefreq>monthly</changefreq>
           <priority>0.9</priority>
       </url>
         ${paths.map((page: number) => `<url>
           <loc>${siteData["siteUrl"]}/blog/page/${page}</loc>
-          <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+          <lastmod>${new Date().toISOString()?.split('T')[0]}</lastmod>
           <changefreq>monthly</changefreq>
           <priority>0.9</priority>
       </url>`)}

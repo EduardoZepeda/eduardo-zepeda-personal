@@ -3,7 +3,7 @@ import styles from '@styles/Home.module.css'
 import NavElements from './NavElements'
 import { openSidebarContext } from '@lib/OpenSidebarContext'
 
-const Sidebar = (): JSX.Element => {
+const Sidebar = (): React.ReactElement => {
   const { hideSidebar, setHideSidebar } = useContext(openSidebarContext)
 
   return (

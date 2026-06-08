@@ -10,7 +10,7 @@ import Flashlight from '@components/FlashlightCursor'
 
 import type { AppProps } from 'next/app'
 
-function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+function MyApp({ Component, pageProps }: AppProps): React.ReactElement {
   const [hideSidebar, setHideSidebar] = useState<boolean>(true)
   const authorFirstName = siteData["authorFirstName"]
   const authorLastName = siteData["authorLastName"]

@@ -20,7 +20,7 @@ const useTypewriter = (text: string, speed: number = 100) => {
   return displayedText
 }
 
-const Introduction = (): JSX.Element => {
+const Introduction = (): React.ReactElement => {
   const { greeting, name, introductionText, introductionHeader, contact } = introduction
   const typedName = useTypewriter(name, 150)
 

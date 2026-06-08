@@ -62,7 +62,7 @@ export const aboutMe = {
 export const introduction = {
     greeting: 'Hey there,',
     name: "I'm Ed",
-    introductionHeader: "I build the thing you need, then I make sure it keeps working.",
+    introductionHeader: "I build the app you need, then I make sure it keeps working.",
     introductionText: 'Web Developer skilled in Python, TypeScript, Go, GNU/Linux',
     contact: "Let's talk"
 }
@@ -93,6 +93,13 @@ export const portfolioData: PortfolioProject[] = [
         info: 'Check any photo\'s shutter count and EXIF data instantly. Used by photographers worldwide to check camera usage before buying or selling.  Includes ranking, photography simulator, gamification and gets great SEO results.',
         websiteLink: 'https://camerashuttercount.net/',
         stack: 'Nextjs, Typescript, DaisyUI, Sqlite, Nginx, vps'
+    },
+    {
+        imgSrc: '/portfolio/Subjoin.jpg',
+        title: 'Subjoin',
+        info: 'SAAS. Subtitle videos automatically using AI and integrate it into automation tool flows, like n8n, Zappier, etc. Auth tokens, Subtitling API, and GPU video rendering. Stripe Payments. Multiple Free Video & Audio Editing Tools',
+        websiteLink: 'https://subjoin.app/',
+        stack: 'Nextjs, Typescript, FastAPI, Whisper, Golang, Pocketbase, DaisyUI, Sqlite'
     },
     {
         imgSrc: '/portfolio/Tamper.jpg',

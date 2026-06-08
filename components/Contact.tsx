@@ -8,7 +8,7 @@ function UnicodeDecodeB64(str: string): string {
   return decodeURIComponent(window.atob(str))
 }
 
-const Contact = (): JSX.Element => {
+const Contact = (): React.ReactElement => {
   const [decodedEmail, setDecodedEmail] = useState<string>('')
   const { socialMediaLinks } = useContext(openSidebarContext)
   const { message, buttonText } = contact

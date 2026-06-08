@@ -18,7 +18,7 @@ function debounce<T extends (...args: any[]) => any>(func: T, wait: number): (..
     };
 }
 
-const Flashlight = (): JSX.Element => {
+const Flashlight = (): React.ReactElement => {
     const [position, setPosition] = useState({ x: 0, y: 0, radius: 400, moved: false });
     const isMobile = useIsMobile();
 

@@ -7,7 +7,7 @@ import PortfolioImage from './PortfolioImage'
 import Pluralize from '@lib/Pluralize'
 
 
-const PortfolioItem = ({ imgSrc, title, info, websiteLink, sourceCodeLink, stack }: PortfolioItemProps): JSX.Element => {
+const PortfolioItem = ({ imgSrc, title, info, websiteLink, sourceCodeLink, stack }: PortfolioItemProps): React.ReactElement => {
   const iconSize = 'lg'
 
   return (

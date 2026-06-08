@@ -4,7 +4,7 @@ import { projectData } from 'siteData'
 
 
 
-const Projects = (): JSX.Element => {
+const Projects = (): React.ReactElement => {
   const projectItems = projectData.map(({ title, description, link, stack }) => <ProjectItem key={title} title={title} description={description} link={link} stack={stack} />)
   return (
     <section id='projects' className={styles.projects}>

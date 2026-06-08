@@ -4,7 +4,7 @@ import NavElements from '@components/NavElements'
 import Sidebar from '@components/Sidebar'
 import { openSidebarContext } from '@lib/OpenSidebarContext'
 
-const Nav = (): JSX.Element => {
+const Nav = (): React.ReactElement => {
   const { hideSidebar, setHideSidebar } = useContext(openSidebarContext)
 
   return (

@@ -12,7 +12,7 @@ interface ProjectItemProps {
   stack: string
 }
 
-const ProjectItem = ({ title, description, link, stack }: ProjectItemProps): JSX.Element => {
+const ProjectItem = ({ title, description, link, stack }: ProjectItemProps): React.ReactElement => {
   const iconSize = 'lg'
   const folderSize = '3x'
 

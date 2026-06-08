@@ -6,7 +6,7 @@ import Contact from '@components/Contact'
 import RevealElement from '@components/Reveal'
 import Schema from '@components/Schema'
 
-const Main = (): JSX.Element => {
+const Main = (): React.ReactElement => {
   return (
     <>
       <RevealElement><Introduction /></RevealElement>

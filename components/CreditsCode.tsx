@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import type { SizeProp } from '@fortawesome/fontawesome-svg-core'
 import { sourceCodeUrl } from 'siteData'
 
-const CreditsCode = (): JSX.Element => {
+const CreditsCode = (): React.ReactElement => {
   const iconSize: SizeProp = 'sm'
 
   return (
